@@ -3,12 +3,12 @@
 name: Prerelease
 
 on:
-  - push
-  - workflow_dispatch
+  push:
+    branches:
+      - master
 
 jobs:
   prerelease:
-    if: "github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[prerelease]')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
