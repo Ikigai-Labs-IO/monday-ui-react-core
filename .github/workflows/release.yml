@@ -34,7 +34,7 @@ jobs:
         run: | # Compare the latest version and the current version and publish only if the version changed
           if [ $(npm view monday-ui-react-core version) != ${{ env.package_version }} ]; then npm run build && npm publish; else echo ''; fi;
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TEST_VIBE}}
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"

@@ -53,7 +53,7 @@ jobs:
         if: success()
         run: npm run build && npm publish --tag prerelease
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TEST_VIBE }}
       - uses: "marvinpinto/action-automatic-releases@latest"
         if: success()
         with:

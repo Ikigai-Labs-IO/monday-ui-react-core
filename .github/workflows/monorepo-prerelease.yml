@@ -8,9 +8,9 @@ on:
       package:
         description: "Choose package to prerelease"
         required: true
-        default: "monday-ui-react-core"
+        default: "test-monday-ui-react-core"
         options:
-          - "monday-ui-react-core"
+          - "test-monday-ui-react-core"
 
 jobs:
   prerelease:
@@ -63,7 +63,7 @@ jobs:
           cd packages/${{ github.event.inputs.package }}
           npm publish --tag prerelease
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TEST_VIBE }}
       - uses: "marvinpinto/action-automatic-releases@latest"
         if: success()
         with:
