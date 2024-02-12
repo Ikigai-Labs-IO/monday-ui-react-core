@@ -3,12 +3,12 @@
 name: Prerelease
 
 on:
-  - push
-  - workflow_dispatch
+  push:
+    branches:
+      - master
 
 jobs:
   prerelease:
-    if: "github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[prerelease]')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -53,7 +53,7 @@ jobs:
         if: success()
         run: npm run build && npm publish --tag prerelease
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TEST_VIBE }}
       - uses: "marvinpinto/action-automatic-releases@latest"
         if: success()
         with:
