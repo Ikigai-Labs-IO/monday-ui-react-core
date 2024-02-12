@@ -16,7 +16,7 @@ jobs:
         run: |
           npm ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TEST_VIBE}}
 
       - name: Test
         if: success()
@@ -34,7 +34,7 @@ jobs:
         run: |
           npm ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TEST_VIBE}}
 
       - name: Test
         if: success()
@@ -52,7 +52,7 @@ jobs:
         run: |
           npm ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TEST_VIBE}}
 
       - name: Test
         if: success()
@@ -70,7 +70,7 @@ jobs:
         run: |
           npm ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TEST_VIBE}}
 
       - name: Test
         if: success()
@@ -88,7 +88,7 @@ jobs:
         run: |
           npm ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TEST_VIBE}}
 
       - name: Test
         if: success()
