@@ -1,11 +1,11 @@
 name: Publish Storybook
 
-on:
-  workflow_run:
-    workflows: ["Release new version"]
-    types:
-      - completed
-  workflow_dispatch:
+# on:
+#   workflow_run:
+#     workflows: ["Release new version"]
+#     types:
+#       - completed
+#   workflow_dispatch:
 
 jobs:
   build-and-deploy:
