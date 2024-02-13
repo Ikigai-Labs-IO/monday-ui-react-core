@@ -64,17 +64,17 @@ jobs:
         uses: 8BitJonny/gh-get-current-pr@2.2.0
         id: PR
         if: success()
-      - name: Create comment with prerelease version details
-        if: success()
-        uses: peter-evans/create-or-update-comment@v1
-        with:
-          issue-number: ${{ steps.PR.outputs.number }}
-          body: |
-            A new prerelease version of this PR has been published: `${{ steps.create-update-version.outputs.package_version }}`
+      # - name: Create comment with prerelease version details
+      #   if: success()
+      #   uses: peter-evans/create-or-update-comment@v1
+      #   with:
+      #     issue-number: ${{ steps.PR.outputs.number }}
+      #     body: |
+      #       A new prerelease version of this PR has been published: `${{ steps.create-update-version.outputs.package_version }}`
 
-            ```
-            // To install this prerelease version using npm, please run the following command in your terminal:
-            npm i monday-ui-react-core@${{ steps.create-update-version.outputs.package_version }}
-            // If you prefer using Yarn, you can use the following command instead:
-            yarn add monday-ui-react-core@${{ steps.create-update-version.outputs.package_version }}
-            ```
+      #       ```
+      #       // To install this prerelease version using npm, please run the following command in your terminal:
+      #       npm i monday-ui-react-core@${{ steps.create-update-version.outputs.package_version }}
+      #       // If you prefer using Yarn, you can use the following command instead:
+      #       yarn add monday-ui-react-core@${{ steps.create-update-version.outputs.package_version }}
+      #       ```
