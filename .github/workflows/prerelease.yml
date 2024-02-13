@@ -57,7 +57,7 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         if: success()
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: "${{ secrets.TEST_PAT_OF_USER_SM }}"
           prerelease: true
           automatic_release_tag: prerelease
       - name: Get current PR id
