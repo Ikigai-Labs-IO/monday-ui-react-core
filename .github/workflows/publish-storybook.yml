@@ -27,7 +27,7 @@ jobs:
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          target_branch: "release"
+          target_branch: "gh-pages"
           build_dir: static_storybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
