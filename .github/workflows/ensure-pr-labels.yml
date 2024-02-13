@@ -2,9 +2,9 @@
 
 name: PR labeling for release
 
-on:
-  pull_request:
-    types: [opened, labeled, unlabeled, synchronize]
+# on:
+#   pull_request:
+#     types: [opened, labeled, unlabeled, synchronize]
 
 jobs:
   ensure-label:
