@@ -26,7 +26,7 @@ jobs:
         id: check-version
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
-          if npm view your-package-name@$PACKAGE_VERSION > /dev/null 2>&1; then
+          if npm view test-monday-ui-react-core@$PACKAGE_VERSION > /dev/null 2>&1; then
             echo "Version $PACKAGE_VERSION already published. Skipping publishing step."
             echo "::set-output name=skip_publishing::true"
           else
