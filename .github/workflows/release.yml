@@ -48,6 +48,6 @@ jobs:
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: "${{ secrets.TEST_PAT_OF_USER_SM }}"
           prerelease: false
           automatic_release_tag: "v${{ env.package_version }}"
