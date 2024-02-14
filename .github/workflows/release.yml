@@ -12,34 +12,42 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@v3
         with:
           node-version-file: ".nvmrc"
           registry-url: https://registry.npmjs.org/
+
       - name: Install dependencies
         run: npm ci
+
       - name: Set up git credentials
         run: |
           git config --global user.name 'ci'
           git config --global user.email 'deploy@monday.com'
-      - name: Prepare changes
-        run: npm run release
-        env:
-          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Set package version variable
         run: echo "package_version=$(node -e "console.log(require('./package.json').version)")" >> "$GITHUB_ENV"
-      - name: Commit and push changes
+
+      - name: Commit and push changes if version updated
         run: |
-          git add .
-          git commit -m "Release version ${{ env.package_version }}"
-          git push --follow-tags
+          VERSION_UPDATED=$(git status --porcelain | grep package.json | wc -l)
+          if [ "$VERSION_UPDATED" -eq "1" ]; then
+            git add package.json
+            git commit -m "chore(release): ${{ env.package_version }}"
+            git tag -a "v${{ env.package_version }}" -m "Release version ${{ env.package_version }}"
+            git push --follow-tags
+          else
+            echo "Version not updated in package.json, skipping commit and tag."
+          fi
+
       - name: Publish the new version to npm
-        run: | # Compare the latest version and the current version and publish only if the version changed
-          if [ $(npm view test-monday-ui-react-core version) != ${{ env.package_version }} ]; then npm run build && npm publish; else echo ''; fi;
+        run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TEST_VIBE}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TEST_VIBE }}
+
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          automatic_release_tag: latest
+          automatic_release_tag: "v${{ env.package_version }}"
