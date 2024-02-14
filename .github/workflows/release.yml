@@ -6,48 +6,39 @@ on:
       - master
 
 jobs:
-  publish-npm:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - uses: actions/setup-node@v3
         with:
-          node-version-file: ".nvmrc"
+          node-version: '14'
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Set up git credentials
+      - name: Check if version is published
+        id: check-version
         run: |
-          git config --global user.name 'ci'
-          git config --global user.email 'deploy@monday.com'
-
-      - name: Set package version variable
-        run: echo "package_version=$(node -e "console.log(require('./package.json').version)")" >> "$GITHUB_ENV"
-
-      - name: Commit and push changes if version updated
-        run: |
-          VERSION_UPDATED=$(git status --porcelain | grep package.json | wc -l)
-          if [ "$VERSION_UPDATED" -eq "1" ]; then
-            git add package.json
-            git commit -m "chore(release): ${{ env.package_version }}"
-            git tag -a "v${{ env.package_version }}" -m "Release version ${{ env.package_version }}"
-            git push --follow-tags
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          if npm view your-package-name@$PACKAGE_VERSION > /dev/null 2>&1; then
+            echo "Version $PACKAGE_VERSION already published. Skipping publishing step."
+            echo "::set-output name=skip_publishing::true"
           else
-            echo "Version not updated in package.json, skipping commit and tag."
+            echo "Version $PACKAGE_VERSION not published. Proceeding with publishing."
+            echo "::set-output name=skip_publishing::false"
           fi
-
-      - name: Publish the new version to npm
-        run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TEST_VIBE }}
+          NPM_TOKEN: ${{ secrets.NPM_TEST_VIBE }}
 
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          automatic_release_tag: "v${{ env.package_version }}"
+      - name: Run semantic-release
+        if: steps.check-version.outputs.skip_publishing == 'false'
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TEST_VIBE }}
