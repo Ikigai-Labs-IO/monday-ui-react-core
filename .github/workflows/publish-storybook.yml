@@ -1,11 +1,11 @@
 name: Publish Storybook
 
-on:
-  workflow_run:
-    workflows: ["Release new version"]
-    types:
-      - completed
-  workflow_dispatch:
+# on:
+#   workflow_run:
+#     workflows: ["Release new version"]
+#     types:
+#       - completed
+#   workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -22,7 +22,7 @@ jobs:
           cd static_storybook
           echo "style.monday.com" > ./CNAME
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TEST_VIBE}}
       - name: Push to Storybook's branch
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
