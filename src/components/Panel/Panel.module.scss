@@ -59,12 +59,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
     box-shadow: 0 12px 22px var(--color-american_gray-selected);
     background-color: var(--primary-background-color);
     max-width: 100%;
     width: 100vw;
+    z-index: 9999;
     @media (min-width: 576px) {
       width: 50vw; // sm
     }
