@@ -15,10 +15,16 @@ export function PanelHeader({ side = "onRight", title, onClick }: HeaderProps) {
   const reverse = side === "onLeft";
   return (
     <div className={styles.panelHeaderStyled}>
-      <div className={styles.panelHeaderInner} style={{justifyContent: reverse ? 'flex-end' : 'space-between', flexDirection: reverse ? 'row-reverse' : 'row'}}>
+      <div
+        className={styles.panelHeaderInner}
+        style={{
+          justifyContent: reverse ? "flex-end" : "space-between",
+          flexDirection: reverse ? "row-reverse" : "row"
+        }}
+      >
         <header>
           <Text type={Text.types.TEXT2} element="span" weight={Text.weights.NORMAL}>
-            <div style={{marginLeft: reverse ? "1rem" : "0", fontWeight: "500", textTransform: "capitalize"}}>
+            <div style={{ marginLeft: reverse ? "1rem" : "0", fontWeight: "500", textTransform: "capitalize" }}>
               {title}
             </div>
           </Text>
@@ -44,7 +50,6 @@ export function PanelFooter({ close }: PanelFooterProps) {
 
 type PanelProps = {
   children?: React.ReactNode;
-  title?: string;
   caption?: string;
   isOpen?: boolean;
   side?: "onLeft" | "onRight";
@@ -59,13 +64,10 @@ type PanelProps = {
 
 export function Panel({
   children,
-  title,
-  caption,
   side,
   isOpen,
   footer,
   header,
-  headerStyles,
   contentStyles,
   onClick = () => undefined,
   ...props
@@ -89,24 +91,48 @@ export function Panel({
   const reverse = side === "onLeft";
   return (
     <>
-      <div className={styles.backgroundStyled} style={{pointerEvents: isOpen ? "auto" : "none", opacity: isOpen ? 0.7 : 0}}/>
-      <div className={isOpen ? styles.panelMenuStyled : ""}
-        style={{transform: isOpen ? "translate3d(0,0,0)" : `translate3d(${reverse ? "-100%,0,0" : "100%,0,0"})`,
-        justifyContent: side !== "onLeft" ? "flex-end" : "flex-start"}}
+      <div
+        className={styles.backgroundStyled}
+        style={{ pointerEvents: isOpen ? "auto" : "none", opacity: isOpen ? 0.7 : 0 }}
+      />
+      <div
+        className={isOpen ? styles.panelMenuStyled : ""}
+        style={{
+          transform: isOpen ? "translate3d(0,0,0)" : `translate3d(${reverse ? "-100%,0,0" : "100%,0,0"})`,
+          justifyContent: side !== "onLeft" ? "flex-end" : "flex-start"
+        }}
       >
-        <div className={styles.innerStyled} style={{
-          borderLeft: side !== "onLeft" && "1px solid #C8C8C8", borderRight: reverse && "1px slid #C8C8C8"}}>
+        <div
+          className={styles.innerStyled}
+          style={{
+            borderLeft: side !== "onLeft" && "1px solid #C8C8C8",
+            borderRight: reverse && "1px slid #C8C8C8"
+          }}
+        >
           {isOpen && (
             <>
               {header}
               <div className={styles.containerStyled} style={contentStyles}>
-                <Text className={styles.textStyled} type={Text.types.TEXT2} element="div" weight={Text.weights.NORMAL}>{children}</Text>
+                <Text className={styles.textStyled} type={Text.types.TEXT2} element="div" weight={Text.weights.NORMAL}>
+                  {children}
+                </Text>
               </div>
               {footer}
             </>
           )}
         </div>
-        {isOpen && <div className={styles.CloseLayerStyled} onClick={onClick} {...props} />}
+        {isOpen && (
+          <div
+            className={styles.CloseLayerStyled}
+            onClick={onClick}
+            onKeyDown={event => {
+              if (event.key === "Enter") {
+                onClick();
+              }
+            }}
+            {...props}
+          />
+        )}
       </div>
     </>
   );

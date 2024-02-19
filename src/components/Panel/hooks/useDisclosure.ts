@@ -8,7 +8,7 @@ export function useDisclosure(isOpenDefault = false) {
 
   const toggle = useCallback((toSet?: boolean) => {
     if (typeof toSet !== "boolean") {
-      setIsOpen((state) => !state);
+      setIsOpen(state => !state);
     } else {
       setIsOpen(toSet);
     }
