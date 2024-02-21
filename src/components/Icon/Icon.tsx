@@ -7,6 +7,7 @@ import CustomSvgIcon from "./CustomSvgIcon/CustomSvgIcon";
 import FontIcon from "./FontIcon/FontIcon";
 import useIconProps from "./hooks/useIconProps";
 import { VibeComponentProps, VibeComponent, MouseEventCallBack, SubIcon, withStaticProps } from "../../types";
+import {CustomIcon, PathName} from "./Icons/components/CustomIcon";
 
 // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function
 const CLICK_NOOP = (_event: React.MouseEvent) => {};
@@ -32,7 +33,7 @@ interface IconProps extends VibeComponentProps {
   /**
    * We support three types of icons - SVG, FONT and SRC (classname) so this prop is either the name of the icon or the component
    */
-  icon: SubIcon;
+  icon?: SubIcon;
   /**
    * Is icon is a button
    */
@@ -67,6 +68,10 @@ mo   * Icon aria label [aria label](https://developer.mozilla.org/en-US/docs/Web
    * Override the default color with a custom one
    */
   customColor?: string;
+
+  iconName?: PathName;
+  
+  isCustomIcon?: boolean;
 }
 
 const Icon: VibeComponent<IconProps, HTMLElement> & { type?: typeof IconType } = forwardRef(
@@ -89,10 +94,18 @@ const Icon: VibeComponent<IconProps, HTMLElement> & { type?: typeof IconType } =
       style,
       useCurrentColor = false,
       customColor,
-      "data-testid": dataTestId
+      "data-testid": dataTestId,
+      iconName,
+      isCustomIcon = false
     },
     ref
   ) => {
+    
+    if(isCustomIcon && typeof iconName === "string")
+    {
+      icon = () => <CustomIcon name={iconName} iconSize={iconSize}/>;
+    }
+
     const overrideExternalTabIndex = externalTabIndex && +externalTabIndex;
     const { screenReaderAccessProps, onClickCallback, computedClassName, iconRef } = useIconProps({
       onClick,
