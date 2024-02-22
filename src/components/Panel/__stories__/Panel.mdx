@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import { TipBenefits } from "./Panel.stories.helpers.js";
+import * as PanelStories from "./Panel.stories";
+
+<Meta of={PanelStories} />
+
+# Panel
+
+- [Overview](#overview)
+- [Props](#props)
+- [Panel properties](#panel-properties)
+- [Feedback](#feedback)
+
+## Overview
+
+Panels are distinct sections or interfaces within an application designed to house specific functionalities, offering a modular and organized approach to user interaction and content presentation.
+
+## Props
+
+<PropsTable />
+
+## Panel properties
+
+<TipBenefits />
+
+### default
+
+<Canvas>
+  <Story of={PanelStories.Default} />
+</Canvas>
+
+### footer
+
+You can pass Buttons to footer, and it will displayed at the bottom of the Panel.
+
+<Canvas>
+  <Story of={PanelStories.Footer} />
+</Canvas>
+
+### side
+
+Panel in default is displayed on the right side, but optionally you can change this behaviour with simple prop `side='onLeft'`.
+
+<Canvas>
+  <Story of={PanelStories.Side} />
+</Canvas>
+
+### width
+
+If you don't need default breakpoints and needs just to hardcode `width` value you can provide it with `width` prop.
+
+<Canvas>
+  <Story of={PanelStories.CustomWidth} />
+</Canvas>
