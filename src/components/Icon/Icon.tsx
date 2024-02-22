@@ -7,7 +7,7 @@ import CustomSvgIcon from "./CustomSvgIcon/CustomSvgIcon";
 import FontIcon from "./FontIcon/FontIcon";
 import useIconProps from "./hooks/useIconProps";
 import { VibeComponentProps, VibeComponent, MouseEventCallBack, SubIcon, withStaticProps } from "../../types";
-import {CustomIcon, PathName} from "./Icons/components/CustomIcon";
+import { CustomIcon, PathName } from "./Icons/components/CustomIcon";
 
 // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function
 const CLICK_NOOP = (_event: React.MouseEvent) => {};
@@ -70,7 +70,7 @@ mo   * Icon aria label [aria label](https://developer.mozilla.org/en-US/docs/Web
   customColor?: string;
 
   iconName?: PathName;
-  
+
   isCustomIcon?: boolean;
 }
 
@@ -100,10 +100,8 @@ const Icon: VibeComponent<IconProps, HTMLElement> & { type?: typeof IconType } =
     },
     ref
   ) => {
-    
-    if(isCustomIcon && typeof iconName === "string")
-    {
-      icon = () => <CustomIcon name={iconName} iconSize={iconSize}/>;
+    if (isCustomIcon && typeof iconName === "string") {
+      icon = () => <CustomIcon name={iconName} iconSize={iconSize} />;
     }
 
     const overrideExternalTabIndex = externalTabIndex && +externalTabIndex;
