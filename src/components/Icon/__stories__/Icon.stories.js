@@ -62,7 +62,7 @@ export const Color = {
         color: "var(--sb-color-sofia_pink)"
       }}
     >
-      <Icon iconType={Icon.type.SVG} icon={Bolt} iconLabel="my bolt svg icon" iconSize={16} />
+      <Icon isCustomIcon={true} iconName="sideNavCollapse" iconSize="16px" />
     </div>
   ),
 
@@ -73,4 +73,17 @@ export const IconsListStory = {
   render: IconsList.bind({}),
   name: "Icons List",
   args: {}
+};
+
+export const CustomIcon = {
+  render: () => (
+    <Icon
+      iconType={Icon.type.SVG}
+      isCustomIcon={true}
+      iconName="sideNavCollapse"
+      iconSize="16px"
+    />
+  ),
+
+  name: "Custom Icon"
 };

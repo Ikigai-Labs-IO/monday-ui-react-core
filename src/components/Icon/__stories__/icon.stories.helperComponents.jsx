@@ -34,9 +34,7 @@ export const IconsList = () => {
             return acc;
           }
           const Component = AllIcons[icon.file.split(".")[0]];
-          if (Component) {
-            acc.push(<IconComponent {...icon} Component={Component} />);
-          }
+          {Component && ( acc.push(<IconComponent {...icon} Component={Component} />))}
           return acc;
         }, [])}
       </div>
