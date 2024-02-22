@@ -76,14 +76,7 @@ export const IconsListStory = {
 };
 
 export const CustomIcon = {
-  render: () => (
-    <Icon
-      iconType={Icon.type.SVG}
-      isCustomIcon={true}
-      iconName="sideNavCollapse"
-      iconSize="16px"
-    />
-  ),
+  render: () => <Icon iconType={Icon.type.SVG} isCustomIcon={true} iconName="sideNavCollapse" iconSize="16px" />,
 
   name: "Custom Icon"
 };
