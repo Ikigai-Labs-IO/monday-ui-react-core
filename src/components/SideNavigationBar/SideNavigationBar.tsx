@@ -31,8 +31,6 @@ interface SideNavigationBarWrapperProps {
 export const SideNavigationBarWrapper: React.FC<SideNavigationBarWrapperProps> = ({
   expanded,
   position,
-  backgroundColor,
-  height,
   expandableConfig,
   children,
   onTransitionEnd,
@@ -56,7 +54,6 @@ function SideNavigationBarVisual({
   header,
   footer,
   position = "fixed",
-  expandable = true,
   height = "100vh",
   backgroundColor = "#161632",
   closeOnLeave = false,
@@ -66,14 +63,12 @@ function SideNavigationBarVisual({
   },
   children
 }: Props) {
-  const { expanded, expandedDone, handleExpand, setExpanded, setExpandedDone } = useMenuBarConfiguration();
+  const { expanded, setExpanded, setExpandedDone } = useMenuBarConfiguration();
 
   if (children == null) {
     console.warn("Children is not provided. Component will not be rendered.");
     return null;
   }
-
-  const icon = expandedDone ? "sideNavCollapse" : "sideNavExpand";
 
   return (
     <SideNavigationBarWrapper

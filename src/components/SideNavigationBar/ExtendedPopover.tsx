@@ -1,8 +1,8 @@
 import * as React from "react";
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes } from "react";
 import { useDisclosure } from "../Panel/hooks/useDisclosure";
 import { useEvent } from "./utils/useEvent";
-import { Placement, Position, getStyle, Margin, DEFAULT_MARGIN, PaddingWrapper } from "./utils/position";
+import { Placement, Position, getStyle, Margin, DEFAULT_MARGIN } from "./utils/position";
 import { throttle } from "./utils/throttle";
 import Icon from "../Icon/Icon";
 import styles from "./ExtendedPopOver.module.scss";
@@ -118,12 +118,12 @@ interface PopoverProps {
   contentRef: React.RefObject<HTMLDivElement>;
   visible: boolean;
   style?: React.CSSProperties;
-  margin?: any; 
+  margin?: any;
   content: React.ReactNode;
-  placement?: string; 
+  placement?: string;
 }
 
-const Popover: React.FC<PopoverProps> = ({ contentRef, visible, style, margin, content, placement }) => {
+const Popover: React.FC<PopoverProps> = ({ contentRef, visible, style, content }) => {
   if (!visible) return null;
 
   return (
@@ -148,6 +148,5 @@ interface ContentWrapperProps extends HTMLAttributes<HTMLDivElement> {
 const ContentWrapper = React.forwardRef<HTMLDivElement, ContentWrapperProps>((props, ref) => {
   return <div className={styles.contentWrapper} ref={ref} {...props} />;
 });
-
 
 export type ExtendedPopoverAction = "click" | "hover";

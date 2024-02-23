@@ -10,6 +10,4 @@ type Props = {
   popoverConfig: PopoverConfig;
 };
 
-export const SideNavigationBarContext = React.createContext<Props | undefined>(
-  undefined
-);
+export const SideNavigationBarContext = React.createContext<Props | undefined>(undefined);

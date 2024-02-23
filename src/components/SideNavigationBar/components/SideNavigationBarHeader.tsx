@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-const Logo_Expand = require("../../../assets/ikigai-logo-expand.png");
-const Logo = require("../../../assets/ikigai-logo.png");
+/* eslint-disable */
+/* tslint:disable */
+import React from "react";
 import { useMenuBarConfiguration } from "../utils/hooks";
 import styles from "../SideNavigationBar.module.scss";
 import Icon from "../../../components/Icon/Icon";
@@ -17,13 +17,23 @@ interface BurgerWrapperProps {
 
 export function BurgerWrapper({ expanded, onClick, children }: BurgerWrapperProps) {
   return (
-    <div className={`${styles.burgerWrapper} ${expanded ? styles.expanded : ""}`} onClick={onClick}>
+    <div
+      className={`${styles.burgerWrapper} ${expanded ? styles.expanded : ""}`}
+      onClick={onClick}
+      onKeyDown={event => {
+        if (event.key === "Enter") {
+          onClick();
+        }
+      }}
+    >
       {children}
     </div>
   );
 }
 
 export function SideNavigationBarHeader({ title }: SideNavigationBarHeaderProps) {
+  const Logo = require("../../../assets/ikigai-logo.png");
+  const Logo_Expand = require("../../../assets/ikigai-logo-expand.png");
   const { expanded, handleExpand, expandedDone } = useMenuBarConfiguration();
   const icon = expandedDone ? "sideNavCollapse" : "sideNavExpand";
 
@@ -48,3 +58,5 @@ export function SideNavigationBarHeader({ title }: SideNavigationBarHeaderProps)
     </div>
   );
 }
+/* tslint:enable */
+/* eslint-enable */

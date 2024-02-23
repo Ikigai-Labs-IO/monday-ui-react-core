@@ -33,6 +33,6 @@ export function useTooltipHover() {
 
   return {
     isHovered,
-    updateIsHovered,
+    updateIsHovered
   };
 }

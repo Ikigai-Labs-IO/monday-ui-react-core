@@ -14,11 +14,7 @@ type UseEventProps<T> = {
   target?: T | Window | null;
 };
 
-export function useEvent<T extends Listener>({
-  name,
-  handler,
-  target = window,
-}: UseEventProps<T>) {
+export function useEvent<T extends Listener>({ name, handler, target = window }: UseEventProps<T>) {
   React.useEffect(() => {
     if (!handler || !target) {
       return;

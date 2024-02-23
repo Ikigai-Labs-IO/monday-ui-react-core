@@ -71,7 +71,7 @@ export function MenuItem({ caption, icon, children }: MenuItemProps) {
   return (
     <StyledTriggerWrapper>
       <FlexContainer justifyContent={expanded ? "start" : "center"}>
-        <Icon icon={icon} style={expanded? {marginRight: '0.75rem'} : {}}/>
+        <Icon icon={icon} style={expanded ? { marginRight: "0.75rem" } : {}} />
         {expanded ? caption : ""}
       </FlexContainer>
     </StyledTriggerWrapper>

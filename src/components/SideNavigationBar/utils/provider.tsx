@@ -11,19 +11,12 @@ type Props = {
 const popoverConfigDefault = {
   triggerOn: "hover",
   closeOn: "hover",
-  position: "start",
+  position: "start"
 } as const;
 
-export function SideNavigationBarProvider({
-  children,
-  popoverConfig = popoverConfigDefault,
-}: Props) {
+export function SideNavigationBarProvider({ children, popoverConfig = popoverConfigDefault }: Props) {
   const { isOpen: expanded, toggle: setExpanded } = useDisclosure();
-  const {
-    isOpen: expandedDone,
-    close: closeExpandedDone,
-    toggle: setExpandedDone,
-  } = useDisclosure();
+  const { isOpen: expandedDone, close: closeExpandedDone, toggle: setExpandedDone } = useDisclosure();
 
   const handleExpand = () => {
     if (expanded) {
@@ -38,12 +31,8 @@ export function SideNavigationBarProvider({
     handleExpand,
     popoverConfig,
     setExpanded,
-    setExpandedDone,
+    setExpandedDone
   };
 
-  return (
-    <SideNavigationBarContext.Provider value={value}>
-      {children}
-    </SideNavigationBarContext.Provider>
-  );
+  return <SideNavigationBarContext.Provider value={value}>{children}</SideNavigationBarContext.Provider>;
 }
