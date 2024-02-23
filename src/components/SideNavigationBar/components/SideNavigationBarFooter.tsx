@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../SideNavigationBar.module.scss';
-
 import { useMenuBarConfiguration } from '../utils/hooks';
 import Icon from '../../Icon/Icon';
 import { IoHelpCircle } from '../../../components/Icon/Icons/components/IoHelpCircle';

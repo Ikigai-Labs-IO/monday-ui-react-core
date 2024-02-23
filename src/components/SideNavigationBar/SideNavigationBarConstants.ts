@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Position } from "./utils/position";
 import { ExtendedPopoverAction } from "./ExtendedPopover";
-import { PathName } from "../svgicon/paths";
+import { SubIcon } from "../../types";
 
 export type Props = {
   children: React.ReactNode | React.ReactNode[];
@@ -22,7 +22,7 @@ export type ExpandedProps = {
 
 export type MenuItemProps = {
   caption: string;
-  icon: PathName;
+  icon: SubIcon;
   children?: React.ReactNode;
 };
 

@@ -2,10 +2,11 @@ import * as React from "react";
 import { MenuItemProps } from "../SideNavigationBarConstants";
 import "../SideNavigationBar.module.scss";
 import Icon from "../../Icon/Icon";
+import { SubIcon } from "../../../types";
 
 type Props = {
   caption: string;
-  icon: string;
+  icon: SubIcon;
   expanded: boolean;
 };
 

@@ -4,20 +4,7 @@ import { SideNavigationBar } from "../SideNavigationBar";
 import { SideNavigationBarHeader } from "../components/SideNavigationBarHeader";
 import { SideNavigationBarFooter } from "../components/SideNavigationBarFooter";
 import "./SideNavigationBar.stories.scss";
-import { ScheduleIcon } from "../../../components/Icon/Icons/components/ScheduleIcon";
-import { FacetsIcon } from "../../../components/Icon/Icons/components/FacetsIcon";
-import { ConnectorIcon } from "../../../components/Icon/Icons/components/ConnectorIcon";
-import { MarketPlaceIcon } from "../../../components/Icon/Icons/components/MarketPlaceIcon";
-import { InProgressIcon } from "../../../components/Icon/Icons/components/InProgressIcon";
-import { AppsIcon } from "../../../components/Icon/Icons/components/AppsIcon";
-import { Dashboard, Settings } from "../../../components/Icon/Icons";
-import { ApplicationIcon } from "../../../components/Icon/Icons/components/ApplicationIcon";
-import { DashboardIcon } from "../../../components/Icon/Icons/components/DashboardIcon";
-import { ChartAscendingIcon } from "../../../components/Icon/Icons/components/ChartAscendingIcon";
-import { ReservedInstancesIcon } from "../../../components/Icon/Icons/components/ReservedInstancesIcon";
-import { ArchiveIcon } from "../../../components/Icon/Icons/components/ArchiveIcon";
-import { ResourceIcon } from "../../../components/Icon/Icons/components/ResourceIcon";
-import { CloudIcon } from "../../../components/Icon/Icons/components/CloudIcon";
+import { Settings, CustomIcon } from "../../../components/Icon/Icons";
 
 const meta: Meta = {
   title: "Components/SideNavigationBar",
@@ -52,12 +39,12 @@ export const Default: StoryObj = {
         >
           <div className="items-container">
             <ItemsSection>
-              <MenuItem caption="Apps" icon={AppsIcon} />
-              <MenuItem caption="Schedules" icon={ScheduleIcon} />
-              <MenuItem caption="Facets" icon={FacetsIcon} />
-              <MenuItem caption="Connectors" icon={ConnectorIcon} />
-              <MenuItem caption="Market Place" icon={MarketPlaceIcon} />
-              <MenuItem caption="In Progress" icon={InProgressIcon} />
+              <MenuItem caption="Apps" icon={()=> <CustomIcon name="apps"/>} />
+              <MenuItem caption="Schedules" icon={()=> <CustomIcon name="schedule"/>} />
+              <MenuItem caption="Facets" icon={()=> <CustomIcon name="facets"/>} />
+              <MenuItem caption="Connectors" icon={()=> <CustomIcon name="connector"/>} />
+              <MenuItem caption="Market Place" icon={()=> <CustomIcon name="marketPlace"/>} />
+              <MenuItem caption="In Progress" icon={()=> <CustomIcon name="inProgress"/>} />
             </ItemsSection>
           </div>
         </SideNavigationBar>
@@ -87,9 +74,9 @@ export const NonExpandable: StoryObj = {
         <SideNavigationBar position="absolute" height="100%" expandable={false}>
           <div className="items-container">
             <ItemsSection>
-              <MenuItem caption="Apps" icon={AppsIcon} />
-              <MenuItem caption="Schedules" icon={ScheduleIcon} />
-              <MenuItem caption="Facets" icon={FacetsIcon} />
+              <MenuItem caption="Apps" icon={()=> <CustomIcon name="apps"/>} />
+              <MenuItem caption="Schedules" icon={()=> <CustomIcon name="schedule"/>} />
+              <MenuItem caption="Facets" icon={()=> <CustomIcon name="facets"/>} />
             </ItemsSection>
           </div>
         </SideNavigationBar>
@@ -119,8 +106,8 @@ export const MultipleSectionsWithStickToBottom: StoryObj = {
         <SideNavigationBar position="absolute" height="100%">
           <div className="items-container">
             <ItemsSection>
-              <MenuItem caption="Dashboard" icon={DashboardIcon} />
-              <MenuItem caption="Applications" icon={ApplicationIcon} />
+              <MenuItem caption="Dashboard" icon={()=> <CustomIcon name="dashboard"/>} />
+              <MenuItem caption="Applications" icon={()=> <CustomIcon name="application"/>} />
               <MenuItem caption="Settings" icon={Settings}>
                 <ul
                   style={{
@@ -135,12 +122,12 @@ export const MultipleSectionsWithStickToBottom: StoryObj = {
               </MenuItem>
             </ItemsSection>
             <ItemsSection>
-              <MenuItem caption="KPIs" icon={ChartAscendingIcon} />
-              <MenuItem caption="Reserved Instances" icon={ReservedInstancesIcon} />
-              <MenuItem caption="Estate Records" icon={ResourceIcon} />
+              <MenuItem caption="KPIs" icon={()=> <CustomIcon name="chartAscending"/>} />
+              <MenuItem caption="Reserved Instances" icon={()=> <CustomIcon name="reservedInstances"/>} />
+              <MenuItem caption="Estate Records" icon={()=> <CustomIcon name="resource"/>} />
             </ItemsSection>
             <ItemsSection stickToBottom>
-              <MenuItem caption="Archive" icon={ArchiveIcon} />
+              <MenuItem caption="Archive" icon={()=> <CustomIcon name="archive"/>} />
             </ItemsSection>
           </div>
         </SideNavigationBar>
@@ -170,8 +157,8 @@ export const Scrollable: StoryObj = {
         <SideNavigationBar position="absolute" height="100%">
           <div className="items-container">
             <ItemsSection>
-              <MenuItem caption="Dashboard" icon={Dashboard} />
-              <MenuItem caption="Applications" icon={ApplicationIcon} />
+              <MenuItem caption="Dashboard" icon={()=> <CustomIcon name="dashboard"/>} />
+              <MenuItem caption="Applications" icon={()=> <CustomIcon name="application"/>} />
               <MenuItem caption="Settings" icon={Settings}>
                 <ul
                   style={{
@@ -184,13 +171,13 @@ export const Scrollable: StoryObj = {
                   <li>Application settings</li>
                 </ul>
               </MenuItem>
-              <MenuItem caption="KPIs" icon={ChartAscendingIcon} />
-              <MenuItem caption="Reserved Instances" icon={ReservedInstancesIcon} />
-              <MenuItem caption="Estate Records" icon={ResourceIcon} />
-              <MenuItem caption="Cloud Accounts" icon={CloudIcon} />
+              <MenuItem caption="KPIs" icon={()=> <CustomIcon name="chartAscending"/>} />
+              <MenuItem caption="Reserved Instances" icon={()=> <CustomIcon name="reservedInstances"/>} />
+              <MenuItem caption="Estate Records" icon={()=> <CustomIcon name="resource"/>} />
+              <MenuItem caption="Cloud Accounts" icon={()=> <CustomIcon name="cloud"/>} />
             </ItemsSection>
             <ItemsSection stickToBottom>
-              <MenuItem caption="Archive" icon={ArchiveIcon} />
+              <MenuItem caption="Archive" icon={()=> <CustomIcon name="archive"/>} />
             </ItemsSection>
           </div>
         </SideNavigationBar>

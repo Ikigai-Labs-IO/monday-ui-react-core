@@ -1,6 +1,6 @@
 import * as React from "react";
 import { HTMLAttributes } from 'react';
-import { useDisclosure } from "./utils/hooks";
+import { useDisclosure } from "../Panel/hooks/useDisclosure";
 import { useEvent } from "./utils/useEvent";
 import { Placement, Position, getStyle, Margin, DEFAULT_MARGIN, PaddingWrapper } from "./utils/position";
 import { throttle } from "./utils/throttle";

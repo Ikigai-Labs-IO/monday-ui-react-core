@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useDisclosure } from "./hooks";
+import { useDisclosure } from "../../Panel/hooks/useDisclosure";
 import { PopoverConfig } from "../SideNavigationBarConstants";
 import { SideNavigationBarContext } from "./context";
 

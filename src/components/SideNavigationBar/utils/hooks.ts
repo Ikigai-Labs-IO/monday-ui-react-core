@@ -1,6 +1,6 @@
 import * as React from "react";
-import { useCallback, useState } from "react";
 import { SideNavigationBarContext } from "./context";
+import { useDisclosure } from "../../Panel/hooks/useDisclosure";
 
 export function useMenuBarConfiguration() {
   const context = React.useContext(SideNavigationBarContext);
@@ -9,23 +9,6 @@ export function useMenuBarConfiguration() {
     throw new Error("useMenuBarConfiguration must be used within a SideNavigationBarContextProvider");
   }
   return context;
-}
-
-export function useDisclosure(isOpenDefault = false) {
-  const [isOpen, setIsOpen] = useState(isOpenDefault);
-
-  const open = useCallback(() => setIsOpen(true), []);
-  const close = useCallback(() => setIsOpen(false), []);
-
-  const toggle = useCallback((toSet?: boolean) => {
-    if (typeof toSet !== "boolean") {
-      setIsOpen(state => !state);
-    } else {
-      setIsOpen(toSet);
-    }
-  }, []);
-
-  return { isOpen, open, close, toggle };
 }
 
 export function useTooltipHover() {

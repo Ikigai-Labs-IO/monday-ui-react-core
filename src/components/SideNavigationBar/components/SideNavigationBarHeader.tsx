@@ -4,7 +4,6 @@ const Logo = require("../../../assets/ikigai-logo.png");
 import { useMenuBarConfiguration } from "../utils/hooks";
 import styles from "../SideNavigationBar.module.scss";
 import Icon from "../../../components/Icon/Icon";
-import { SideNavExpandIcon } from "../../../components/Icon/Icons/components/SideNavExpand";
 
 interface SideNavigationBarHeaderProps {
   title: string;
@@ -39,7 +38,8 @@ export function SideNavigationBarHeader({ title }: SideNavigationBarHeaderProps)
 
       <BurgerWrapper expanded={expanded} onClick={handleExpand}>
         <Icon
-          icon={SideNavExpandIcon}
+          iconName={icon}
+          isCustomIcon={true}
           iconSize={24}
           iconType={Icon.type.SVG}
           style={{ padding: "0.25rem", cursor: "pointer" }}
