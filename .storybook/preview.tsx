@@ -32,10 +32,50 @@ import { ComponentNameDecorator, PropsTable, RelatedComponentsDecorator } from "
 import "monday-ui-style/dist/index.min.css";
 import "vibe-storybook-components/dist/index.css";
 import introCode from "../src/storybook/stand-alone-documentaion/playground/playground-helpers";
+import ThemeProvider from "../src/components/ThemeProvider/ThemeProvider";
 
 const fontLoader = async () => ({
   fonts: await document.fonts.ready // Fixing Chromatic tests flakiness - taking snapshots after fonts are loaded
 });
+
+const colorThemeConfig = {
+  light: {
+    'brand-colors': {
+      'brand-color': '#0073ea',
+      'brand-hover-color': '#0060b9',
+      'text-color-on-brand': '#ffffff',
+    },
+    'primary-color': '#0073ea',
+    'primary-hover-color': '#0060b9',
+    'primary-selected-color': '#cce5ff',
+    'primary-selected-hover-color': '#aed4fc',
+    'text-color-on-primary': '#ffffff'
+  },
+  black: {
+    'brand-colors': {
+      'brand-color': '#0073ea',
+      'brand-hover-color': '#0060b9',
+      'text-color-on-brand': '#ffffff',
+    },
+    'primary-color': '#0073ea',
+    'primary-hover-color': '#0060b9',
+    'primary-selected-color': '#133774',
+    'primary-selected-hover-color': '#0d2e65',
+    'text-color-on-primary': '#ffffff'
+  },
+  dark: {
+    'brand-colors': {
+      'brand-color': '#0073ea',
+      'brand-hover-color': '#0060b9',
+      'text-color-on-brand': '#ffffff',
+    },
+    'primary-color': '#0073ea',
+    'primary-hover-color': '#0060b9',
+    'primary-selected-color': '#133774',
+    'primary-selected-hover-color': '#0d2e65',
+    'text-color-on-primary': '#ffffff'
+  }
+}
 
 const preview: Preview = {
   parameters: {
@@ -107,9 +147,16 @@ const preview: Preview = {
   decorators: [
     (Story, { className }: { className: string }) => {
       return (
-        <MultipleStoryElementsWrapper className={className}>
-          <Story />
-        </MultipleStoryElementsWrapper>
+        <ThemeProvider
+          themeConfig={{
+            colors: colorThemeConfig,
+            name: 'Ikigai-Theme'
+          }}
+        >
+          <MultipleStoryElementsWrapper className={className}>
+            <Story />
+          </MultipleStoryElementsWrapper>
+        </ThemeProvider>
       );
     },
     withMemoryStats,
