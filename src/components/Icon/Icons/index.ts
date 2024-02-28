@@ -53,6 +53,7 @@ export {default as Counter} from './components/Counter';
 export {default as Country} from './components/Country';
 export {default as CreditCard} from './components/CreditCard';
 export {default as Custom} from './components/Custom';
+export { CustomIcon} from './components/CustomIcon';
 export {default as Cut} from './components/Cut';
 export {default as Dashboard} from './components/Dashboard';
 export {default as DashboardPrivate} from './components/DashboardPrivate';
