@@ -84,12 +84,19 @@ const preview: Preview = {
     },
     docs: {
       container: ({ children, context }: { children: any; context: any }) => (
-        <DocsContainer context={context}>
-          <Unstyled>
-            {children}
-            {<DocFooter feedbackFormLink="https://forms.monday.com/forms/213ebddcb0d423ae5b6178fb6e8f7b3d?r=use1" />}
-          </Unstyled>
-        </DocsContainer>
+        <ThemeProvider
+          themeConfig={{
+            colors: colorThemeConfig,
+            name: 'Ikigai-Theme'
+          }}
+        >
+          <DocsContainer context={context}>
+            <Unstyled>
+              {children}
+              {<DocFooter feedbackFormLink="https://forms.monday.com/forms/213ebddcb0d423ae5b6178fb6e8f7b3d?r=use1" />}
+            </Unstyled>
+          </DocsContainer>
+        </ThemeProvider>
       ),
       page: DocsPage,
       components: {
@@ -147,16 +154,9 @@ const preview: Preview = {
   decorators: [
     (Story, { className }: { className: string }) => {
       return (
-        <ThemeProvider
-          themeConfig={{
-            colors: colorThemeConfig,
-            name: 'Ikigai-Theme'
-          }}
-        >
-          <MultipleStoryElementsWrapper className={className}>
-            <Story />
-          </MultipleStoryElementsWrapper>
-        </ThemeProvider>
+        <MultipleStoryElementsWrapper className={className}>
+          <Story />
+        </MultipleStoryElementsWrapper>
       );
     },
     withMemoryStats,
