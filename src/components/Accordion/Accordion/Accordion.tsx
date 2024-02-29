@@ -103,14 +103,20 @@ const Accordion: VibeComponent<AccordionProps, unknown> & object = forwardRef(
           open: !disabled && isChildExpanded(itemIndex),
           expandCollapseComponentClassName: cx(styles.accordionItemExpandCollapse, {
             [styles.accordionItemExpandCollapseLast]: itemIndex === children.length - 1,
-            [styles.disabledAccordion]: disabled,
+            [styles.disabledAccordion]: disabled
           })
         });
       });
     }, [children, id, disabled, isChildExpanded, onChildClick]);
 
     return (
-      <div ref={mergedRef} className={cx(styles.accordion, className, { [styles.disabledAccordion]: disabled })} data-testid={dataTestId} id={id} style={disabled ? { pointerEvents: "none" } : undefined}>
+      <div
+        ref={mergedRef}
+        className={cx(styles.accordion, className, { [styles.disabledAccordion]: disabled })}
+        data-testid={dataTestId}
+        id={id}
+        style={disabled ? { pointerEvents: "none" } : undefined}
+      >
         {children && renderChildElements}
       </div>
     );

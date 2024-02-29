@@ -133,7 +133,11 @@ export const PreferencesAccordion = {
 
 export const WithoutBorder = {
   render: () => (
-    <Accordion className="monday-storybook-accordion_small-wrapepr accordionWithoutBorder" allowMultiple defaultIndex={[1, 3]} >
+    <Accordion
+      className="monday-storybook-accordion_small-wrapepr accordionWithoutBorder"
+      allowMultiple
+      defaultIndex={[1, 3]}
+    >
       <AccordionItem title="Notifications">
         <div className="monday-storybook-accordion_small-box" />
       </AccordionItem>
@@ -153,17 +157,22 @@ export const WithoutBorder = {
 export const DisabledAccordion = {
   render: () => (
     <>
-      <Accordion className="monday-storybook-accordion_small-wrapepr" allowMultiple defaultIndex={[1, 3]} disabled >
+      <Accordion className="monday-storybook-accordion_small-wrapepr" allowMultiple defaultIndex={[1, 3]} disabled>
         <AccordionItem title="Notifications">
-          <div className="monday-storybook-accordion_small-box"/>
+          <div className="monday-storybook-accordion_small-box" />
         </AccordionItem>
       </Accordion>
-      <Accordion className="monday-storybook-accordion_small-wrapepr accordionWithoutBorder" allowMultiple defaultIndex={[1, 3]} disabled >
+      <Accordion
+        className="monday-storybook-accordion_small-wrapepr accordionWithoutBorder"
+        allowMultiple
+        defaultIndex={[1, 3]}
+        disabled
+      >
         <AccordionItem title="Notifications">
-          <div className="monday-storybook-accordion_small-box"/>
+          <div className="monday-storybook-accordion_small-box" />
         </AccordionItem>
       </Accordion>
-  </>
+    </>
   ),
 
   name: "Disabled Accordion"
