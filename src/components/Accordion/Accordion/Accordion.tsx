@@ -33,6 +33,8 @@ interface AccordionProps extends VibeComponentProps {
    * Array of initial expanded indexes
    */
   defaultIndex?: Array<number>;
+
+  disabled?: boolean;
 }
 
 const Accordion: VibeComponent<AccordionProps, unknown> & object = forwardRef(
@@ -43,6 +45,7 @@ const Accordion: VibeComponent<AccordionProps, unknown> & object = forwardRef(
       "data-testid": dataTestId = COMPONENT_ID,
       defaultIndex = [],
       className = "",
+      disabled = false,
       id
     },
     ref
@@ -64,6 +67,7 @@ const Accordion: VibeComponent<AccordionProps, unknown> & object = forwardRef(
     const onChildClick = useCallback(
       (itemIndex: number) => {
         if (allowMultiple) {
+          if (disabled) return;
           const newExpandedItems = [...expandedItems];
           if (isChildExpanded(itemIndex)) {
             const index = newExpandedItems.indexOf(itemIndex);
@@ -83,7 +87,7 @@ const Accordion: VibeComponent<AccordionProps, unknown> & object = forwardRef(
           setExpandedItems([itemIndex]);
         }
       },
-      [isChildExpanded, expandedItems, allowMultiple]
+      [isChildExpanded, expandedItems, allowMultiple, disabled]
     );
 
     const renderChildElements = useMemo(() => {
@@ -96,16 +100,23 @@ const Accordion: VibeComponent<AccordionProps, unknown> & object = forwardRef(
           onClickAccordionCallback: () => {
             onChildClick(itemIndex);
           },
-          open: isChildExpanded(itemIndex),
+          open: !disabled && isChildExpanded(itemIndex),
           expandCollapseComponentClassName: cx(styles.accordionItemExpandCollapse, {
-            [styles.accordionItemExpandCollapseLast]: itemIndex === children.length - 1
+            [styles.accordionItemExpandCollapseLast]: itemIndex === children.length - 1,
+            [styles.disabledAccordion]: disabled
           })
         });
       });
-    }, [children, id, isChildExpanded, onChildClick]);
+    }, [children, id, disabled, isChildExpanded, onChildClick]);
 
     return (
-      <div ref={mergedRef} className={cx(styles.accordion, className)} data-testid={dataTestId} id={id}>
+      <div
+        ref={mergedRef}
+        className={cx(styles.accordion, className, { [styles.disabledAccordion]: disabled })}
+        data-testid={dataTestId}
+        id={id}
+        style={disabled ? { pointerEvents: "none" } : undefined}
+      >
         {children && renderChildElements}
       </div>
     );

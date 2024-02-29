@@ -130,3 +130,50 @@ export const PreferencesAccordion = {
 
   name: "Preferences Accordion"
 };
+
+export const WithoutBorder = {
+  render: () => (
+    <Accordion
+      className="monday-storybook-accordion_small-wrapepr accordionWithoutBorder"
+      allowMultiple
+      defaultIndex={[1, 3]}
+    >
+      <AccordionItem title="Notifications">
+        <div className="monday-storybook-accordion_small-box" />
+      </AccordionItem>
+      <AccordionItem title="Setting">
+        <div className="monday-storybook-accordion_small-box" />
+      </AccordionItem>
+      <AccordionItem title="Connectivity">
+        <div className="monday-storybook-accordion_small-box" />
+      </AccordionItem>
+    </Accordion>
+  ),
+
+  name: "Without Border",
+  play: accordionMultiActivePlaySuite
+};
+
+export const DisabledAccordion = {
+  render: () => (
+    <>
+      <Accordion className="monday-storybook-accordion_small-wrapepr" allowMultiple defaultIndex={[1, 3]} disabled>
+        <AccordionItem title="Notifications">
+          <div className="monday-storybook-accordion_small-box" />
+        </AccordionItem>
+      </Accordion>
+      <Accordion
+        className="monday-storybook-accordion_small-wrapepr accordionWithoutBorder"
+        allowMultiple
+        defaultIndex={[1, 3]}
+        disabled
+      >
+        <AccordionItem title="Notifications">
+          <div className="monday-storybook-accordion_small-box" />
+        </AccordionItem>
+      </Accordion>
+    </>
+  ),
+
+  name: "Disabled Accordion"
+};

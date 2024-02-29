@@ -56,7 +56,7 @@ const AccordionItem: React.FC<AccordionItemProps> = forwardRef(
     }, [onClickAccordionCallback, onClick]);
 
     return (
-      <div ref={mergedRef} className={className} id={id}>
+      <div ref={mergedRef} className={className} id={id} style={{ fontWeight: 700 }}>
         <ExpandCollapse
           iconSize={iconSize}
           id={`expand-collapse--${id}`}
