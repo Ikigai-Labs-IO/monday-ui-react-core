@@ -1,7 +1,6 @@
 import cx from "classnames";
 import React, { FC, ReactElement } from "react";
 import { ComponentDefaultTestId, getTestId } from "../../tests/test-ids-utils";
-import NavigationChevronRight from "../Icon/Icons/components/NavigationChevronRight";
 import { BreadcrumbsBarType } from "./BreadcrumbsConstants";
 import { BreadcrumbItemProps } from "./BreadcrumbItem/BreadcrumbItem";
 import { withStaticProps, VibeComponentProps } from "../../types";
@@ -32,10 +31,13 @@ const BreadcrumbsBar: FC<BreadcrumbBarProps> & { types?: typeof BreadcrumbsBarTy
         React.Children.map(children, (child, index) =>
           React.isValidElement(child)
             ? [
-                index > 0 && <CustomIcon className={styles.separatorIcon} iconSize="30" name="navigationForwardSlash" />,
+                index > 0 && (
+                  <CustomIcon className={styles.separatorIcon} iconSize="30" name="navigationForwardSlash" />
+                ),
                 React.cloneElement(child, {
                   ...child?.props,
-                  isClickable: type !== BreadcrumbsBar.types.INDICATION && !(index === React.Children.count(children) - 1)
+                  isClickable:
+                    type !== BreadcrumbsBar.types.INDICATION && !(index === React.Children.count(children) - 1)
                 })
               ]
             : null

@@ -48,7 +48,7 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
 }) => {
   const overrideDisabled = backwardCompatibilityForProperties([disabled, isDisabled], false) as boolean;
   const componentRef = useRef<HTMLSpanElement>(null);
-  const textLength = text.length > 15
+  const textLength = text.length > 15;
   const truncatedText = textLength ? `${text.slice(0, 15)}...` : text;
 
   return (

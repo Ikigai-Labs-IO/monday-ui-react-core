@@ -112,7 +112,9 @@ export const uiIcons = {
     </>
   ),
   navigationForwardSlash: (
-    <path d="M7.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0" 
-        transform="rotate(-30 4.646 2.646)" />
+    <path
+      d="M7.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0"
+      transform="rotate(-30 4.646 2.646)"
+    />
   )
 };
