@@ -1,7 +1,6 @@
 import { ComponentDefaultTestId, getTestId } from "../../../tests/test-ids-utils";
 import cx from "classnames";
 import React, { useRef } from "react";
-import useIsOverflowing from "../../../hooks/useIsOverflowing/useIsOverflowing";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import { backwardCompatibilityForProperties } from "../../../helpers/backwardCompatibilityForProperties";
 import { BreadcrumbContent } from "./BreadcrumbContent/BreadcrumbContent";
@@ -49,13 +48,14 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
 }) => {
   const overrideDisabled = backwardCompatibilityForProperties([disabled, isDisabled], false) as boolean;
   const componentRef = useRef<HTMLSpanElement>(null);
-  const isOverflowing = useIsOverflowing({ ref: componentRef });
+  const textLength = text.length > 15
+  const truncatedText = textLength ? `${text.slice(0, 15)}...` : text;
 
   return (
     <Tooltip
       disableDialogSlide={true}
       withoutDialog={false}
-      content={isOverflowing && text}
+      content={textLength && text}
       showTrigger={MOUSEENTER}
       hideTrigger={MOUSELEAVE}
     >
@@ -71,7 +71,7 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
           isClickable={isClickable}
           link={link}
           onClick={onClick}
-          text={text}
+          text={truncatedText}
           icon={icon}
           isCurrent={isCurrent}
           disabled={overrideDisabled}

@@ -6,6 +6,7 @@ import { BreadcrumbsBarType } from "./BreadcrumbsConstants";
 import { BreadcrumbItemProps } from "./BreadcrumbItem/BreadcrumbItem";
 import { withStaticProps, VibeComponentProps } from "../../types";
 import styles from "./BreadcrumbsBar.module.scss";
+import { CustomIcon } from "../Icon/Icons";
 
 export interface BreadcrumbBarProps extends VibeComponentProps {
   /** The type of the bar is responsible for whether it will be navigational or for indication only  */
@@ -31,10 +32,10 @@ const BreadcrumbsBar: FC<BreadcrumbBarProps> & { types?: typeof BreadcrumbsBarTy
         React.Children.map(children, (child, index) =>
           React.isValidElement(child)
             ? [
-                index > 0 && <NavigationChevronRight className={styles.separatorIcon} size="14" aria-hidden="true" />,
+                index > 0 && <CustomIcon className={styles.separatorIcon} iconSize="30" name="navigationForwardSlash" />,
                 React.cloneElement(child, {
                   ...child?.props,
-                  isClickable: type !== BreadcrumbsBar.types.INDICATION
+                  isClickable: type !== BreadcrumbsBar.types.INDICATION && !(index === React.Children.count(children) - 1)
                 })
               ]
             : null
