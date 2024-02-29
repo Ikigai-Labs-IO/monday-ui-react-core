@@ -2,12 +2,15 @@
 @import "../../styles/typography";
 @import "../../styles/states";
 $disabled-on-primary-color-opacity: 0.5;
+$transparent-gray: rgba(16, 24, 27, 0.40);
 
 .button {
   --loader-padding: 8px;
   outline: none;
   border: none;
   height: auto;
+  gap: 10px;
+  flex-shrink: 0;
   border-radius: var(--border-radius-small);
   cursor: pointer;
   white-space: nowrap;
@@ -104,8 +107,8 @@ $disabled-on-primary-color-opacity: 0.5;
 .sizeSmall {
   @include smoothing-text;
   @include vibe-text(text2, normal);
-  padding: var(--spacing-xs) var(--spacing-small);
-  height: 32px;
+  padding: 0 var(--spacing-small);
+  height: 24px;
   line-height: 24px;
 }
 
@@ -116,18 +119,19 @@ $disabled-on-primary-color-opacity: 0.5;
 .sizeMedium {
   @include smoothing-text;
   @include vibe-text(text1, normal);
-  padding: var(--spacing-small) var(--spacing-medium);
-  height: 40px;
+  padding: var(--spacing-xs) var(--spacing-medium);
+  height: 32px;
 }
 
 .sizeLarge {
   @include smoothing-text;
   @include vibe-text(text1, normal);
-  padding: 12px var(--spacing-large);
-  height: 48px;
+  padding: 8px var(--spacing-medium);
+  height: 42px;
 }
 
 .kindPrimary {
+  border: 1px solid $transparent-gray;
   color: var(--text-color-on-primary);
 }
 
@@ -166,10 +170,20 @@ $disabled-on-primary-color-opacity: 0.5;
   background: var(--negative-color);
 }
 
-.kindPrimary.colorNegativeActive,
-.kindPrimary.colorNegative:hover,
 .kindPrimary.colorNegative:focus {
+  background-color: var(--negative-color);
+}
+
+.kindPrimary.colorNegative:hover {
   background: var(--negative-color-hover);
+  border-color: var(--negative-color);
+  color: var(--negative-color);
+}
+
+.kindPrimary.colorNegative:active {
+  background-color: var(--negative-color);
+  color: white;
+  border-color: $transparent-gray;
 }
 
 .kindPrimary.colorOnPrimaryColor {
@@ -269,15 +283,12 @@ $disabled-on-primary-color-opacity: 0.5;
   background: var(--positive-color-selected);
 }
 
-.kindSecondary.colorNegative {
+.kindSecondary.colorNegative,
+.kindSecondary.colorNegativeActive,
+.kindSecondary.colorNegative:focus,
+.kindSecondary.colorNegative:hover {
   color: var(--negative-color);
   border-color: var(--negative-color);
-}
-
-.kindSecondary.colorNegativeActive,
-.kindSecondary.colorNegative:hover,
-.kindSecondary.colorNegative:focus {
-  background: var(--negative-color-selected);
 }
 
 .kindSecondary.colorOnPrimaryColor {
@@ -364,14 +375,15 @@ $disabled-on-primary-color-opacity: 0.5;
   background: var(--positive-color-selected);
 }
 
-.kindTertiary.colorNegative {
-  color: var(--negative-color);
-}
-
+.kindTertiary.colorNegative,
 .kindTertiary.colorNegativeActive,
 .kindTertiary.colorNegative:hover,
 .kindTertiary.colorNegative:focus {
-  background: var(--negative-color-selected);
+  color: var(--negative-color);
+}
+
+.kindTertiary.colorNegative:active {
+  color: black;
 }
 
 .kindTertiary.colorOnPrimaryColor {

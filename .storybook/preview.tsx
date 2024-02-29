@@ -41,39 +41,48 @@ const fontLoader = async () => ({
 const colorThemeConfig = {
   light: {
     'brand-colors': {
-      'brand-color': '#0073ea',
-      'brand-hover-color': '#0060b9',
+      'brand-color': '#7822FF',
+      'brand-hover-color': '#5605c0',
       'text-color-on-brand': '#ffffff',
     },
-    'primary-color': '#0073ea',
-    'primary-hover-color': '#0060b9',
+    'primary-color': '#7822FF',
+    'primary-hover-color': '#5605c0',
     'primary-selected-color': '#cce5ff',
     'primary-selected-hover-color': '#aed4fc',
-    'text-color-on-primary': '#ffffff'
+    'text-color-on-primary': '#ffffff',
+    'ui-border-color': '#e3e9ef',
+    'negative-color': '#FE4646',
+    'negative-color-hover': '#FFE6E6'
   },
   black: {
     'brand-colors': {
-      'brand-color': '#0073ea',
+      'brand-color': '#7822FF',
       'brand-hover-color': '#0060b9',
       'text-color-on-brand': '#ffffff',
     },
-    'primary-color': '#0073ea',
+    'primary-color': '#7822FF',
     'primary-hover-color': '#0060b9',
     'primary-selected-color': '#133774',
     'primary-selected-hover-color': '#0d2e65',
-    'text-color-on-primary': '#ffffff'
+    'text-color-on-primary': '#ffffff',
+    'ui-border-color': '#e3e9ef',
+    'negative-color': '#FE4646',
+    'negative-color-hover': '#FFE6E6'
   },
   dark: {
     'brand-colors': {
-      'brand-color': '#0073ea',
+      'brand-color': '#7822FF',
       'brand-hover-color': '#0060b9',
       'text-color-on-brand': '#ffffff',
     },
-    'primary-color': '#0073ea',
+    'primary-color': '#7822FF',
     'primary-hover-color': '#0060b9',
     'primary-selected-color': '#133774',
     'primary-selected-hover-color': '#0d2e65',
-    'text-color-on-primary': '#ffffff'
+    'text-color-on-primary': '#ffffff',
+    'ui-border-color': '#e3e9ef',
+    'negative-color': '#FE4646',
+    'negative-color-hover': '#FFE6E6'
   }
 }
 
