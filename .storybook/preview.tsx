@@ -42,11 +42,11 @@ const colorThemeConfig = {
   light: {
     'brand-colors': {
       'brand-color': '#7822FF',
-      'brand-hover-color': '#10181B',
+      'brand-hover-color': '#5605c0',
       'text-color-on-brand': '#ffffff',
     },
     'primary-color': '#7822FF',
-    'primary-hover-color': '#10181B',
+    'primary-hover-color': '#5605c0',
     'primary-selected-color': '#cce5ff',
     'primary-selected-hover-color': '#aed4fc',
     'text-color-on-primary': '#ffffff',
