@@ -139,7 +139,7 @@ export const OnColorStates = {
     <>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <span style={{ marginBottom: "var(--sb-spacing-small)" }}>Regular</span>
-        <div style={{background: "var(--primary-hover-color)", padding:"var(--spacing-medium)"}}>
+        <div style={{ background: "var(--primary-hover-color)", padding: "var(--spacing-medium)" }}>
           <Button color={Button.colors.ON_PRIMARY_COLOR} marginRight>
             Primary on color
           </Button>
@@ -152,7 +152,7 @@ export const OnColorStates = {
         </div>
         <br />
         <span style={{ marginBottom: "var(--sb-spacing-small)" }}>Disabled</span>
-        <div style={{background: "var(--primary-hover-color)", padding:"var(--spacing-medium)"}} >
+        <div style={{ background: "var(--primary-hover-color)", padding: "var(--spacing-medium)" }}>
           <Button color={Button.colors.ON_PRIMARY_COLOR} disabled marginRight>
             Primary on color
           </Button>
