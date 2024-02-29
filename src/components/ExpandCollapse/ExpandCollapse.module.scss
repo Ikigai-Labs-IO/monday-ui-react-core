@@ -26,6 +26,10 @@
 
 .header .headerContent {
   margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  font-style: normal;
 }
 
 .header .iconComponent {
@@ -51,7 +55,6 @@
 .showBorder {
   border: 1px solid var(--ui-border-color);
   .headerOpen {
-    border-bottom: 1px solid;
     border-color: var(--ui-border-color);
   }
 }
