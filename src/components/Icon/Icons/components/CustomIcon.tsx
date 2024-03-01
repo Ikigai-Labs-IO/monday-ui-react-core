@@ -17,9 +17,10 @@ const getPath = (name: PathName) => {
 interface CustomIconProps extends React.SVGAttributes<SVGElement> {
   iconSize?: string | number;
   name?: PathName;
+  fillColor?: string;
 }
 
-export const CustomIcon: React.FC<CustomIconProps> = ({ name, iconSize, ...props }) => {
+export const CustomIcon: React.FC<CustomIconProps> = ({ name, fillColor, iconSize, ...props }) => {
   if (typeof name !== "string") {
     return null;
   }
@@ -27,8 +28,8 @@ export const CustomIcon: React.FC<CustomIconProps> = ({ name, iconSize, ...props
 
   return (
     <svg
-      viewBox="0 0 20 20"
-      fill="currentColor"
+      viewBox="0 0 30 30"
+      fill={fillColor || "currentColor"}
       width={iconSize || "20"}
       height={iconSize || "20"}
       {...props}

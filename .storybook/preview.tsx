@@ -49,10 +49,15 @@ const colorThemeConfig = {
     'primary-hover-color': '#5605c0',
     'primary-selected-color': '#cce5ff',
     'primary-selected-hover-color': '#aed4fc',
+    'success-background-color': '#f0fff8',
     'text-color-on-primary': '#ffffff',
-    'ui-border-color': '#e3e9ef',
+    'primary-text-color': '#10181b',
     'negative-color': '#FE4646',
-    'negative-color-hover': '#FFE6E6'
+    'negative-color-hover': '#ffe6e6',
+    'warning-background-color': '#fff7e6',
+    'ui-border-color': '#e3e9ef',
+    'layout-border-color': '#e3e9ef',
+    'link-color': '#1f76c2'
   },
   black: {
     'brand-colors': {
