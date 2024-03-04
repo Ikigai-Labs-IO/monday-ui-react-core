@@ -5,6 +5,11 @@
   position: relative;
 }
 
+.extraLarge {
+  height: $avatar-size-extra-large;
+  width: $avatar-size-extra-large;
+}
+
 .large {
   height: $avatar-size-large;
   width: $avatar-size-large;
@@ -30,7 +35,7 @@
   width: 100%;
   position: relative;
   border: 1px solid;
-  border-radius: 50%;
+  border-radius: 100px;
   overflow: hidden;
   display: flex;
   justify-content: center;

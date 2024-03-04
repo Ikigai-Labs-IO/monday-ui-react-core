@@ -1,7 +1,8 @@
 @import "../../styles/typography";
-$avatar-icon-large: 28px;
-$avatar-icon-medium: 18px;
-$avatar-icon-small: 12px;
+$avatar-icon-extra-large: var(--spacing-xxl);
+$avatar-icon-large: var(--spacing-xl);
+$avatar-icon-medium: var(--spacing-large);
+$avatar-icon-small: var(--spacing-medium);
 $font-size-avatar-small: 12px;
 
 .contentImg {
@@ -13,7 +14,7 @@ $font-size-avatar-small: 12px;
 .contentText {
   font-family: var(--font-family);
   font-weight: 400;
-  line-height: 21px;
+  line-height: 15px;
   letter-spacing: -0.5px;
   display: flex;
   justify-content: center;
@@ -22,19 +23,21 @@ $font-size-avatar-small: 12px;
   height: 100%;
 }
 
-.contentTextLarge {
-  @include vibe-heading("h3", "normal");
-  font-family: var(--font-family) !important;
-}
-
-.contentTextMedium {
+.contentTextExtraLarge {
   @include vibe-text(text1, normal);
-  margin-top: 1px;
 }
 
+.contentTextLarge,
+.contentTextMedium,
 .contentTextSmall {
   margin-top: 1px;
   font-size: $font-size-avatar-small;
+  font-weight: 400;
+}
+
+.contentIconExtraLarge {
+  height: $avatar-icon-extra-large;
+  width: $avatar-icon-extra-large;
 }
 
 .contentIconLarge {
