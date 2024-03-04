@@ -32,7 +32,14 @@ const BreadcrumbsBar: FC<BreadcrumbBarProps> & { types?: typeof BreadcrumbsBarTy
           React.isValidElement(child)
             ? [
                 index > 0 && (
-                  <CustomIcon className={styles.separatorIcon} iconSize="30" name="navigationForwardSlash" />
+                  <li>
+                    <CustomIcon
+                      className={styles.separatorIcon}
+                      fillColor="#A2B1C1"
+                      iconSize="30"
+                      name="navigationSlash"
+                    />
+                  </li>
                 ),
                 React.cloneElement(child, {
                   ...child?.props,

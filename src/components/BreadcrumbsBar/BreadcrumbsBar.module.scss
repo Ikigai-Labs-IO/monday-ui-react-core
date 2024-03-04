@@ -6,6 +6,10 @@
 }
 
 .breadcrumbsBar ol .separatorIcon {
-  color: var(--secondary-text-color);
   flex-shrink: 0;
 }
+
+ol li{
+  list-style: none;
+}
+
