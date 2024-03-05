@@ -53,7 +53,8 @@ const colorThemeConfig = {
     'text-color-on-primary': '#ffffff',
     'ui-border-color': '#e3e9ef',
     'negative-color': '#FE4646',
-    'negative-color-hover': '#FFE6E6'
+    'negative-color-hover': '#FFE6E6',
+    "color-american_gray-selected": "#bfbfbf"
   },
   black: {
     'brand-colors': {
