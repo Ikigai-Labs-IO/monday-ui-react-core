@@ -58,6 +58,16 @@ export const Overview = {
 export const Size = {
   render: () => (
     <Flex direction={Flex.directions.COLUMN} gap={Flex.gaps.LARGE} align={Flex.align.START}>
+      <StoryDescription description="Extra Large" vertical align={Flex.align.START}>
+        <AvatarGroup size={Avatar.sizes.EXTRALARGE} type={Avatar.types.IMG} max={3}>
+          <Avatar type={Avatar.types.IMG} src={person1} ariaLabel="Hadas Fahri" />
+          <Avatar type={Avatar.types.IMG} src={person2} ariaLabel="Sergey Roytman" />
+          <Avatar type={Avatar.types.IMG} src={person3} ariaLabel="Yossi Saadi" />
+          <Avatar type={Avatar.types.IMG} src={person1} ariaLabel="Hadas Fahri" />
+          <Avatar type={Avatar.types.IMG} src={person2} ariaLabel="Sergey Roytman" />
+          <Avatar type={Avatar.types.IMG} src={person3} ariaLabel="Yossi Saadi" />
+        </AvatarGroup>
+      </StoryDescription>
       <StoryDescription description="Large" vertical align={Flex.align.START}>
         <AvatarGroup size={Avatar.sizes.LARGE} type={Avatar.types.IMG} max={3}>
           <Avatar type={Avatar.types.IMG} src={person1} ariaLabel="Hadas Fahri" />

@@ -34,6 +34,10 @@
     @include counterSize($avatar-size-large);
     padding: 0 var(--spacing-xs);
   }
+  &.extraLarge {
+    @include counterSize($avatar-size-extra-large);
+    padding: 0 var(--spacing-small);
+  }
 
   &.primary {
     color: var(--text-color-on-primary);
