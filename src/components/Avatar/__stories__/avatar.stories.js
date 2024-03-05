@@ -29,11 +29,34 @@ export const Overview = {
   name: "Overview",
 
   args: {
-    size: Avatar.sizes.LARGE,
+    size: Avatar.sizes.EXTRALARGE,
     src: window.location.origin + "/" + person1,
     type: Avatar.types.IMG,
     ariaLabel: "Hadas Fahri"
   }
+};
+
+export const Types = {
+  render: () => (
+    <>
+      <Avatar size={Avatar.sizes.LARGE} src={person1} type={Avatar.types.IMG} ariaLabel="Hadas Fahri" />
+      <Avatar
+        size={Avatar.sizes.LARGE}
+        type={Avatar.types.TEXT}
+        text="RM"
+        backgroundColor={Avatar.colors.DONE_GREEN}
+        ariaLabel="Ron Meir"
+      />
+      <AvatarGroup max={3} size={Avatar.sizes.LARGE}>
+        <Avatar type={Avatar.types.IMG} src={person3} ariaLabel="Hadas Fahri" />
+        <Avatar type={Avatar.types.TEXT} text="RS" backgroundColor={Avatar.colors.DONE_GREEN} ariaLabel="Ron Sergey" />
+        <Avatar type={Avatar.types.IMG} src={person2} ariaLabel="Sergey Roytman" />
+        <Avatar type={Avatar.types.IMG} src={person1} ariaLabel="Yossi Saadi" />
+      </AvatarGroup>
+    </>
+  ),
+
+  name: "Types"
 };
 
 export const Size = {
@@ -42,6 +65,7 @@ export const Size = {
       <Avatar size={Avatar.sizes.SMALL} src={person1} type={Avatar.types.IMG} ariaLabel="Hadas Fahri" />
       <Avatar size={Avatar.sizes.MEDIUM} src={person1} type={Avatar.types.IMG} ariaLabel="Hadas Fahri" />
       <Avatar size={Avatar.sizes.LARGE} src={person1} type={Avatar.types.IMG} ariaLabel="Hadas Fahri" />
+      <Avatar size={Avatar.sizes.EXTRALARGE} src={person1} type={Avatar.types.IMG} ariaLabel="Hadas Fahri" />
     </>
   ),
 
@@ -54,6 +78,7 @@ export const Disable = {
       <Avatar size={Avatar.sizes.SMALL} src={person1} type={Avatar.types.IMG} disabled />
       <Avatar size={Avatar.sizes.MEDIUM} src={person1} type={Avatar.types.IMG} disabled />
       <Avatar size={Avatar.sizes.LARGE} src={person1} type={Avatar.types.IMG} disabled />
+      <Avatar size={Avatar.sizes.EXTRALARGE} src={person1} type={Avatar.types.IMG} disabled />
     </>
   ),
   name: "Disable"
@@ -78,6 +103,13 @@ export const AvatarWithText = {
       />
       <Avatar
         size={Avatar.sizes.LARGE}
+        type={Avatar.types.TEXT}
+        text="RM"
+        backgroundColor={Avatar.colors.DONE_GREEN}
+        ariaLabel="Ron Meir"
+      />
+      <Avatar
+        size={Avatar.sizes.EXTRALARGE}
         type={Avatar.types.TEXT}
         text="RM"
         backgroundColor={Avatar.colors.DONE_GREEN}
@@ -110,6 +142,14 @@ export const SquareAvatar = {
       />
       <Avatar
         size={Avatar.sizes.LARGE}
+        type={Avatar.types.TEXT}
+        text="RM"
+        backgroundColor={Avatar.colors.WORKING_ORANGE}
+        square
+        ariaLabel="Ron Meir"
+      />
+      <Avatar
+        size={Avatar.sizes.EXTRALARGE}
         type={Avatar.types.TEXT}
         text="RM"
         backgroundColor={Avatar.colors.WORKING_ORANGE}
@@ -233,6 +273,7 @@ export const MultipleAvatars = {
   render: () => (
     <AvatarGroup max={2} size={Avatar.sizes.LARGE}>
       <Avatar type={Avatar.types.IMG} src={person1} ariaLabel="Hadas Fahri" />
+      <Avatar type={Avatar.types.TEXT} text="R" backgroundColor={Avatar.colors.BRIGHT_BLUE} ariaLabel="Ron" />
       <Avatar type={Avatar.types.IMG} src={person2} ariaLabel="Sergey Roytman" />
       <Avatar type={Avatar.types.IMG} src={person3} ariaLabel="Yossi Saadi" />
     </AvatarGroup>
