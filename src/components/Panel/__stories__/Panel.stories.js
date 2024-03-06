@@ -4,6 +4,7 @@ import { useDisclosure } from "../hooks/useDisclosure";
 import Button from "../../Button/Button";
 import Text from "../../Text/Text";
 import { Panel, PanelHeader, PanelFooter } from "../Panel";
+import { PANEL_SIZES } from "../PanelConstants";
 import { createComponentTemplate } from "vibe-storybook-components";
 
 const metaSettings = createStoryMetaSettingsDecorator({
@@ -63,7 +64,7 @@ export const Default = {
   parameters: {
     docs: {
       story: {
-        height: "450px"
+        height: "400px"
       }
     }
   }
@@ -94,7 +95,7 @@ export const Footer = {
   parameters: {
     docs: {
       story: {
-        height: "450px"
+        height: "400px"
       }
     }
   }
@@ -103,7 +104,6 @@ export const Footer = {
 export const Side = {
   render: () => {
     const { isOpen: isOpenLeft, open: openLeft, close: closeLeft } = useDisclosure();
-
     const { isOpen: isOpenRight, open: openRight, close: closeRight } = useDisclosure();
 
     return (
@@ -140,67 +140,158 @@ export const Side = {
   parameters: {
     docs: {
       story: {
-        height: "450px"
+        height: "400px"
       }
     }
   }
 };
 
-export const CustomWidth = {
+export const SmallPanel = {
   render: () => {
-    const { isOpen: isOpenPercent, open: openPercent, close: closePercent } = useDisclosure();
-
-    const { isOpen: isOpenRem, open: openRem, close: closeRem } = useDisclosure();
-
-    const { isOpen: isOpenPx, open: openPx, close: closePx } = useDisclosure();
+    const { isOpen: isOpenLeftSmallPanel, open: openLeftSmallPanel, close: closeLeftSmallPanel } = useDisclosure();
+    const { isOpen: isOpenRightSmallPanel, open: openRightSmallPanel, close: closeRightSmallPanel } = useDisclosure();
 
     return (
       <Container>
         <Row justify="space-around">
           <Col md={2}>
-            <Button onClick={openPercent}>50% Panel</Button>
+            <Button onClick={openLeftSmallPanel}>← Small Panel(on Left)</Button>
           </Col>
           <Col md={2}>
-            <Button onClick={openRem}>50rem sidebar on Left</Button>
-          </Col>
-          <Col md={2}>
-            <Button onClick={openPx}>700px sidebar</Button>
+            <Button onClick={openRightSmallPanel}>Small Panel(on Right) →</Button>
           </Col>
         </Row>
+
         <Panel
-          width="50%"
-          header={<PanelHeader title="Title" onClick={closePercent} />}
-          isOpen={isOpenPercent}
-          onClick={closePercent}
-        >
-          Panel Content
-        </Panel>
-        <Panel
-          width="50rem"
+          size={PANEL_SIZES.SMALL}
           side="onLeft"
-          header={<PanelHeader title="Title" onClick={closeRem} />}
-          isOpen={isOpenRem}
-          onClick={closeRem}
+          header={<PanelHeader title="Title" onClick={closeLeftSmallPanel} />}
+          footer={<PanelFooter />}
+          isOpen={isOpenLeftSmallPanel}
+          onClick={closeLeftSmallPanel}
         >
-          Panel Content on Left
+          Small panel content on left.
         </Panel>
         <Panel
-          width="700px"
-          header={<PanelHeader title="Title" onClick={closePx} />}
-          isOpen={isOpenPx}
-          onClick={closePx}
+          size={PANEL_SIZES.SMALL}
+          header={<PanelHeader title="Title" onClick={closeRightSmallPanel} />}
+          footer={<PanelFooter />}
+          isOpen={isOpenRightSmallPanel}
+          onClick={closeRightSmallPanel}
         >
-          Panel Content
+          Small panel content on right.
         </Panel>
       </Container>
     );
   },
 
-  name: "custom width",
+  name: "SmallPanel",
   parameters: {
     docs: {
       story: {
-        height: "450px"
+        height: "300px"
+      }
+    }
+  }
+};
+
+export const MediumPanel = {
+  render: () => {
+    const { isOpen: isOpenLeftMediumPanel, open: openLeftMediumPanel, close: closeLeftMediumPanel } = useDisclosure();
+    const {
+      isOpen: isOpenRightMediumPanel,
+      open: openRightMediumPanel,
+      close: closeRightMediumPanel
+    } = useDisclosure();
+
+    return (
+      <Container>
+        <Row justify="space-around">
+          <Col md={2}>
+            <Button onClick={openLeftMediumPanel}>← Medium Panel(on Left)</Button>
+          </Col>
+          <Col md={2}>
+            <Button onClick={openRightMediumPanel}>Medium Panel(on Right) →</Button>
+          </Col>
+        </Row>
+
+        <Panel
+          size={PANEL_SIZES.MEDIUM}
+          side="onLeft"
+          header={<PanelHeader title="Title" onClick={closeLeftMediumPanel} />}
+          footer={<PanelFooter />}
+          isOpen={isOpenLeftMediumPanel}
+          onClick={closeLeftMediumPanel}
+        >
+          Medium panel content on left.
+        </Panel>
+        <Panel
+          size={PANEL_SIZES.MEDIUM}
+          header={<PanelHeader title="Title" onClick={closeRightMediumPanel} />}
+          footer={<PanelFooter />}
+          isOpen={isOpenRightMediumPanel}
+          onClick={closeRightMediumPanel}
+        >
+          Medium panel content on right.
+        </Panel>
+      </Container>
+    );
+  },
+
+  name: "MediumPanel",
+  parameters: {
+    docs: {
+      story: {
+        height: "350px"
+      }
+    }
+  }
+};
+
+export const LargePanel = {
+  render: () => {
+    const { isOpen: isOpenLeftLargePanel, open: openLeftLargePanel, close: closeLeftLargePanel } = useDisclosure();
+    const { isOpen: isOpenRightLargePanel, open: openRightLargePanel, close: closeRightLargePanel } = useDisclosure();
+
+    return (
+      <Container>
+        <Row justify="space-around">
+          <Col md={2}>
+            <Button onClick={openLeftLargePanel}>← Large Panel(on Left)</Button>
+          </Col>
+          <Col md={2}>
+            <Button onClick={openRightLargePanel}>Large Panel(on Right) →</Button>
+          </Col>
+        </Row>
+
+        <Panel
+          size={PANEL_SIZES.LARGE}
+          side="onLeft"
+          header={<PanelHeader title="Title" onClick={closeLeftLargePanel} />}
+          footer={<PanelFooter />}
+          isOpen={isOpenLeftLargePanel}
+          onClick={closeLeftLargePanel}
+        >
+          Large panel content on left.
+        </Panel>
+        <Panel
+          size={PANEL_SIZES.LARGE}
+          header={<PanelHeader title="Title" onClick={closeRightLargePanel} />}
+          footer={<PanelFooter />}
+          isOpen={isOpenRightLargePanel}
+          onClick={closeRightLargePanel}
+        >
+          Large panel content on right.
+        </Panel>
+      </Container>
+    );
+  },
+
+  name: "LargePanel",
+  parameters: {
+    docs: {
+      story: {
+        height: "400px"
       }
     }
   }
