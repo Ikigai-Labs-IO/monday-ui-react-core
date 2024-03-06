@@ -55,7 +55,8 @@ const colorThemeConfig = {
     'negative-color': '#fe4646',
     'negative-color-hover': '#ffe6e6',
     'divider-selected': '#10181b',
-    'surface-alt': '#414d5a'
+    'surface-alt': '#414d5a',
+    "color-american_gray-selected": "#bfbfbf"
   },
   black: {
     'brand-colors': {
