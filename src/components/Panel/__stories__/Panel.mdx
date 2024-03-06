@@ -23,13 +23,13 @@ Panels are distinct sections or interfaces within an application designed to hou
 
 <TipBenefits />
 
-### default
+### Default
 
 <Canvas>
   <Story of={PanelStories.Default} />
 </Canvas>
 
-### footer
+### With Footer
 
 You can pass Buttons to footer, and it will displayed at the bottom of the Panel.
 
@@ -37,7 +37,7 @@ You can pass Buttons to footer, and it will displayed at the bottom of the Panel
   <Story of={PanelStories.Footer} />
 </Canvas>
 
-### side
+### Side
 
 Panel in default is displayed on the right side, but optionally you can change this behaviour with simple prop `side='onLeft'`.
 
@@ -45,10 +45,25 @@ Panel in default is displayed on the right side, but optionally you can change t
   <Story of={PanelStories.Side} />
 </Canvas>
 
-### width
+### Size
 
-If you don't need default breakpoints and needs just to hardcode `width` value you can provide it with `width` prop.
+If you don't need default breakpoint you can change the size of Panel by provide it the `size` prop.
+Panels appear in 3 sizes: Small, Medium, and Large.
+
+#### Small Panel
 
 <Canvas>
-  <Story of={PanelStories.CustomWidth} />
+  <Story of={PanelStories.SmallPanel} />
+</Canvas>
+
+#### Medium Panel(Default)
+
+<Canvas>
+  <Story of={PanelStories.MediumPanel} />
+</Canvas>
+
+#### Large Panel
+
+<Canvas>
+  <Story of={PanelStories.LargePanel} />
 </Canvas>

@@ -59,7 +59,8 @@ const colorThemeConfig = {
     'surface-alt': '#414d5a',
     'warning-background-color': '#fff7e6',
     'layout-border-color': '#e3e9ef',
-    'link-color': '#1f76c2'
+    'link-color': '#1f76c2',
+    "color-american_gray-selected": "#bfbfbf"
   },
   black: {
     'brand-colors': {

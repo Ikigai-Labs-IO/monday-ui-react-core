@@ -4,6 +4,7 @@ import Text from "../Text/Text";
 import styles from "./Panel.module.scss";
 import Icon from "../../components/Icon/Icon";
 import Close from "../../components/Icon/Icons/components/Close";
+import { PANEL_SIZES, PanelSize, sizeToWidth } from "./PanelConstants";
 
 type HeaderProps = {
   side?: string;
@@ -24,7 +25,7 @@ export function PanelHeader({ side = "onRight", title, onClick }: HeaderProps) {
       >
         <header>
           <Text type={Text.types.TEXT2} element="span" weight={Text.weights.NORMAL}>
-            <div style={{ marginLeft: reverse ? "1rem" : "0", fontWeight: "500", textTransform: "capitalize" }}>
+            <div className={styles.headerTextStyled} style={{ marginLeft: reverse ? "1rem" : "0" }}>
               {title}
             </div>
           </Text>
@@ -42,8 +43,10 @@ type PanelFooterProps = {
 export function PanelFooter({ close }: PanelFooterProps) {
   return (
     <div className={styles.panelFooterStyled}>
-      <Button onClick={close}>Cancel</Button>
-      <Button>Update</Button>
+      <Button onClick={close} kind={Button.kinds.SECONDARY}>
+        Label
+      </Button>
+      <Button>Label</Button>
     </div>
   );
 }
@@ -53,7 +56,7 @@ type PanelProps = {
   caption?: string;
   isOpen?: boolean;
   side?: "onLeft" | "onRight";
-  width?: number | string;
+  size?: PanelSize;
   reverse?: boolean;
   onClick?: () => void;
   footer?: React.ReactNode;
@@ -69,6 +72,7 @@ export function Panel({
   footer,
   header,
   contentStyles,
+  size = PANEL_SIZES.MEDIUM,
   onClick = () => undefined,
   ...props
 }: PanelProps) {
@@ -89,6 +93,7 @@ export function Panel({
   }, [isOpen, onClick]);
 
   const reverse = side === "onLeft";
+  const width = sizeToWidth[size];
   return (
     <>
       <div
@@ -105,8 +110,9 @@ export function Panel({
         <div
           className={styles.innerStyled}
           style={{
-            borderLeft: side !== "onLeft" && "1px solid #C8C8C8",
-            borderRight: reverse && "1px slid #C8C8C8"
+            borderLeft: side !== "onLeft" && "1px solid var(--ui-border-color)",
+            borderRight: reverse && "1px solid var(--ui-border-color)",
+            width: isOpen ? width : "0"
           }}
         >
           {isOpen && (
