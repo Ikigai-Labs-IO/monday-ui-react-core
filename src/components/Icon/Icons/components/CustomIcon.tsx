@@ -28,7 +28,7 @@ export const CustomIcon: React.FC<CustomIconProps> = ({ name, fillColor, iconSiz
 
   return (
     <svg
-      viewBox="0 0 30 30"
+      viewBox="0 0 27 30"
       fill={fillColor || "currentColor"}
       width={iconSize || "20"}
       height={iconSize || "20"}

@@ -33,6 +33,7 @@ import "monday-ui-style/dist/index.min.css";
 import "vibe-storybook-components/dist/index.css";
 import introCode from "../src/storybook/stand-alone-documentaion/playground/playground-helpers";
 import ThemeProvider from "../src/components/ThemeProvider/ThemeProvider";
+import '../src/styles/global.css';
 
 const fontLoader = async () => ({
   fonts: await document.fonts.ready // Fixing Chromatic tests flakiness - taking snapshots after fonts are loaded
@@ -51,11 +52,12 @@ const colorThemeConfig = {
     'primary-selected-hover-color': '#aed4fc',
     'success-background-color': '#f0fff8',
     'text-color-on-primary': '#ffffff',
-    'primary-text-color': '#10181b',
-    'negative-color': '#FE4646',
-    'negative-color-hover': '#ffe6e6',
-    'warning-background-color': '#fff7e6',
     'ui-border-color': '#e3e9ef',
+    'negative-color': '#fe4646',
+    'negative-color-hover': '#ffe6e6',
+    'divider-selected': '#10181b',
+    'surface-alt': '#414d5a',
+    'warning-background-color': '#fff7e6',
     'layout-border-color': '#e3e9ef',
     'link-color': '#1f76c2'
   },

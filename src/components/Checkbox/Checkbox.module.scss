@@ -1,7 +1,7 @@
 @import "~monday-ui-style/dist/mixins";
 @import "../../styles/typography";
 @import "../../styles/states";
-$checkbox-size: 16px;
+$checkbox-size: 17px;
 
 @mixin hover-selected {
   background-color: var(--primary-hover-color);
@@ -30,7 +30,7 @@ $checkbox-size: 16px;
   width: $checkbox-size;
   border: 1px solid;
   border-color: var(--ui-border-color);
-  border-radius: 2px;
+  border-radius: var(--border-radius-small);
   transition: transform var(--motion-productive-short) var(--motion-timing-enter);
   position: relative;
   overflow: hidden;
@@ -74,6 +74,7 @@ $checkbox-size: 16px;
 
 /* For any active attribute in the hidden checkbox, we will change the appearance of the checkbox we drew in its place. */
 
+.input:active + .checkbox,
 .input:focus + .checkbox {
   @include hover-unselected;
 }
@@ -84,10 +85,10 @@ $checkbox-size: 16px;
 
 .input:focus-visible + .checkbox {
   outline: none;
-  border: 1px solid;
+  border: 1px solid var(--ui-border-color);
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px hsla(209, 100%, 50%, 0.5);
-  border-radius: 2px;
+  border-radius: var(--border-radius-small);
 }
 
 .input:checked:focus + .checkbox:after,
@@ -102,18 +103,8 @@ $checkbox-size: 16px;
 
 .input:checked + .checkbox,
 .input:indeterminate + .checkbox {
-  background-color: var(--primary-color);
-  border-color: transparent;
-}
-
-.input:checked + .checkbox:hover,
-.input:indeterminate + .checkbox:hover {
-  @include hover-selected;
-}
-
-.input:checked + .checkbox:hover:after,
-.input:indeterminate + .checkbox:hover:after {
-  background-color: var(--primary-hover-color);
+  background-color: var(--surface-alt);
+  border-color: var(--divider-selected);
 }
 
 .input:checked + .checkbox:after,
