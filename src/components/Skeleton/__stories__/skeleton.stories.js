@@ -166,3 +166,44 @@ export const UpdateInTheSystem = {
 
   name: "Update in the system"
 };
+
+export const SingleBarSkeleton = {
+  render: () => (
+    <p className="monday-storybook-skeleton_text-wrapper">
+      <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} />
+    </p>
+  ),
+
+  name: "Single Bar"
+};
+
+export const ParagraphSkeleton = {
+  render: () => (
+    <p className="monday-storybook-skeleton_text-wrapper">
+      <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} width={800} />
+      <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} width={800} />
+      <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} width={450} />
+    </p>
+  ),
+
+  name: "Paragraph"
+};
+
+export const ActivitySkeleton = {
+  render: () => (
+    <div className="monday-storybook-skeleton_article">
+      <div className="monday-storybook-skeleton_rules-row" style={{ alignItems: "flex-start", display: "flex" }}>
+        <Skeleton type={Skeleton.types.CIRCLE} width={25} height={25} />
+      </div>
+      <div className="monday-storybook-skeleton_aside" style={{ marginTop: "var(--spacing-small)" }}>
+        <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} width={200} />
+        <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} width={800} />
+        <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} width={800} />
+        <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} width={800} />
+        <Skeleton type={Skeleton.types.TEXT} size={Skeleton.sizes.TEXT.SMALL} width={400} />
+      </div>
+    </div>
+  ),
+
+  name: "Activity"
+};
