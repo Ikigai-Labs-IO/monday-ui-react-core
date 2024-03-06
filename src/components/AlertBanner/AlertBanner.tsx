@@ -128,6 +128,7 @@ const AlertBanner: VibeComponent<AlertBannerProps> & {
               name={iconFilled ? (`${iconName}Filled` as PathName) : (iconName as PathName)}
               iconSize="25"
               fillColor={fillColor}
+              viewBox="0 -2 27 30"
             />
             {children.map(
               (
