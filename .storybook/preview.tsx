@@ -56,7 +56,12 @@ const colorThemeConfig = {
     'negative-color-hover': '#ffe6e6',
     'divider-selected': '#10181b',
     'surface-alt': '#414d5a',
-    "color-american_gray-selected": "#bfbfbf"
+    "color-american_gray-selected": "#bfbfbf",
+    'background-greenbold': '#25d184',
+    'success-background-color': '#f0fff8',
+    'warning-background-color': '#fff7e6',
+    'layout-border-color': '#e3e9ef',
+    'link-color': '#1f76c2'
   },
   black: {
     'brand-colors': {
