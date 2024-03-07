@@ -1,7 +1,6 @@
 import AlertBanner from "../AlertBanner";
 import AlertBannerText from "../AlertBannerText/AlertBannerText";
 import AlertBannerLink from "../AlertBannerLink/AlertBannerLink";
-import AlertBannerButton from "../AlertBannerButton/AlertBannerButton";
 import { createStoryMetaSettingsDecorator } from "../../../storybook/functions/createStoryMetaSettingsDecorator";
 import "./alertBanner.stories.scss";
 
@@ -14,7 +13,6 @@ const alertBannerTemplate = args => {
   return (
     <AlertBanner {...args}>
       <AlertBannerText text={args.bannerText} />
-      <AlertBannerLink text={args.linkText} href="https://monday.com" />
     </AlertBanner>
   );
 };
@@ -32,7 +30,6 @@ export const Overview = {
 
   args: {
     bannerText: "Alert banner message",
-    linkText: "this is a CTA",
     className: "monday-storybook-alert-banner_big-container"
   }
 };
@@ -41,24 +38,28 @@ export const Types = {
   render: () => (
     <div className="monday-storybook-alert-banner_column-wrapper monday-storybook-alert-banner_big-container">
       <AlertBanner>
-        <AlertBannerText text="Alert banner message" />
-        <AlertBannerLink text="this is a CTA" href="https://monday.com" />
+        <AlertBannerText text="Informative text" />
       </AlertBanner>
+      <AlertBanner iconFilled>
+        <AlertBannerText text="Informative text" />
+      </AlertBanner>
+
       <AlertBanner backgroundColor={AlertBanner.backgroundColors.POSITIVE}>
-        <AlertBannerText text="Alert banner message" />
-        <AlertBannerLink text="this is a CTA" href="https://monday.com" />
+        <AlertBannerText text="Success" />
       </AlertBanner>
-      <AlertBanner backgroundColor={AlertBanner.backgroundColors.NEGATIVE}>
-        <AlertBannerText text="Alert banner message" />
-        <AlertBannerLink text="this is a CTA" href="https://monday.com" />
+      <AlertBanner backgroundColor={AlertBanner.backgroundColors.POSITIVE} iconFilled>
+        <AlertBannerText text="Success" />
       </AlertBanner>
+
       <AlertBanner backgroundColor={AlertBanner.backgroundColors.WARNING}>
-        <AlertBannerText text="Alert banner message" />
-        <AlertBannerLink text="this is a CTA" href="https://monday.com" />
+        <AlertBannerText text="Warning" />
       </AlertBanner>
-      <AlertBanner backgroundColor={AlertBanner.backgroundColors.DARK}>
-        <AlertBannerText text="Alert banner message" />
-        <AlertBannerLink text="this is a CTA" href="https://monday.com" />
+
+      <AlertBanner backgroundColor={AlertBanner.backgroundColors.NEGATIVE}>
+        <AlertBannerText text="Error" />
+      </AlertBanner>
+      <AlertBanner backgroundColor={AlertBanner.backgroundColors.NEGATIVE} iconFilled>
+        <AlertBannerText text="Error" />
       </AlertBanner>
     </div>
   ),
@@ -68,9 +69,8 @@ export const Types = {
 
 export const AlertBannerWithButton = {
   render: () => (
-    <AlertBanner className="monday-storybook-alert-banner_big-container">
+    <AlertBanner className="monday-storybook-alert-banner_big-container" bannerButton bannerButtonText="Label">
       <AlertBannerText text="Lorem ipsum dolor sit amet" />
-      <AlertBannerButton>Lorem Ipsum</AlertBannerButton>
     </AlertBanner>
   ),
 
@@ -91,7 +91,7 @@ export const AlertBannerWithLink = {
 export const AlertBannerAsAnAnnouncement = {
   render: () => (
     <AlertBanner
-      backgroundColor={AlertBanner.backgroundColors.DARK}
+      backgroundColor={AlertBanner.backgroundColors.PRIMARY}
       className="monday-storybook-alert-banner_big-container"
     >
       <AlertBannerText text="Join us at Elevate 2022" />

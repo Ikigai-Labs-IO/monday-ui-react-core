@@ -2,10 +2,11 @@
   text-decoration: underline;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+  color: var(--link-color);
 }
 
 .bannerLinkTextColorOnPrimary {
-  color: var(--text-color-on-primary);
+  color: var(--link-color);
 }
 
 .bannerLinkTextColorOnInverted {

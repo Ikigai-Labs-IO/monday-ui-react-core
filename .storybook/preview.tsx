@@ -34,6 +34,7 @@ import "vibe-storybook-components/dist/index.css";
 import introCode from "../src/storybook/stand-alone-documentaion/playground/playground-helpers";
 import ThemeProvider from "../src/components/ThemeProvider/ThemeProvider";
 import '../src/styles/global.css';
+import { palette } from "../src/styles/palette";
 
 const fontLoader = async () => ({
   fonts: await document.fonts.ready // Fixing Chromatic tests flakiness - taking snapshots after fonts are loaded
@@ -42,56 +43,56 @@ const fontLoader = async () => ({
 const colorThemeConfig = {
   light: {
     'brand-colors': {
-      'brand-color': '#7822FF',
-      'brand-hover-color': '#5605c0',
-      'text-color-on-brand': '#ffffff',
+      'brand-color': palette.purple.purple500,
+      'brand-hover-color': palette.purple.purple600,
+      'text-color-on-brand': palette.white,
     },
-    'primary-color': '#7822FF',
-    'primary-hover-color': '#5605c0',
-    'primary-selected-color': '#cce5ff',
-    'primary-selected-hover-color': '#aed4fc',
-    'text-color-on-primary': '#ffffff',
-    'ui-border-color': '#e3e9ef',
-    'negative-color': '#fe4646',
-    'negative-color-hover': '#ffe6e6',
-    'divider-selected': '#10181b',
-    'surface-alt': '#414d5a',
-    "color-american_gray-selected": "#bfbfbf",
-    'background-greenbold': '#25d184',
-    'success-background-color': '#f0fff8',
-    'warning-background-color': '#fff7e6',
-    'layout-border-color': '#e3e9ef',
-    'link-color': '#1f76c2'
+    'primary-color': palette.purple.purple500,
+    'primary-hover-color': palette.purple.purple600,
+    'primary-selected-color': palette.blue.blue100,
+    'primary-selected-hover-color': palette.blue.blue200,
+    'text-color-on-primary': palette.white,
+    'ui-border-color': palette.grey.grey200,
+    'negative-color': palette.red.red500,
+    'negative-color-hover': palette.red.red100,
+    'divider-selected': palette.grey.grey900,
+    'surface-alt': palette.grey.grey700,
+    "color-american_gray-selected": palette.grey.grey75,
+    'warning-background-color': palette.orange.orange100,
+    'layout-border-color': palette.grey.grey200,
+    'link-color':palette.blue.blue600,
+    'background-greenbold': palette.green.green500,
+    'success-background-color': palette.green.green100
   },
   black: {
     'brand-colors': {
-      'brand-color': '#7822FF',
-      'brand-hover-color': '#0060b9',
-      'text-color-on-brand': '#ffffff',
+      'brand-color': palette.purple.purple500,
+      'brand-hover-color': palette.blue.blue500,
+      'text-color-on-brand': palette.white,
     },
-    'primary-color': '#7822FF',
-    'primary-hover-color': '#0060b9',
-    'primary-selected-color': '#133774',
-    'primary-selected-hover-color': '#0d2e65',
-    'text-color-on-primary': '#ffffff',
-    'ui-border-color': '#e3e9ef',
-    'negative-color': '#FE4646',
-    'negative-color-hover': '#FFE6E6'
+    'primary-color': palette.purple.purple500,
+    'primary-hover-color': palette.blue.blue500,
+    'primary-selected-color': palette.navy.navy500,
+    'primary-selected-hover-color': palette.darkBlue.darkBlue500,
+    'text-color-on-primary': palette.white,
+    'ui-border-color': palette.grey.grey200,
+    'negative-color': palette.red.red500,
+    'negative-color-hover': palette.red.red100
   },
   dark: {
     'brand-colors': {
-      'brand-color': '#7822FF',
-      'brand-hover-color': '#0060b9',
-      'text-color-on-brand': '#ffffff',
+      'brand-color': palette.purple.purple500,
+      'brand-hover-color': palette.blue.blue500,
+      'text-color-on-brand': palette.white,
     },
-    'primary-color': '#7822FF',
-    'primary-hover-color': '#0060b9',
-    'primary-selected-color': '#133774',
-    'primary-selected-hover-color': '#0d2e65',
-    'text-color-on-primary': '#ffffff',
-    'ui-border-color': '#e3e9ef',
-    'negative-color': '#FE4646',
-    'negative-color-hover': '#FFE6E6'
+    'primary-color': palette.purple.purple500,
+    'primary-hover-color': palette.blue.blue500,
+    'primary-selected-color': palette.navy.navy500,
+    'primary-selected-hover-color': palette.darkBlue.darkBlue500,
+    'text-color-on-primary': palette.white,
+    'ui-border-color': palette.grey.grey200,
+    'negative-color': palette.red.red500,
+    'negative-color-hover': palette.red.red100
   }
 }
 

@@ -18,9 +18,10 @@ interface CustomIconProps extends React.SVGAttributes<SVGElement> {
   iconSize?: string | number;
   name?: PathName;
   fillColor?: string;
+  viewBox?: string;
 }
 
-export const CustomIcon: React.FC<CustomIconProps> = ({ name, fillColor, iconSize, ...props }) => {
+export const CustomIcon: React.FC<CustomIconProps> = ({ name, fillColor, iconSize, viewBox, ...props }) => {
   if (typeof name !== "string") {
     return null;
   }
@@ -28,7 +29,7 @@ export const CustomIcon: React.FC<CustomIconProps> = ({ name, fillColor, iconSiz
 
   return (
     <svg
-      viewBox="0 0 27 30"
+      viewBox={viewBox || "0 0 27 30"}
       fill={fillColor || "currentColor"}
       width={iconSize || "20"}
       height={iconSize || "20"}
