@@ -28,12 +28,7 @@ const AlertBannerButton: FC<AlertBannerButtonProps> = ({
       data-testid={dataTestId || getTestId(ComponentDefaultTestId.ALERT_BANNER_BUTTON, id)}
       id={id}
     >
-      <Button
-        {...overrideButtonProps}
-        size={Button.sizes.SMALL}
-        className={cx(styles.bannerButton)}
-        color={Button.colors.ON_PRIMARY_COLOR}
-      />
+      <Button {...overrideButtonProps} size={Button.sizes.SMALL} className={cx(styles.bannerButton)} />
     </div>
   );
 };
