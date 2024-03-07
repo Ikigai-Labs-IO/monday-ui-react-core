@@ -61,6 +61,8 @@ const colorThemeConfig = {
     'warning-background-color': palette.orange.orange100,
     'layout-border-color': palette.grey.grey200,
     'link-color':palette.blue.blue600,
+    'background-greenbold': palette.green.green500,
+    'success-background-color': palette.green.green100
   },
   black: {
     'brand-colors': {

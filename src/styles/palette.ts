@@ -11,6 +11,10 @@ export const palette = {
     grey700: "#414d5a",
     grey900: "#10181b"
   },
+  green: {
+    green100: "#f0fff8",
+    green500: "#25d184"
+  },
   red: {
     red100: "#ffe6e6",
     red500: "#fe4646"
