@@ -18,12 +18,16 @@ export const palette = {
   blue: {
     blue100: "#cce5ff",
     blue200: "#aed4fc",
-    blue500: "#0060b9"
+    blue500: "#0060b9",
+    blue600: "#1f76c2"
   },
   navy: {
     navy500: "#133774"
   },
   darkBlue: {
     darkBlue500: "#0d2e65"
+  },
+  orange: {
+    orange100: "#fff7e6"
   }
 } as const;

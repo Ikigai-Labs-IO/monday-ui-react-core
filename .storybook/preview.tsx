@@ -57,7 +57,10 @@ const colorThemeConfig = {
     'negative-color-hover': palette.red.red100,
     'divider-selected': palette.grey.grey900,
     'surface-alt': palette.grey.grey700,
-    "color-american_gray-selected": palette.grey.grey75
+    "color-american_gray-selected": palette.grey.grey75,
+    'warning-background-color': palette.orange.orange100,
+    'layout-border-color': palette.grey.grey200,
+    'link-color':palette.blue.blue600,
   },
   black: {
     'brand-colors': {

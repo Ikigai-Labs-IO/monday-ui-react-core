@@ -16,6 +16,23 @@ import { VibeComponent, withStaticProps } from "../../types";
 import styles from "./AlertBanner.module.scss";
 import Text from "../Text/Text";
 import { AlertBannerContext } from "./AlertBannerContext";
+import { CustomIcon, PathName } from "../Icon/Icons/components/CustomIcon";
+import AlertBannerButton from "./AlertBannerButton/AlertBannerButton";
+
+const getFillColorAndIconName = (color: AlertBannerBackgroundColor): { fillColor: string; iconName: string } => {
+  switch (color) {
+    case AlertBannerBackgroundColor.PRIMARY:
+      return { fillColor: "#676879", iconName: "info" };
+    case AlertBannerBackgroundColor.POSITIVE:
+      return { fillColor: "#25D184", iconName: "success" };
+    case AlertBannerBackgroundColor.NEGATIVE:
+      return { fillColor: "#FE4646", iconName: "cancel" };
+    case AlertBannerBackgroundColor.WARNING:
+      return { fillColor: "#FFAB48", iconName: "danger" };
+    default:
+      return { fillColor: "#676879", iconName: "info" };
+  }
+};
 
 interface AlertBannerProps extends VibeComponentProps {
   /**
@@ -29,6 +46,9 @@ interface AlertBannerProps extends VibeComponentProps {
   closeButtonAriaLabel?: string;
   onClose?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children?: ReactElement<AlertBannerButtonProps | AlertBannerLinkProps | AlertBannerTextProps>;
+  iconFilled?: boolean;
+  bannerButton?: boolean;
+  bannerButtonText?: string;
 }
 
 const AlertBanner: VibeComponent<AlertBannerProps> & {
@@ -43,6 +63,9 @@ const AlertBanner: VibeComponent<AlertBannerProps> & {
       ariaLabel = "",
       closeButtonAriaLabel = "Close",
       isCloseHidden = false,
+      iconFilled = false,
+      bannerButton = false,
+      bannerButtonText = "",
       id,
       "data-testid": dataTestId
     },
@@ -86,6 +109,8 @@ const AlertBanner: VibeComponent<AlertBannerProps> & {
       });
     }, [originalChildren, isDarkBackground]);
 
+    const { fillColor, iconName } = getFillColorAndIconName(backgroundColor);
+
     return (
       <Text
         type={Text.types.TEXT2}
@@ -99,6 +124,12 @@ const AlertBanner: VibeComponent<AlertBannerProps> & {
       >
         <AlertBannerContext.Provider value={{ textColor }}>
           <div className={cx(styles.content)}>
+            <CustomIcon
+              name={iconFilled ? (`${iconName}Filled` as PathName) : (iconName as PathName)}
+              iconSize="25"
+              fillColor={fillColor}
+              viewBox="0 -2 27 30"
+            />
             {children.map(
               (
                 child: ReactElement & {
@@ -121,6 +152,11 @@ const AlertBanner: VibeComponent<AlertBannerProps> & {
             )}
           </div>
         </AlertBannerContext.Provider>
+        {bannerButton && (
+          <div style={{ paddingRight: "var(--spacing-small)" }}>
+            <AlertBannerButton>{bannerButtonText}</AlertBannerButton>
+          </div>
+        )}
         <div className={cx(styles.closeButtonWrapper)}>
           {isCloseHidden ? null : (
             <Button
@@ -132,7 +168,7 @@ const AlertBanner: VibeComponent<AlertBannerProps> & {
               color={isDarkBackground ? Button.colors.ON_INVERTED_BACKGROUND : Button.colors.ON_PRIMARY_COLOR}
               ariaLabel={closeButtonAriaLabel}
             >
-              <Icon iconType={Icon.type.SVG} clickable={false} icon={CloseSmall} iconSize="20px" ignoreFocusStyle />
+              <Icon iconType={Icon.type.SVG} clickable={false} icon={CloseSmall} iconSize="24px" ignoreFocusStyle />
             </Button>
           )}
         </div>
