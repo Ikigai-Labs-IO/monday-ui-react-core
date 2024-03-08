@@ -44,6 +44,7 @@ interface RadioButtonProps extends VibeComponentProps {
   childrenTabIndex?: string;
   /** disabled animation */
   noLabelAnimation?: boolean;
+  alertCheck?: boolean;
 }
 
 const RadioButton: VibeComponent<RadioButtonProps, HTMLElement> & object = forwardRef(
@@ -72,6 +73,7 @@ const RadioButton: VibeComponent<RadioButtonProps, HTMLElement> & object = forwa
       retainChildClick = true,
       childrenTabIndex = "0",
       noLabelAnimation = false,
+      alertCheck = false,
       id,
       "data-testid": dataTestId
     },
@@ -105,7 +107,8 @@ const RadioButton: VibeComponent<RadioButtonProps, HTMLElement> & object = forwa
           data-testid={dataTestId || getTestId(ComponentDefaultTestId.RADIO_BUTTON, id)}
           className={cx(styles.radioButton, overrideClassName, {
             [styles.disabled]: disabled,
-            disabled: disabled
+            disabled: disabled,
+            [styles.alertBorder]: alertCheck,
           })}
         >
           <span className={cx(styles.inputContainer)}>

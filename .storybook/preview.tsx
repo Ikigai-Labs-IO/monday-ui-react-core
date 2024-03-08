@@ -62,7 +62,8 @@ const colorThemeConfig = {
     'layout-border-color': palette.grey.grey200,
     'link-color':palette.blue.blue600,
     'background-greenbold': palette.green.green500,
-    'success-background-color': palette.green.green100
+    'success-background-color': palette.green.green100,
+    'disabled-background-color': palette.grey.softGrey
   },
   black: {
     'brand-colors': {
