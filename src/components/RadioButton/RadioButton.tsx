@@ -108,7 +108,7 @@ const RadioButton: VibeComponent<RadioButtonProps, HTMLElement> & object = forwa
           className={cx(styles.radioButton, overrideClassName, {
             [styles.disabled]: disabled,
             disabled: disabled,
-            [styles.alertBorder]: alertCheck,
+            [styles.alertBorder]: alertCheck
           })}
         >
           <span className={cx(styles.inputContainer)}>
