@@ -6,7 +6,7 @@ import React, { forwardRef, useCallback, useMemo, useRef } from "react";
 import { backwardCompatibilityForProperties } from "../../helpers/backwardCompatibilityForProperties";
 import Text from "../Text/Text";
 import Leg from "./Leg";
-import { LabelColor, LabelKind } from "./LabelConstants";
+import { LabelColor, LabelKind, LabelSize, BorderRadius } from "./LabelConstants";
 import { VibeComponent, VibeComponentProps, withStaticProps } from "../../types";
 import useClickableProps from "../../hooks/useClickableProps/useClickableProps";
 import useMergeRef from "../../hooks/useMergeRef";
@@ -27,11 +27,14 @@ interface LabelProps extends VibeComponentProps {
   isAnimationDisabled?: boolean;
   isLegIncluded?: boolean;
   onClick?: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void;
+  size?: LabelSize;
+  isCornersRounded?: boolean;
 }
 
 const Label: VibeComponent<LabelProps> & {
   colors?: typeof LabelColor;
   kinds?: typeof LabelKind;
+  size?: typeof LabelSize;
 } = forwardRef<HTMLElement, LabelProps>(
   (
     {
@@ -43,6 +46,8 @@ const Label: VibeComponent<LabelProps> & {
       text = "",
       isAnimationDisabled = false,
       isLegIncluded = false,
+      size = LabelSize.MEDIUM,
+      isCornersRounded = false,
       id,
       "data-testid": dataTestId,
       onClick
@@ -61,13 +66,18 @@ const Label: VibeComponent<LabelProps> & {
           styles.label,
           getStyle(styles, camelCase("kind" + "-" + kind)),
           getStyle(styles, camelCase("color" + "-" + color)),
+          getStyle(styles, camelCase("size" + "-" + size)),
+          getStyle(
+            styles,
+            camelCase("borderRadius" + "-" + (isCornersRounded ? BorderRadius.PX1000 : BorderRadius.PX4))
+          ),
           {
             [styles.withAnimation]: !isAnimationDisabled,
             [styles.withLeg]: isLegIncluded
           },
           labelClassName
         ),
-      [kind, color, isAnimationDisabled, isLegIncluded, labelClassName]
+      [kind, color, size, isCornersRounded, isAnimationDisabled, isLegIncluded, labelClassName]
     );
 
     const onClickCallback = useCallback(
@@ -111,5 +121,6 @@ const Label: VibeComponent<LabelProps> & {
 
 export default withStaticProps(Label, {
   colors: LabelColor,
-  kinds: LabelKind
+  kinds: LabelKind,
+  size: LabelSize
 });
