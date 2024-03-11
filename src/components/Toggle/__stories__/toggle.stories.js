@@ -2,6 +2,7 @@ import { createComponentTemplate, MultipleStoryElementsWrapper } from "vibe-stor
 import Toggle from "../Toggle";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import "./toggle.stories.scss";
+import { ToggleColor } from "../ToggleConstants";
 
 const metaSettings = createStoryMetaSettingsDecorator({
   component: Toggle,
@@ -24,26 +25,41 @@ export const Overview = {
   name: "Overview"
 };
 
+export const On = {
+  render: () => <Toggle onOverrideText="" offOverrideText="" />,
+
+  name: "On"
+};
+
+export const Off = {
+  render: () => <Toggle isDefaultSelected={false} onOverrideText="" offOverrideText="" />,
+
+  name: "Off"
+};
+
 export const States = {
   render: () => (
     <MultipleStoryElementsWrapper className="monday-storybook-toggle_column">
-      <Toggle isDefaultSelected={false} />
-      <Toggle />
+      <Toggle isDefaultSelected={false} offOverrideText="Default" onOverrideText="Label" />
+      <Toggle offOverrideText="Checked" onOverrideText="Label" />
+      <Toggle isDefaultSelected={false} offOverrideText="Disabled" disabled onOverrideText="Label" />
+      <Toggle offOverrideText="Disabled Checked" disabled onOverrideText="Label" />
     </MultipleStoryElementsWrapper>
   ),
 
   name: "States"
 };
 
-export const Disabled = {
+export const Colors = {
   render: () => (
     <MultipleStoryElementsWrapper className="monday-storybook-toggle_column">
-      <Toggle isDefaultSelected={false} disabled />
-      <Toggle disabled />
+      <Toggle toggleColor={ToggleColor.WARNING} offOverrideText="" onOverrideText="Warning" />
+      <Toggle toggleColor={ToggleColor.SUCCESS} offOverrideText="" onOverrideText="Success" />
+      <Toggle toggleColor={ToggleColor.PRIMARY} offOverrideText="" onOverrideText="Notification" />
     </MultipleStoryElementsWrapper>
   ),
 
-  name: "Disabled"
+  name: "Colors"
 };
 
 export const TurnOnOffAnAutomation = {

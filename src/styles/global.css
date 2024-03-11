@@ -1,4 +1,5 @@
 :root{
+    /* Spacing */
     --spacing-xs: 4px;
     --spacing-small: 8px;
     --spacing-medium: 16px;
@@ -6,4 +7,9 @@
     --spacing-xl: 32px;
     --spacing-xxl: 48px;
     --spacing-xxxl: 64px;
+
+    /* Radius */
+    --border-radius-small: 4px;
+    --border-radius-medium: 8px;
+    --border-radius-big: 16px;
 }

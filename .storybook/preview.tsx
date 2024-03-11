@@ -57,12 +57,14 @@ const colorThemeConfig = {
     'negative-color-hover': palette.red.red100,
     'divider-selected': palette.grey.grey900,
     'surface-alt': palette.grey.grey700,
+    "surface-secondary": palette.grey.grey100,
     "color-american_gray-selected": palette.grey.grey75,
     'warning-background-color': palette.orange.orange100,
     'layout-border-color': palette.grey.grey200,
     'link-color':palette.blue.blue600,
     'background-greenbold': palette.green.green500,
-    'success-background-color': palette.green.green100
+    'success-background-color': palette.green.green100,
+    "background-orangebold": palette.orange.orange500
   },
   black: {
     'brand-colors': {

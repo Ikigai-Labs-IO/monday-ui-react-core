@@ -7,6 +7,7 @@ export const palette = {
   },
   grey: {
     grey75: "#bfbfbf",
+    grey100: "#f5f7f8",
     grey200: "#e3e9ef",
     grey700: "#414d5a",
     grey900: "#10181b"
@@ -32,6 +33,7 @@ export const palette = {
     darkBlue500: "#0d2e65"
   },
   orange: {
-    orange100: "#fff7e6"
+    orange100: "#fff7e6",
+    orange500: "#ffab48"
   }
 } as const;
