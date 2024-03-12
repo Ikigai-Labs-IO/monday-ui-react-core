@@ -59,6 +59,7 @@ const colorThemeConfig = {
     'surface-alt': palette.grey.grey700,
     "color-american_gray-selected": palette.grey.grey75,
     'warning-background-color': palette.orange.orange100,
+    'warning-color': palette.orange.orange500,
     'layout-border-color': palette.grey.grey200,
     'link-color':palette.blue.blue600,
     'background-greenbold': palette.green.green500,

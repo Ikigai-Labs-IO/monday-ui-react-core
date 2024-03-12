@@ -4,20 +4,21 @@ import cx from "classnames";
 import React, { FC, ReactElement, useCallback, useEffect, useMemo, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import Button from "../../components/Button/Button";
-import { IconSubComponentProps } from "../Icon/Icon";
 import Text from "../Text/Text";
 import Loader from "../Loader/Loader";
 import Flex from "../Flex/Flex";
-import CloseSmall from "../Icon/Icons/components/CloseSmall";
+import CloseIcon from "../Icon/Icons/components/Close";
 import ToastLink from "./ToastLink/ToastLink";
 import ToastButton from "./ToastButton/ToastButton";
 import { ToastAction, ToastActionType, ToastType } from "./ToastConstants";
-import { getIcon } from "./ToastHelpers";
+import { getFillColorAndIconName } from "./ToastHelpers";
 import { NOOP } from "../../utils/function-utils";
 import { getStyle } from "../../helpers/typesciptCssModulesHelper";
 import { withStaticProps, VibeComponentProps } from "../../types";
 import styles from "./Toast.module.scss";
 import IconButton from "../IconButton/IconButton";
+import { CustomIcon } from "../Icon/Icons";
+import { PathName } from "../Icon/Icons/components/CustomIcon";
 
 interface ToastProps extends VibeComponentProps {
   actions?: ToastAction[];
@@ -25,8 +26,6 @@ interface ToastProps extends VibeComponentProps {
   open?: boolean;
   loading?: boolean;
   type?: ToastType;
-  /** Possible to override the default icon */
-  icon?: string | React.FC<IconSubComponentProps> | null;
   /** If true, won't show the icon */
   hideIcon?: boolean;
   /** The action to display */
@@ -47,7 +46,6 @@ const Toast: FC<ToastProps> & { types?: typeof ToastType; actionTypes?: typeof T
   loading = false,
   autoHideDuration = null,
   type = ToastType.NORMAL,
-  icon,
   hideIcon = false,
   action: deprecatedAction,
   actions,
@@ -118,7 +116,11 @@ const Toast: FC<ToastProps> & { types?: typeof ToastType; actionTypes?: typeof T
     };
   }, [open, autoHideDuration, setAutoHideTimer]);
 
-  const iconElement = !hideIcon && getIcon(type, icon);
+  const { fillColor, iconName } = getFillColorAndIconName(type);
+
+  const iconElement = !hideIcon && (
+    <CustomIcon name={iconName as PathName} iconSize="25" fillColor={fillColor} viewBox="0 -2 27 30" />
+  );
 
   return (
     <CSSTransition
@@ -159,7 +161,7 @@ const Toast: FC<ToastProps> & { types?: typeof ToastType; actionTypes?: typeof T
             color={Button.colors.FIXED_LIGHT}
             ariaLabel={closeButtonAriaLabel}
             data-testid={getTestId(ComponentDefaultTestId.TOAST_CLOSE_BUTTON)}
-            icon={CloseSmall}
+            icon={CloseIcon}
             hideTooltip
           />
         )}

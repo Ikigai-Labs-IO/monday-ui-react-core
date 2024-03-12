@@ -32,6 +32,7 @@ export const palette = {
     darkBlue500: "#0d2e65"
   },
   orange: {
-    orange100: "#fff7e6"
+    orange100: "#fff7e6",
+    orange500: "#ffab48"
   }
 } as const;
