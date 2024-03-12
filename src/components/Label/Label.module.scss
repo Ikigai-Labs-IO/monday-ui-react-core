@@ -2,6 +2,9 @@
 @import "../../styles/typography";
 @import "../../styles/keyframes";
 
+$label-font-size: 14px;
+$label-line-height: 22px;
+
 .clickable {
   @include clickable.clickable;
 }
@@ -11,9 +14,40 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--border-radius-small);
-  padding: 2px var(--spacing-small);
   position: relative;
+  font-weight: 400;
+
+  &.sizeTiny {
+    padding: 0px var(--spacing-xs);
+    font-size: 12px !important;
+    line-height: 15px;
+  }
+
+  &.sizeSmall {
+    padding: 0px var(--spacing-small);
+    font-size: $label-font-size;
+    line-height: $label-line-height;
+  }
+
+  &.sizeMedium {
+    padding: var(--spacing-xs) var(--spacing-small);
+    font-size: $label-font-size;
+    line-height: $label-line-height;
+  }
+
+  &.sizeLarge {
+    padding: var(--spacing-xs) var(--spacing-medium);
+    font-size: $label-font-size;
+    line-height: $label-line-height;
+  }
+
+  &.borderRadius4Px {
+    border-radius: var(--border-radius-small);
+  }
+
+  &.borderRadius1000Px {
+    border-radius: 1000px;
+  }
 }
 
 .withLeg {
@@ -84,7 +118,7 @@
 
 .kindLine {
   border: 1px solid currentColor;
-  padding: 1px var(--spacing-small);
+  color: var(--divider-selected);
 
   .legWrapper {
     left: -1px;
@@ -92,7 +126,7 @@
   }
 
   &.colorPrimary {
-    color: var(--primary-color);
+    border-color: var(--primary-color);
 
     svg path {
       fill: var(--primary-color);
@@ -105,7 +139,7 @@
   }
 
   &.colorDark {
-    color: var(--inverted-color-background);
+    border-color: var(--inverted-color-background);
 
     svg path {
       fill: var(--inverted-color-background);
@@ -118,7 +152,7 @@
   }
 
   &.colorNegative {
-    color: var(--negative-color);
+    border-color: var(--negative-color);
 
     svg path {
       fill: var(--negative-color);
@@ -131,7 +165,7 @@
   }
 
   &.colorPositive {
-    color: var(--positive-color);
+    border-color: var(--positive-color);
 
     svg path {
       fill: var(--positive-color);
