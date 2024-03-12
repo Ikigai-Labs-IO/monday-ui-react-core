@@ -26,7 +26,7 @@ export const Overview = {
   name: "Overview",
 
   args: {
-    children: "General message toast",
+    children: "Informative text",
     open: true,
     className: "monday-storybook-toast_wrapper",
 
@@ -53,7 +53,7 @@ export const DefaultWithButton = {
 
     return (
       <Toast open autoHideDuration={5000} actions={actions} className="monday-storybook-toast_wrapper">
-        General message toast
+        Informative text
       </Toast>
     );
   },
@@ -76,7 +76,7 @@ export const ToastWithLink = {
 
     return (
       <Toast open actions={actions} autoHideDuration={5000} className="monday-storybook-toast_wrapper">
-        General message toast
+        Informative text
       </Toast>
     );
   },
@@ -88,7 +88,7 @@ export const ToastWithLoading = {
   render: () => {
     return (
       <Toast open loading className="monday-storybook-toast_wrapper">
-        General message toast
+        Informative text
       </Toast>
     );
   },
@@ -117,7 +117,7 @@ export const SuccessMessage = {
         autoHideDuration={5000}
         className="monday-storybook-toast_wrapper"
       >
-        Positive message toast
+        Success
       </Toast>
     );
   },
@@ -145,7 +145,7 @@ export const ErrorMessage = {
         autoHideDuration={5000}
         className="monday-storybook-toast_wrapper"
       >
-        Negative message toast
+        Alert
       </Toast>
     );
   },
@@ -173,40 +173,12 @@ export const WarningMessage = {
         autoHideDuration={5000}
         className="monday-storybook-toast_wrapper"
       >
-        Warning message toast
+        Warning
       </Toast>
     );
   },
 
   name: "Warning message"
-};
-
-export const DarkMessage = {
-  render: () => {
-    const actions = useMemo(
-      () => [
-        {
-          type: Toast.actionTypes.BUTTON,
-          content: "Button"
-        }
-      ],
-      []
-    );
-
-    return (
-      <Toast
-        open
-        actions={actions}
-        type={Toast.types.DARK}
-        autoHideDuration={5000}
-        className="monday-storybook-toast_wrapper"
-      >
-        Dark message toast
-      </Toast>
-    );
-  },
-
-  name: "Dark message"
 };
 
 // TODO storybook 7 migration: toast isn't opening at the top of the page, but inside of the story instead

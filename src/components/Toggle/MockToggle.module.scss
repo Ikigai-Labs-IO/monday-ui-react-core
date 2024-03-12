@@ -5,26 +5,30 @@
   transition: background-color var(--motion-productive-medium) var(--motion-timing-transition);
   margin: 0 var(--spacing-small);
   position: relative;
-  height: 24px;
-  width: 41px;
+  height: 20px;
+  width: 32px;
   cursor: pointer;
-  border-radius: 100px !important;
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  border-radius: var(--border-radius-small) !important;
 
   &::after {
     background-color: var(--primary-background-color);
     content: " ";
     position: absolute;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    top: calc(50% - 18px / 2);
+    width: 15px;
+    height: 15px;
+    border-radius: var(--border-radius-small) !important;
+    top: calc(50% - 15px / 2);
     transition: left var(--motion-productive-medium) var(--motion-timing-transition);
   }
 
   &.selected {
-    background-color: var(--primary-color);
+    background-color: var(--surface-alt);
     &::after {
-      left: 20px;
+      left: 15px;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.07);
     }
   }
 
@@ -32,6 +36,7 @@
     background-color: var(--ui-border-color);
     &::after {
       left: 3px;
+      box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
     }
   }
 
@@ -39,4 +44,16 @@
     opacity: var(--disabled-component-opacity);
     cursor: not-allowed;
   }
+}
+
+.selected.colorPrimary {
+  background-color: var(--primary-color) !important;
+}
+
+.selected.colorSuccess {
+  background-color: var(--background-greenbold) !important;
+}
+
+.selected.colorWarning {
+  background-color: var(--background-orangebold) !important;
 }

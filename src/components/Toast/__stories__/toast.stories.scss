@@ -5,6 +5,7 @@
     // overriding margin for storybook wrapper
     margin-right: auto !important;
     margin-left: auto !important;
+    padding: var(--spacing-small) var(--spacing-medium);
   }
 
   &_negative_rule {

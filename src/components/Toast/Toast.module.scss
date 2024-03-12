@@ -1,7 +1,8 @@
 @import "../../styles/keyframes";
 
 .toast {
-  box-shadow: var(--box-shadow-medium);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.07);
+  border: 1px solid var(--Color-Dividers-Divider-Overlay, rgba(16, 24, 27, 0.10));
   -webkit-font-smoothing: var(--font-smoothing-webkit);
   -moz-osx-font-smoothing: var(--font-smoothing-moz);
   margin: var(--spacing-medium);
@@ -14,14 +15,14 @@
   padding: var(--spacing-small);
   align-items: center;
   display: flex;
-  min-width: 200px;
-  border-radius: var(--border-radius-small);
-  color: var(--fixed-light-color);
+  min-width: 320px;
+  border-radius: var(--border-radius-medium);
+  color: var(--divider-selected);
+  background-color: var(--text-color-on-primary)
 }
 
 .icon {
   display: flex;
-  margin-left: var(--spacing-small);
 }
 
 .content {
@@ -34,46 +35,30 @@
   flex-grow: 1;
 }
 
-.typeNormal {
-  background-color: var(--primary-color);
-}
-
 .typePositive {
-  background-color: var(--positive-color);
+  box-shadow: inset 0 3px 0 var(--positive-color),
+  0px 1px 4px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.07);
 }
 
 .typeNegative {
-  background-color: var(--negative-color);
+  box-shadow: inset 0 3px 0 var(--negative-color),
+  0px 1px 4px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.07);
 }
 
 .typeWarning {
-  background-color: var(--warning-color);
-  color: var(--fixed-dark-color);
-
-  .closeButton {
-    color: var(--fixed-dark-color);
-  }
-
-  .actionButton,
-  .actionLink {
-    color: var(--fixed-dark-color);
-    border-color: var(--fixed-dark-color);
-  }
+  box-shadow: inset 0 3px 0 var(--warning-color),
+  0px 1px 4px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.07);
 }
 
-.typeDark {
-  background-color: var(--inverted-color-background);
-  color: var(--text-color-on-inverted);
+.closeButton {
+  margin-left: var(--spacing-small);
+  color: var(--divider-selected) !important;
+}
 
-  .closeButton {
-    color: var(--text-color-on-inverted);
-  }
-
-  .actionButton,
-  .actionLink {
-    color: var(--text-color-on-inverted);
-    border-color: var(--text-color-on-inverted);
-  }
+.actionButton,
+.actionLink {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 
 // Animation
@@ -88,10 +73,6 @@
   animation-fill-mode: forwards;
   animation-duration: var(--motion-productive-long);
   animation-name: toast-slide-out;
-}
-
-.closeButton {
-  margin-left: var(--spacing-small);
 }
 
 @include keyframe(toast-slide-in-elastic) {
