@@ -6,6 +6,7 @@ import { MockToggle } from "./MockToggle";
 import { backwardCompatibilityForProperties } from "../../helpers/backwardCompatibilityForProperties";
 import { VibeComponent, VibeComponentProps } from "../../types";
 import styles from "./Toggle.module.scss";
+import { ToggleColor } from "./ToggleConstants";
 import { ComponentDefaultTestId, getTestId } from "../../tests/test-ids-utils";
 
 interface ToggleProps extends VibeComponentProps {
@@ -32,6 +33,7 @@ interface ToggleProps extends VibeComponentProps {
   offOverrideText?: string;
   ariaLabel?: string;
   ariaControls?: string;
+  toggleColor?: ToggleColor;
 }
 
 const Toggle: VibeComponent<ToggleProps, HTMLInputElement> = forwardRef(
@@ -55,7 +57,8 @@ const Toggle: VibeComponent<ToggleProps, HTMLInputElement> = forwardRef(
       areLabelsHidden = false,
       onOverrideText = "On",
       offOverrideText = "Off",
-      "data-testid": dataTestId
+      "data-testid": dataTestId,
+      toggleColor = null
     },
     ref
   ) => {
@@ -87,6 +90,7 @@ const Toggle: VibeComponent<ToggleProps, HTMLInputElement> = forwardRef(
           disabled={overrideDisabled}
           className={overrideClassName}
           selectedClassName={toggleSelectedClassName}
+          toggleColor={toggleColor}
         />
       </Switch>
     );
