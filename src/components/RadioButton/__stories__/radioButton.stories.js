@@ -25,10 +25,11 @@ export const Overview = {
 export const States = {
   render: () => (
     <>
-      <RadioButton text="Regular" />
+      <RadioButton text="Default" />
       <RadioButton text="Selected" checked />
       <RadioButton text="Disabled" disabled disabledReason="Disabled reason" />
-      <RadioButton text="Disabled" checked disabled />
+      <RadioButton text="Selected Disabled" checked disabled />
+      <RadioButton text="Alert" alertCheck />
     </>
   ),
   name: "States"

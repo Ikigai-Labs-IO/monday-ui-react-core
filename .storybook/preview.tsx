@@ -65,6 +65,7 @@ const colorThemeConfig = {
     'link-color':palette.blue.blue600,
     'background-greenbold': palette.green.green500,
     'success-background-color': palette.green.green100,
+    'disabled-background-color': palette.grey.softGrey,
     "background-orangebold": palette.orange.orange500
   },
   black: {
