@@ -76,11 +76,6 @@ input:checked:disabled + .control {
   border-radius: 50%;
 }
 
-.radioButton:hover .inputContainer input:enabled:checked + .control {
-  border-color: var(--divider-selected);
-  border: 0.1em solid;
-}
-
 .radioButton:hover .inputContainer input:enabled:not(:checked) + .control,
 .radioButton:focus-within .inputContainer input:enabled:not(:checked) + .control {
   border-color: var(--primary-text-color);
