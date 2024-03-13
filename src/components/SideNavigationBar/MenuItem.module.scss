@@ -1,8 +1,8 @@
 .flexContainer {
   display: flex;
-  align-items: center; 
-  align-content: center; 
-  justify-content: flex-start; 
-  flex-wrap: nowrap; 
-  flex-direction: row; 
+  align-items: center !important; 
+  justify-content: flex-start !important;
+  gap: var(--spacing-medium);
+  margin-left: var(--spacing-xs);
+  font: var(--font-text2-normal);
 }

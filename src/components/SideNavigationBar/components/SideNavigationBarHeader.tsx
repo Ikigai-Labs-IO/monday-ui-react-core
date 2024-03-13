@@ -34,23 +34,24 @@ export function BurgerWrapper({ expanded, onClick, children }: BurgerWrapperProp
 export function SideNavigationBarHeader({ title }: SideNavigationBarHeaderProps) {
   const Logo = require("../../../assets/ikigai-logo.png");
   const Logo_Expand = require("../../../assets/ikigai-logo-expand.png");
-  const { expanded, handleExpand, expandedDone } = useMenuBarConfiguration();
-  const icon = expandedDone ? "sideNavCollapse" : "sideNavExpand";
+  const { expanded, handleExpand } = useMenuBarConfiguration();
+  const icon = expanded ? "sideNavExpand" : "sideNavCollapse";
 
   return (
     <div className={`${styles.sideNavigationBarHeader} ${!expanded ? styles.collapsed : ""}`}>
       <div className={styles.header}>
         <div className={styles.logo}>
           <img src={expanded ? Logo_Expand : Logo} alt="logo" />
+          {expanded && <span className={styles.title}>{title}</span>}
         </div>
-        {expanded && <span className={styles.title}>{title}</span>}
       </div>
 
       <BurgerWrapper expanded={expanded} onClick={handleExpand}>
         <Icon
           iconName={icon}
-          isCustomIcon={true}
-          iconSize={24}
+          isCustomIcon
+          viewBox="0 0 15 15" 
+          iconSize="15"
           iconType={Icon.type.SVG}
           style={{ padding: "0.25rem", cursor: "pointer" }}
         />

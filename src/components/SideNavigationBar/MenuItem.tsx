@@ -51,13 +51,13 @@ export const StyledTriggerWrapper: React.FC<StyledTriggerWrapperProps> = ({ chil
   return <div className={`styled-trigger-wrapper ${className || ""}`}>{children}</div>;
 };
 
-export function MenuItem({ caption, icon, children }: MenuItemProps) {
+export function MenuItem({ caption, iconName, children, iconSize }: MenuItemProps) {
   const { expanded, expandedDone, popoverConfig } = useMenuBarConfiguration();
 
   if (children != null) {
     const triggerElement = (
       <FlexContainer justifyContent={expanded ? "start" : "center"}>
-        <Trigger expanded={expandedDone} icon={icon} caption={caption} />
+        <Trigger expanded={expandedDone} icon={iconName} caption={caption} />
       </FlexContainer>
     );
 
@@ -71,7 +71,7 @@ export function MenuItem({ caption, icon, children }: MenuItemProps) {
   return (
     <StyledTriggerWrapper>
       <FlexContainer justifyContent={expanded ? "start" : "center"}>
-        <Icon icon={icon} style={expanded ? { marginRight: "0.75rem" } : {}} />
+        <Icon iconName={iconName} viewBox={iconSize ? `0 0 ${iconSize} ${iconSize}` : "0 0 15 15"} isCustomIcon iconSize={iconSize || "15"} style={expanded ? { marginRight: "0.75rem" } : {}} />
         {expanded ? caption : ""}
       </FlexContainer>
     </StyledTriggerWrapper>
