@@ -114,7 +114,7 @@ export const MultipleSectionsWithStickToBottom: StoryObj = {
               <MenuItem caption="Estate Records" iconName="resource" iconSize="30" />
             </ItemsSection>
             <ItemsSection stickToBottom>
-              <MenuItem caption="Archive" iconName="archive"  iconSize="30" />
+              <MenuItem caption="Archive" iconName="archive" iconSize="30" />
             </ItemsSection>
           </div>
         </SideNavigationBar>

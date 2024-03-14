@@ -71,7 +71,13 @@ export function MenuItem({ caption, iconName, children, iconSize }: MenuItemProp
   return (
     <StyledTriggerWrapper>
       <FlexContainer justifyContent={expanded ? "start" : "center"}>
-        <Icon iconName={iconName} viewBox={iconSize ? `0 0 ${iconSize} ${iconSize}` : "0 0 15 15"} isCustomIcon iconSize={iconSize || "15"} style={expanded ? { marginRight: "0.75rem" } : {}} />
+        <Icon
+          iconName={iconName}
+          viewBox={iconSize ? `0 0 ${iconSize} ${iconSize}` : "0 0 15 15"}
+          isCustomIcon
+          iconSize={iconSize || "15"}
+          style={expanded ? { marginRight: "0.75rem" } : {}}
+        />
         {expanded ? caption : ""}
       </FlexContainer>
     </StyledTriggerWrapper>

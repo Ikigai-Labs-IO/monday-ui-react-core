@@ -8,12 +8,12 @@ export function SideNavigationBarFooter() {
 
   return (
     <div className={styles.sideNavigationBarFooter}>
-      <div className={styles.help} style={ expanded ? {} : {paddingBottom: "10px"}}>
-        <CustomIcon iconSize="24" name="help" fillColor="var(--type-secondary)" viewBox="0 0 25 25"/>
+      <div className={styles.help} style={expanded ? {} : { paddingBottom: "10px" }}>
+        <CustomIcon iconSize="24" name="help" fillColor="var(--type-secondary)" viewBox="0 0 25 25" />
         {expanded && "Get Help"}
       </div>
-      <div className={styles.help} style={expanded ? {paddingTop: "14px"} : {paddingTop: "0"}}>
-        <CustomIcon iconSize="24" name="refresh" fillColor="var(--type-secondary)" viewBox="0 0 25 25"/>
+      <div className={styles.help} style={expanded ? { paddingTop: "14px" } : { paddingTop: "0" }}>
+        <CustomIcon iconSize="24" name="refresh" fillColor="var(--type-secondary)" viewBox="0 0 25 25" />
         {expanded && "Switch modes"}
       </div>
       <div className={styles.profile}>
@@ -24,10 +24,9 @@ export function SideNavigationBarFooter() {
               <p className={styles.title}>James Acme</p>
               <p className={styles.subTitle}>james@brand.com</p>
             </div>
-            <CustomIcon iconSize="30" name="threeDots" fillColor="var(--type-secondary)" viewBox="0 0 25 25"/>
+            <CustomIcon iconSize="30" name="threeDots" fillColor="var(--type-secondary)" viewBox="0 0 25 25" />
           </>
-        )
-        }
+        )}
       </div>
     </div>
   );
