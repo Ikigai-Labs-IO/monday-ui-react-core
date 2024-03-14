@@ -1,7 +1,7 @@
 import { createComponentTemplate } from "vibe-storybook-components";
 import Tab from "../../Tab/Tab";
 import { Email } from "../../../Icon/Icons";
-import styles from "../Tab.module.scss"
+import styles from "../Tab.module.scss";
 
 export default {
   title: "Navigation/Tabs/Tab",
@@ -24,7 +24,9 @@ export const States = {
       <Tab>Default</Tab>
       <Tab hover>Hover</Tab>
       <Tab active>Active</Tab>
-      <Tab active hover>Active Hover</Tab>
+      <Tab active hover>
+        Active Hover
+      </Tab>
       <Tab disabled>Disabled</Tab>
     </>
   ),
@@ -40,13 +42,11 @@ export const Variants = {
         Text Only
       </div>
       <div className={styles.container}>
-        <Tab icon={Email}/>
+        <Tab icon={Email} />
         Icon Only
       </div>
       <div className={styles.container}>
-        <Tab icon={Email}>
-          Tab
-        </Tab>
+        <Tab icon={Email}>Tab</Tab>
         Icon + Text
       </div>
     </>
@@ -59,11 +59,15 @@ export const Icons = {
   render: () => (
     <>
       <div className={styles.container}>
-        <Tab icon={Email} iconSide="left">Tab</Tab>
+        <Tab icon={Email} iconSide="left">
+          Tab
+        </Tab>
         Icon on left
       </div>
       <div className={styles.container}>
-        <Tab icon={Email} iconSide="right">Tab</Tab>
+        <Tab icon={Email} iconSide="right">
+          Tab
+        </Tab>
         Icon on Right
       </div>
     </>
