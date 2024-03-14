@@ -56,6 +56,7 @@ const colorThemeConfig = {
     'negative-color': palette.red.red500,
     'negative-color-hover': palette.red.red100,
     'divider-selected': palette.grey.grey900,
+    "divider-tertiary": palette.grey.grey400,
     'surface-alt': palette.grey.grey700,
     "surface-secondary": palette.grey.grey100,
     "color-american_gray-selected": palette.grey.grey75,
@@ -66,7 +67,8 @@ const colorThemeConfig = {
     'background-greenbold': palette.green.green500,
     'success-background-color': palette.green.green100,
     'disabled-background-color': palette.grey.softGrey,
-    "background-orangebold": palette.orange.orange500
+    "background-orangebold": palette.orange.orange500,
+    "type-secondary": palette.grey.grey600
   },
   black: {
     'brand-colors': {
