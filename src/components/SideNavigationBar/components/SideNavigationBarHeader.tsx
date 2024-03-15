@@ -35,7 +35,7 @@ export function SideNavigationBarHeader({ title }: SideNavigationBarHeaderProps)
   const Logo = require("../../../assets/ikigai-logo.png");
   const Logo_Expand = require("../../../assets/ikigai-logo-expand.png");
   const { expanded, handleExpand } = useMenuBarConfiguration();
-  const icon = expanded ? "sideNavExpand" : "sideNavCollapse";
+  const icon = expanded ? "sideNavCollapse" : "sideNavExpand";
 
   return (
     <div className={`${styles.sideNavigationBarHeader} ${!expanded ? styles.collapsed : ""}`}>

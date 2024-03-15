@@ -131,6 +131,8 @@ interface MenuButtonProps extends VibeComponentProps {
    * Whether tooltip should appear only when the trigger element is hovered and not the menu dialog
    */
   showTooltipOnlyOnTriggerElement?: boolean;
+
+  customActiveClassName?: string;
 }
 
 const MenuButton: VibeComponent<MenuButtonProps> & {
@@ -181,7 +183,8 @@ const MenuButton: VibeComponent<MenuButtonProps> & {
       active,
       triggerElement: TriggerElement = "button",
       showTooltipOnlyOnTriggerElement,
-      "data-testid": dataTestId
+      "data-testid": dataTestId,
+      customActiveClassName = undefined
     },
     ref
   ) => {
@@ -190,6 +193,7 @@ const MenuButton: VibeComponent<MenuButtonProps> & {
 
     const [isOpen, setIsOpen] = useState(open);
     const isActive = active ?? isOpen;
+    const activeClassName = customActiveClassName || styles.active;
 
     const onMenuDidClose = useCallback(
       (event: React.KeyboardEvent) => {
@@ -327,7 +331,7 @@ const MenuButton: VibeComponent<MenuButtonProps> & {
         data-testid={dataTestId || getTestId(ComponentDefaultTestId.MENU_BUTTON, id)}
         type="button"
         className={cx(styles.wrapper, overrideClassName, getStyle(styles, camelCase(`size-${size}`)), {
-          [styles.active]: isActive,
+          [activeClassName]: isActive,
           [getStyle(styles, openDialogComponentClassName)]: isOpen && openDialogComponentClassName,
           [styles.disabled]: disabled,
           [styles.text]: text

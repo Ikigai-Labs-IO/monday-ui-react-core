@@ -73,9 +73,9 @@ export function MenuItem({ caption, iconName, children, iconSize }: MenuItemProp
       <FlexContainer justifyContent={expanded ? "start" : "center"}>
         <Icon
           iconName={iconName}
-          viewBox={iconSize ? `0 0 ${iconSize} ${iconSize}` : "0 0 15 15"}
+          viewBox={iconSize ? `0 0 ${iconSize} ${iconSize}` : "0 0 19 19"}
           isCustomIcon
-          iconSize={iconSize || "15"}
+          iconSize={iconSize || "19"}
           style={expanded ? { marginRight: "0.75rem" } : {}}
         />
         {expanded ? caption : ""}

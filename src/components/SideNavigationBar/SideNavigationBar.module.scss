@@ -7,12 +7,12 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: "2.5rem";
+  width: "2.5rem" !important;
   padding-bottom: "1rem";
   padding-left: "0.5rem";
   padding-right: "0.5rem";
   row-gap: "2rem";
-  border-right: 2px solid var(--layout-border-color);
+  border-right: 1px solid var(--layout-border-color);
   align-items: center;
   z-index: 1;
   overflow-x: auto;
@@ -23,7 +23,7 @@
   }
 
   &.expanded {
-    width: 14rem;
+    width: 200px;
     align-items: start;
   }
 }
@@ -63,12 +63,14 @@
 }
 
 .sideNavigationBarFooter {
-  flex: end;
-  border-top: 2px solid var(--layout-border-color);
-  padding: 12px var(--spacing-small);
+  border-top: 1px solid var(--layout-border-color);
+  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   .help {
-    padding: 10px var(--spacing-small);
+    padding: 12px var(--spacing-small);
     font: var(--font-text2-normal);
     display: flex;
     align-items: center;
@@ -76,14 +78,18 @@
     gap: var(--spacing-small);
   }
 
+  .help:hover {
+    border-radius: var(--border-radius-small);
+    background-color: var(--primary-background-hover-color);
+  }
+
   .profile {
-    cursor: pointer;
     display: flex;
     padding: 12px var(--spacing-small);
-    padding-top: 0;
     justify-content: center !important;
     align-items: center !important;
-    gap: var(--spacing-small);  
+    gap: var(--spacing-small); 
+    border-radius: var(--border-radius-small); 
 
     svg {
       margin-top: var(--spacing-small);
@@ -92,7 +98,7 @@
 
     .avatar {
       border-radius: 100px;
-      padding: 2px var(--spacing-xs);
+      padding: 1px 5px 5px var(--spacing-xs);
       font: var(--font-text2-normal);
       font-size: 12px;
       background: var(--primary-color); 
@@ -100,6 +106,7 @@
       height: var(--spacing-large);
       width: var(--spacing-large);
       border: 1px solid rgba(16, 24, 27, 0.10);
+      margin-bottom: var(--spacing-medium);
     }
 
     .name {
@@ -113,6 +120,7 @@
         font: var(--font-text2-normal);
         color: var(--divider-selected);
         margin-bottom: 0;
+        margin-top: 0;
       }
 
       .subTitle {
@@ -134,8 +142,6 @@
   align-items: center;
   padding: 9px 6px;
   margin-bottom: 2.5rem;
-  padding-right: 0.5rem;
-
 
   .header {
     display: flex;
@@ -193,4 +199,13 @@
     justify-content: start;
     padding-left: "0.25rem";
   }
+}
+
+.customActive {
+  background-color: transparent !important;
+}
+
+.wrapper:focus,
+.wrapper:hover {
+  background-color: transparent !important;
 }
