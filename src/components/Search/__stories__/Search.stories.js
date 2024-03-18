@@ -43,6 +43,18 @@ export const Sizes = {
   name: "Sizes"
 };
 
+export const DisabledSearchFields = {
+  render: () => (
+    <div className="monday-storybook-search_box">
+      <Search placeholder="Small" disabled />
+      <Search placeholder="Medium" size={Search.sizes.MEDIUM} disabled />
+      <Search placeholder="Large" size={Search.sizes.LARGE} disabled />
+    </div>
+  ),
+
+  name: "Disabled Search Fields"
+};
+
 export const LabelPositions = {
   render: () => (
     <div className="monday-storybook-search_box">
