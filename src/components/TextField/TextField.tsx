@@ -23,6 +23,7 @@ import { NOOP } from "../../utils/function-utils";
 import { ComponentDefaultTestId } from "../../tests/constants";
 import { VibeComponentProps, VibeComponent, withStaticProps } from "../../types";
 import styles from "./TextField.module.scss";
+import { CustomIcon } from "../Icon/Icons/components/CustomIcon";
 
 const EMPTY_OBJECT = { primary: "", secondary: "", layout: "" };
 
@@ -85,6 +86,8 @@ interface TextFieldProps extends VibeComponentProps {
    * Apply new style for read only, use along with `readonly` prop
    */
   withReadOnlyStyle?: boolean;
+
+  labelPosition?: "top" | "left";
 }
 
 const TextField: VibeComponent<TextFieldProps, unknown> & {
@@ -136,7 +139,8 @@ const TextField: VibeComponent<TextFieldProps, unknown> & {
       tabIndex,
       underline = false,
       name,
-      withReadOnlyStyle
+      withReadOnlyStyle,
+      labelPosition = "top"
     },
     ref
   ) => {
@@ -217,111 +221,124 @@ const TextField: VibeComponent<TextFieldProps, unknown> & {
         role={role}
         aria-busy={loading}
       >
-        <div className={cx(styles.labelWrapper)}>
+        <div className={cx(styles.labelWrapper)} style={labelPosition === "left" ? { display: "flex" } : {}}>
           <FieldLabel
+            position={labelPosition}
             labelText={title}
             icon={labelIconName}
             iconLabel={iconsNames.layout}
             labelFor={id}
             requiredAsterisk={requiredAsterisk}
           />
-          <div className={cx(styles.inputWrapper, SIZE_MAPPER[getActualSize(size)], validationClass)}>
-            {/*Programatical input (tabIndex={-1}) is working fine with aria-activedescendant attribute despite the rule*/}
-            {/*eslint-disable-next-line jsx-a11y/aria-activedescendant-has-tabindex*/}
-            <input
-              className={cx(className, styles.input, {
-                [styles.inputHasIcon]: !!hasIcon,
-                [styles.readOnly]: readonly,
-                // TODO: use `readonly` prop next major instead of withReadOnlyStyle
-                [styles.withReadOnlyStyle]: withReadOnlyStyle
-              })}
-              placeholder={placeholder}
-              autoComplete={autoComplete}
-              value={inputValue}
-              onChange={onEventChanged}
-              disabled={disabled}
-              readOnly={readonly}
-              ref={mergedRef}
-              type={type}
-              id={id}
-              data-testid={overrideDataTestId}
-              name={name}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              onKeyDown={onKeyDown}
-              onWheel={onWheel}
-              maxLength={maxLength}
-              role={searchResultsContainerId && "combobox"} // For voice reader
-              aria-label={inputAriaLabel || placeholder}
-              aria-invalid={validation && validation.status === "error"}
-              aria-owns={searchResultsContainerId}
-              aria-activedescendant={activeDescendant}
-              required={required}
-              tabIndex={tabIndex}
-            />
-            {loading && (
-              <div
-                className={cx(styles.loaderContainer, {
-                  [styles.loaderContainerHasIcon]: hasIcon
+          <div>
+            <div className={cx(styles.inputWrapper, SIZE_MAPPER[getActualSize(size)], validationClass)}>
+              {/*Programatical input (tabIndex={-1}) is working fine with aria-activedescendant attribute despite the rule*/}
+              {/*eslint-disable-next-line jsx-a11y/aria-activedescendant-has-tabindex*/}
+              <input
+                className={cx(className, styles.input, {
+                  [styles.inputHasIcon]: !!hasIcon,
+                  [styles.readOnly]: readonly,
+                  // TODO: use `readonly` prop next major instead of withReadOnlyStyle
+                  [styles.withReadOnlyStyle]: withReadOnlyStyle
                 })}
-              >
-                <div className={cx(styles.loader)}>
-                  <Loader svgClassName={cx(styles.loaderSvg)} />
+                placeholder={placeholder}
+                autoComplete={autoComplete}
+                value={inputValue}
+                onChange={onEventChanged}
+                disabled={disabled}
+                readOnly={readonly}
+                ref={mergedRef}
+                type={type}
+                id={id}
+                data-testid={overrideDataTestId}
+                name={name}
+                onBlur={onBlur}
+                onFocus={onFocus}
+                onKeyDown={onKeyDown}
+                onWheel={onWheel}
+                maxLength={maxLength}
+                role={searchResultsContainerId && "combobox"} // For voice reader
+                aria-label={inputAriaLabel || placeholder}
+                aria-invalid={validation && validation.status === "error"}
+                aria-owns={searchResultsContainerId}
+                aria-activedescendant={activeDescendant}
+                required={required}
+                tabIndex={tabIndex}
+              />
+              {loading && (
+                <div
+                  className={cx(styles.loaderContainer, {
+                    [styles.loaderContainerHasIcon]: hasIcon
+                  })}
+                >
+                  <div className={cx(styles.loader)}>
+                    <Loader svgClassName={cx(styles.loaderSvg)} />
+                  </div>
                 </div>
-              </div>
+              )}
+              <Clickable
+                className={cx(styles.iconContainer, {
+                  [styles.iconContainerHasIcon]: hasIcon,
+                  [styles.iconContainerActive]: isPrimary,
+                  [styles.iconContainerClickable]: isIconContainerClickable
+                })}
+                onClick={onIconClickCallback}
+                tabIndex={onIconClick !== NOOP && inputValue && iconName.length && isPrimary ? "0" : "-1"}
+              >
+                <Icon
+                  icon={iconName}
+                  className={cx(styles.icon)}
+                  clickable={false}
+                  iconLabel={iconsNames.primary}
+                  iconType={Icon.type.ICON_FONT}
+                  ignoreFocusStyle
+                  iconSize={size === TextField.sizes.SMALL ? "16px" : "18px"}
+                />
+              </Clickable>
+              <Clickable
+                className={cx(styles.iconContainer, {
+                  [styles.iconContainerHasIcon]: hasIcon,
+                  [styles.iconContainerActive]: isSecondary,
+                  [styles.iconContainerClickable]: isIconContainerClickable
+                })}
+                onClick={onIconClickCallback}
+                tabIndex={!shouldFocusOnSecondaryIcon ? "-1" : "0"}
+                data-testid={secondaryDataTestId || getTestId(ComponentDefaultTestId.TEXT_FIELD_SECONDARY_BUTTON, id)}
+              >
+                <Icon
+                  icon={secondaryIconName}
+                  className={cx(styles.icon)}
+                  clickable={false}
+                  iconLabel={iconsNames.secondary}
+                  iconType={Icon.type.ICON_FONT}
+                  ignoreFocusStyle
+                  iconSize={size === TextField.sizes.SMALL ? "16px" : "18px"}
+                />
+              </Clickable>
+            </div>
+            {shouldShowExtraText && (
+              <Text type={Text.types.TEXT2} color={Text.colors.SECONDARY} className={cx(styles.subTextContainer)}>
+                {validation && validation.text && (
+                  <>
+                    {validation.status && (
+                      <CustomIcon
+                        name={validation.status === "error" ? "dangerFilled" : "successFilled"}
+                        iconSize="16"
+                        viewBox="0 -5 30 30"
+                        fillColor={validation.status === "error" ? "var(--negative-color)" : "var(--positive-color)"}
+                      />
+                    )}
+                    <span className={cx(styles.subTextContainerStatus)}>{validation.text}</span>
+                  </>
+                )}
+                {showCharCount && (
+                  <span className={cx(styles.counter)} aria-label={TextFieldAriaLabel.CHAR}>
+                    {(inputValue && inputValue.length) || 0}
+                  </span>
+                )}
+              </Text>
             )}
-            <Clickable
-              className={cx(styles.iconContainer, {
-                [styles.iconContainerHasIcon]: hasIcon,
-                [styles.iconContainerActive]: isPrimary,
-                [styles.iconContainerClickable]: isIconContainerClickable
-              })}
-              onClick={onIconClickCallback}
-              tabIndex={onIconClick !== NOOP && inputValue && iconName.length && isPrimary ? "0" : "-1"}
-            >
-              <Icon
-                icon={iconName}
-                className={cx(styles.icon)}
-                clickable={false}
-                iconLabel={iconsNames.primary}
-                iconType={Icon.type.ICON_FONT}
-                ignoreFocusStyle
-                iconSize={size === TextField.sizes.SMALL ? "16px" : "18px"}
-              />
-            </Clickable>
-            <Clickable
-              className={cx(styles.iconContainer, {
-                [styles.iconContainerHasIcon]: hasIcon,
-                [styles.iconContainerActive]: isSecondary,
-                [styles.iconContainerClickable]: isIconContainerClickable
-              })}
-              onClick={onIconClickCallback}
-              tabIndex={!shouldFocusOnSecondaryIcon ? "-1" : "0"}
-              data-testid={secondaryDataTestId || getTestId(ComponentDefaultTestId.TEXT_FIELD_SECONDARY_BUTTON, id)}
-            >
-              <Icon
-                icon={secondaryIconName}
-                className={cx(styles.icon)}
-                clickable={false}
-                iconLabel={iconsNames.secondary}
-                iconType={Icon.type.ICON_FONT}
-                ignoreFocusStyle
-                iconSize={size === TextField.sizes.SMALL ? "16px" : "18px"}
-              />
-            </Clickable>
           </div>
-          {shouldShowExtraText && (
-            <Text type={Text.types.TEXT2} color={Text.colors.SECONDARY} className={cx(styles.subTextContainer)}>
-              {validation && validation.text && (
-                <span className={cx(styles.subTextContainerStatus)}>{validation.text}</span>
-              )}
-              {showCharCount && (
-                <span className={cx(styles.counter)} aria-label={TextFieldAriaLabel.CHAR}>
-                  {(inputValue && inputValue.length) || 0}
-                </span>
-              )}
-            </Text>
-          )}
         </div>
       </div>
     );
