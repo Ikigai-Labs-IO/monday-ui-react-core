@@ -59,25 +59,22 @@ export const Sizes = {
 export const States = {
   render: () => (
     <div className="monday-storybook-text-field_wrapper">
-      <div className="monday-storybook-text-field_column-wrapper monday-storybook-text-field_spacing">
-        <TextField placeholder="Disabled" size={TextField.sizes.MEDIUM} disabled />
-        <TextField placeholder="With icon" iconName={Email} size={TextField.sizes.MEDIUM} />
-        <TextField
-          placeholder="With clickable icon"
-          iconName={Email}
-          onIconClick={() => {}}
-          size={TextField.sizes.MEDIUM}
-        />
+      <div className="monday-storybook-text-field_column-wrapper ">
+        <TextField placeholder="With field label" title="Label" />
+        <TextField placeholder="Label(Required) field" title="Label" requiredAsterisk />
       </div>
-      <div className="monday-storybook-text-field_column-wrapper">
-        <TextField placeholder="With field label" title="Name" size={TextField.sizes.MEDIUM} />
+      <div className="monday-storybook-text-field_column-wrapper monday-storybook-text-field_spacing">
+        <TextField placeholder="With icon" iconName={Email} />
+        <TextField placeholder="With clickable icon" iconName={Email} onIconClick={() => {}} />
+        <TextField placeholder="Disabled" disabled />
+      </div>
+      <div className="monday-storybook-text-field_column-wrapper monday-storybook-text-field_spacing">
         <TextField
           placeholder="Success"
           validation={{
             status: "success"
           }}
           iconName={Check}
-          size={TextField.sizes.MEDIUM}
         />
         <TextField
           placeholder="Error"
@@ -85,7 +82,6 @@ export const States = {
             status: "error"
           }}
           iconName={CloseSmall}
-          size={TextField.sizes.MEDIUM}
         />
       </div>
     </div>
@@ -94,15 +90,34 @@ export const States = {
   name: "States"
 };
 
+export const LabelPositions = {
+  render: () => (
+    <div className="monday-storybook-text-field_column-wrapper">
+      <TextField placeholder="Placeholder text..." title="Label" />
+      <TextField placeholder="Placeholder text..." title="Label" labelPosition="left" />
+    </div>
+  ),
+
+  name: "Label Positions"
+};
+
 export const Validation = {
   render: () => (
     <div className="monday-storybook-text-field_column-wrapper">
       <TextField
         placeholder="Validate me"
         title="Name"
-        size={TextField.sizes.MEDIUM}
         validation={{
           status: "error",
+          text: "Only use the letters a-z..."
+        }}
+      />
+
+      <TextField
+        placeholder="Validate me"
+        title="Name"
+        validation={{
+          status: "success",
           text: "Validation text"
         }}
       />
