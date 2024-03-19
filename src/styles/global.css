@@ -12,4 +12,10 @@
     --border-radius-small: 4px;
     --border-radius-medium: 8px;
     --border-radius-big: 16px;
+
+    /* Font Weight */
+    --font-weight-very-light: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 500;
 }
