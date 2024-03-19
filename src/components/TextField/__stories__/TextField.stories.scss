@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    gap: 16px;
-    margin-right: 32px;
+    gap: var(--spacing-medium);
+    margin-right: var(--spacing-xl);
   }
 
   &_size {
@@ -16,17 +16,17 @@
   }
 
   &_box {
-    padding: 4px;
+    padding: var(--spacing-xs);
     width: 264px;
 
     &_wrapper {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: var(--spacing-medium);
     }
   }
 
   &_spacing {
-    padding-top: 32px
+    padding-top: var(--spacing-large);
   }
 }
