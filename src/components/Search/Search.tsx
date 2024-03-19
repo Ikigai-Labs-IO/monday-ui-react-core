@@ -47,6 +47,10 @@ export interface SearchProps extends VibeComponentProps {
   };
   /** shows loading animation */
   loading?: boolean;
+
+  labelPosition?: "top" | "left";
+
+  title?: string;
 }
 
 const Search: VibeComponent<SearchProps, unknown> & {
@@ -68,7 +72,7 @@ const Search: VibeComponent<SearchProps, unknown> & {
       wrapperClassName = "",
       setRef = NOOP,
       autoComplete = "off",
-      size = BASE_SIZES.MEDIUM,
+      size = BASE_SIZES.SMALL,
       type = SearchType.SQUARE,
       className,
       id = "search",
@@ -78,7 +82,9 @@ const Search: VibeComponent<SearchProps, unknown> & {
       activeDescendant = "",
       iconNames = SearchDefaultIconNames,
       loading = false,
-      "data-testid": dataTestId
+      "data-testid": dataTestId,
+      labelPosition,
+      title = ""
     },
     ref
   ) => {
@@ -86,6 +92,7 @@ const Search: VibeComponent<SearchProps, unknown> & {
     return (
       <TextField
         id={id}
+        title={title}
         data-testid={dataTestId || getTestId(ComponentDefaultTestId.SEARCH, id)}
         iconName={iconName}
         value={value}
@@ -113,6 +120,7 @@ const Search: VibeComponent<SearchProps, unknown> & {
         role="search"
         loading={loading}
         underline={type === SearchType.UNDERLINE}
+        labelPosition={labelPosition}
       />
     );
   }

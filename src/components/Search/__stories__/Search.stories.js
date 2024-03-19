@@ -1,7 +1,8 @@
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate, StoryDescription } from "vibe-storybook-components";
 import Search from "../Search";
+import { useMemo } from "react";
+import { DialogContentContainer, Dropdown } from "../../index";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import DialogContentContainer from "../../DialogContentContainer/DialogContentContainer";
 import Combobox from "../../Combobox/Combobox";
 import "./Search.stories.scss";
 
@@ -25,7 +26,7 @@ export const Overview = {
   name: "Overview",
 
   args: {
-    placeholder: "Placeholder text here",
+    placeholder: "Search...",
     wrapperClassName: "monday-storybook-search_size"
   }
 };
@@ -33,13 +34,83 @@ export const Overview = {
 export const Sizes = {
   render: () => (
     <div className="monday-storybook-search_box">
-      <Search placeholder="Small" size={Search.sizes.SMALL} />
-      <Search placeholder="Medium" />
+      <Search placeholder="Small" />
+      <Search placeholder="Medium" size={Search.sizes.MEDIUM} />
       <Search placeholder="Large" size={Search.sizes.LARGE} />
     </div>
   ),
 
   name: "Sizes"
+};
+
+export const DisabledSearchFields = {
+  render: () => (
+    <div className="monday-storybook-search_box">
+      <Search placeholder="Small" disabled />
+      <Search placeholder="Medium" size={Search.sizes.MEDIUM} disabled />
+      <Search placeholder="Large" size={Search.sizes.LARGE} disabled />
+    </div>
+  ),
+
+  name: "Disabled Search Fields"
+};
+
+export const LabelPositions = {
+  render: () => (
+    <div className="monday-storybook-search_box">
+      <Search placeholder="Placeholder text..." title="Label" labelPosition="left" />
+      <Search placeholder="Placeholder text..." title="Label" />
+    </div>
+  ),
+
+  name: "Label Positions"
+};
+
+export const SearchFieldWithTokens = {
+  render: () => {
+    const options = useMemo(
+      () => [
+        {
+          value: "Rotem",
+          label: "Rotem Dekel"
+        },
+        {
+          value: "Hadas",
+          label: "Hadas Farhi"
+        },
+        {
+          value: "Netta",
+          label: "Netta Muller"
+        },
+        {
+          value: "Dor",
+          label: "Dor Yehuda"
+        }
+      ],
+      []
+    );
+
+    return (
+      <StoryDescription description="Single line" vertical>
+        <div
+          style={{
+            width: "400px"
+          }}
+        >
+          <Dropdown placeholder="Single line multi state" defaultValue={[options[0]]} options={options} multi />
+        </div>
+      </StoryDescription>
+    );
+  },
+
+  name: "Search field with Tokens",
+  parameters: {
+    docs: {
+      story: {
+        height: "200px"
+      }
+    }
+  }
 };
 
 export const FilterInCombobox = {
