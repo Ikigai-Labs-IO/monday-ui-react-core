@@ -68,7 +68,9 @@ const colorThemeConfig = {
     'success-background-color': palette.green.green100,
     'disabled-background-color': palette.grey.softGrey,
     "background-orangebold": palette.orange.orange500,
-    "type-secondary": palette.grey.grey600
+    "type-secondary": palette.grey.grey600,
+    "surface-alert": palette.red.red200,
+    "divider-secondary": palette.grey.grey300
   },
   black: {
     'brand-colors': {
