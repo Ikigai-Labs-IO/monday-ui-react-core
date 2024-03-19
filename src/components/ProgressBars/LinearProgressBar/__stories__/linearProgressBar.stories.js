@@ -66,6 +66,7 @@ export const WithSecondaryValue = {
       className="linear-progress-bar_small-wrapper"
       value={50}
       indicateProgress
+      animated
       valueSecondary={65}
       size={LinearProgressBar.sizes.LARGE}
     />
@@ -120,7 +121,7 @@ export const ProgressBarAsACounter = {
         </div>
         <span>142/200</span>
       </div>
-      <LinearProgressBar value={71} size={LinearProgressBar.sizes.LARGE} barStyle={LinearProgressBar.styles.POSITIVE} />
+      <LinearProgressBar value={71} size={LinearProgressBar.sizes.LARGE} barStyle={LinearProgressBar.styles.PRIMARY} />
     </div>
   ),
 
@@ -149,4 +150,71 @@ export const ProgressBarAsLoadingIndicator = {
   ),
 
   name: "Progress bar as loading indicator"
+};
+
+export const Sizes = {
+  render: () => (
+    <div className="linear-progress-bar_column">
+      <div className="linear-progress-bar_block">
+        <LinearProgressBar
+          className="linear-progress-bar_small-wrapper"
+          indicateProgress
+          value={30}
+          size={LinearProgressBar.sizes.SMALL}
+        />
+        Small
+      </div>
+      <div className="linear-progress-bar_block">
+        <LinearProgressBar
+          className="linear-progress-bar_small-wrapper"
+          indicateProgress
+          value={45}
+          size={LinearProgressBar.sizes.MEDIUM}
+        />
+        Medium
+      </div>
+      <div className="linear-progress-bar_block">
+        <LinearProgressBar
+          className="linear-progress-bar_small-wrapper"
+          indicateProgress
+          value={60}
+          size={LinearProgressBar.sizes.LARGE}
+        />
+        Large
+      </div>
+    </div>
+  ),
+
+  name: "Sizes"
+};
+
+export const SuccessBar = {
+  render: () => (
+    <div className="linear-progress-bar_column">
+      <LinearProgressBar
+        className="linear-progress-bar_small-wrapper"
+        indicateProgress
+        value={100}
+        size={LinearProgressBar.sizes.LARGE}
+      />
+    </div>
+  ),
+
+  name: "SuccessBar"
+};
+
+export const ErrorBar = {
+  render: () => (
+    <div className="linear-progress-bar_column">
+      <LinearProgressBar
+        className="linear-progress-bar_small-wrapper"
+        indicateProgress
+        value={70}
+        barStyle={LinearProgressBar.styles.NEGATIVE}
+        size={LinearProgressBar.sizes.LARGE}
+      />
+    </div>
+  ),
+
+  name: "ErrorBar"
 };

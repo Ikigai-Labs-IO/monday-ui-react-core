@@ -25,11 +25,11 @@ export const Overview = {
 export const States = {
   render: () => (
     <>
-      <Checkbox label="Regular" />
+      <Checkbox label="Default" />
       <Checkbox label="Selected" checked />
-      <Checkbox label="Indeterminate" indeterminate />
+      <Checkbox label="Disabled Selected" disabled checked />
       <Checkbox label="Disabled" disabled />
-      <Checkbox label="Disabled checked" disabled checked />
+      <Checkbox label="Indeterminate" indeterminate />
       <Checkbox label="Disabled indeterminate" disabled indeterminate />
     </>
   ),

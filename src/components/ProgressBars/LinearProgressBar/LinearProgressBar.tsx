@@ -10,6 +10,7 @@ import { VibeComponent, VibeComponentProps, withStaticProps } from "../../../typ
 import { ComponentDefaultTestId } from "../../../tests/constants";
 import { getTestId } from "../../../tests/test-ids-utils";
 import styles from "./LinearProgressBar.module.scss";
+import { CustomIcon } from "../../Icon/Icons/components/CustomIcon";
 
 interface LinearProgressBarProps extends VibeComponentProps {
   /**
@@ -150,6 +151,8 @@ const LinearProgressBar: VibeComponent<LinearProgressBarProps, HTMLDivElement> &
       <PercentageLabel forElement="linear-progress-bar" value={valuePercentage} />
     ) : null;
 
+    barStyle = value === 100 ? ProgressBarStyle.POSITIVE : barStyle;
+
     const renderBaseBars = !multi ? (
       <>
         <Bar
@@ -187,7 +190,17 @@ const LinearProgressBar: VibeComponent<LinearProgressBarProps, HTMLDivElement> &
           {renderBaseBars}
           {renderMultiBars}
         </div>
-        {renderPercentage}
+        {value === 100 ? (
+          <div className={styles.iconOrPercentageContainer}>
+            <CustomIcon name="successFilled" color="#25d184" viewBox="-3 -2 27 30" />
+          </div>
+        ) : barStyle === ProgressBarStyle.NEGATIVE ? (
+          <div className={styles.iconOrPercentageContainer}>
+            <CustomIcon name="cancelFilled" color="var(--negative-color)" viewBox="-3 -2 27 30" />
+          </div>
+        ) : (
+          renderPercentage
+        )}
       </div>
     );
   }

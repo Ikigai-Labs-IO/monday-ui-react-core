@@ -21,10 +21,11 @@ export interface TabProps extends VibeComponentProps {
   value?: number;
   disabled?: boolean;
   active?: boolean;
+  hover?: boolean;
   focus?: boolean;
   icon?: string | React.FunctionComponent<IconSubComponentProps> | null;
   iconType?: IconType;
-  iconSide?: string;
+  iconSide?: "left" | "right";
   onClick?: (value: number) => void;
   /**
    * Tab link-name
@@ -41,12 +42,13 @@ const Tab: FC<TabProps> = forwardRef(
       value = 0,
       disabled = false,
       active = false,
+      hover = false,
       focus = false,
       onClick = NOOP,
       icon,
       iconType,
       iconSide = "left",
-      children,
+      children = "",
       "data-testid": dataTestId
     },
     ref
@@ -81,6 +83,7 @@ const Tab: FC<TabProps> = forwardRef(
         key={id}
         className={cx(styles.tabWrapper, className, {
           [styles.active]: active,
+          [styles.hover]: hover,
           [styles.disabled]: disabled,
           [styles.tabFocusVisibleInset]: focus
         })}

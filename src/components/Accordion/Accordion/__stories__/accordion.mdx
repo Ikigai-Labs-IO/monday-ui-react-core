@@ -47,20 +47,34 @@ Accordion is a vertically stacked list of items. Each item can be "expanded" or 
 
 ## Variants
 
+### Single active
+
+Only one section can be open at the time.
+
+<Canvas>
+  <Story of={AccordionStories.SingleActive} />
+</Canvas>
+
 ### Multi active
 
-Each section can be expanded without closing the others
+Each section can be expanded without closing the others.
 
 <Canvas>
   <Story of={AccordionStories.MultiActive} />
 </Canvas>
 
-### Single active
-
-Only one section can be open at the time
+### Accordion without border
 
 <Canvas>
-  <Story of={AccordionStories.SingleActive} />
+  <Story of={AccordionStories.WithoutBorder} />
+</Canvas>
+
+### Disabled Accordion
+
+Disabled accordion with and without borders.
+
+<Canvas>
+  <Story of={AccordionStories.DisabledAccordion} />
 </Canvas>
 
 ## Do’s and Don’ts

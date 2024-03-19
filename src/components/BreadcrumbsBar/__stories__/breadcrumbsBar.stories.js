@@ -54,11 +54,11 @@ export const Overview = {
 
 export const TextOnly = {
   render: () => (
-    <BreadcrumbsBar type={BreadcrumbsBar.types.INDICATION}>
-      <BreadcrumbItem text="Workspace" isCurrent />
+    <BreadcrumbsBar type={BreadcrumbsBar.types.NAVIGATION}>
+      <BreadcrumbItem text="Workspace" />
       <BreadcrumbItem text="Folder" />
       <BreadcrumbItem text="Board" />
-      <BreadcrumbItem text="Group" />
+      <BreadcrumbItem text="Group" isCurrent />
     </BreadcrumbsBar>
   ),
 
@@ -68,10 +68,10 @@ export const TextOnly = {
 export const WithIcons = {
   render: () => (
     <BreadcrumbsBar type={BreadcrumbsBar.types.NAVIGATION}>
-      <BreadcrumbItem text="Workspace" icon={Workspace} isCurrent />
+      <BreadcrumbItem text="Workspace" icon={Workspace} />
       <BreadcrumbItem text="Folder" icon={Folder} />
       <BreadcrumbItem text="Board" icon={Board} />
-      <BreadcrumbItem text="Group" icon={Group} />
+      <BreadcrumbItem text="Group" icon={Group} isCurrent />
     </BreadcrumbsBar>
   ),
 
@@ -93,4 +93,17 @@ export const NavigatableBreadcrumbs = {
   ),
 
   name: "Navigatable breadcrumbs"
+};
+
+export const BreadcrumbsBarTruncation = {
+  render: () => (
+    <BreadcrumbsBar type={BreadcrumbsBar.types.NAVIGATION}>
+      <BreadcrumbItem text="Workspace" />
+      <BreadcrumbItem text="A very long breadcrumb will live here. Very long breadcrumb." />
+      <BreadcrumbItem text="Board" />
+      <BreadcrumbItem text="Group" isCurrent />
+    </BreadcrumbsBar>
+  ),
+
+  name: "Text only"
 };

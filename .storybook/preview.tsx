@@ -32,10 +32,75 @@ import { ComponentNameDecorator, PropsTable, RelatedComponentsDecorator } from "
 import "monday-ui-style/dist/index.min.css";
 import "vibe-storybook-components/dist/index.css";
 import introCode from "../src/storybook/stand-alone-documentaion/playground/playground-helpers";
+import ThemeProvider from "../src/components/ThemeProvider/ThemeProvider";
+import '../src/styles/global.css';
+import { palette } from "../src/styles/palette";
 
 const fontLoader = async () => ({
   fonts: await document.fonts.ready // Fixing Chromatic tests flakiness - taking snapshots after fonts are loaded
 });
+
+const colorThemeConfig = {
+  light: {
+    'brand-colors': {
+      'brand-color': palette.purple.purple500,
+      'brand-hover-color': palette.purple.purple600,
+      'text-color-on-brand': palette.white,
+    },
+    'primary-color': palette.purple.purple500,
+    'primary-hover-color': palette.purple.purple600,
+    'primary-selected-color': palette.blue.blue100,
+    'primary-selected-hover-color': palette.blue.blue200,
+    'text-color-on-primary': palette.white,
+    'ui-border-color': palette.grey.grey200,
+    'negative-color': palette.red.red500,
+    'negative-color-hover': palette.red.red100,
+    'divider-selected': palette.grey.grey900,
+    "divider-tertiary": palette.grey.grey400,
+    'surface-alt': palette.grey.grey700,
+    "surface-secondary": palette.grey.grey100,
+    "color-american_gray-selected": palette.grey.grey75,
+    'warning-background-color': palette.orange.orange100,
+    'warning-color': palette.orange.orange500,
+    'layout-border-color': palette.grey.grey200,
+    'link-color':palette.blue.blue600,
+    'background-greenbold': palette.green.green500,
+    'success-background-color': palette.green.green100,
+    'disabled-background-color': palette.grey.softGrey,
+    "background-orangebold": palette.orange.orange500,
+    "type-secondary": palette.grey.grey600
+  },
+  black: {
+    'brand-colors': {
+      'brand-color': palette.purple.purple500,
+      'brand-hover-color': palette.blue.blue500,
+      'text-color-on-brand': palette.white,
+    },
+    'primary-color': palette.purple.purple500,
+    'primary-hover-color': palette.blue.blue500,
+    'primary-selected-color': palette.navy.navy500,
+    'primary-selected-hover-color': palette.darkBlue.darkBlue500,
+    'text-color-on-primary': palette.white,
+    'ui-border-color': palette.grey.grey200,
+    'negative-color': palette.red.red500,
+    'negative-color-hover': palette.red.red100
+  },
+  dark: {
+    'brand-colors': {
+      'brand-color': palette.purple.purple500,
+      'brand-hover-color': palette.blue.blue500,
+      'text-color-on-brand': palette.white,
+    },
+    'primary-color': palette.purple.purple500,
+    'primary-hover-color': palette.blue.blue500,
+    'primary-selected-color': palette.navy.navy500,
+    'primary-selected-hover-color': palette.darkBlue.darkBlue500,
+    'text-color-on-primary': palette.white,
+    'ui-border-color': palette.grey.grey200,
+    'negative-color': palette.red.red500,
+    'negative-color-hover': palette.red.red100
+  }
+}
 
 const preview: Preview = {
   parameters: {
@@ -44,12 +109,19 @@ const preview: Preview = {
     },
     docs: {
       container: ({ children, context }: { children: any; context: any }) => (
-        <DocsContainer context={context}>
-          <Unstyled>
-            {children}
-            {<DocFooter feedbackFormLink="https://forms.monday.com/forms/213ebddcb0d423ae5b6178fb6e8f7b3d?r=use1" />}
-          </Unstyled>
-        </DocsContainer>
+        <ThemeProvider
+          themeConfig={{
+            colors: colorThemeConfig,
+            name: 'Ikigai-Theme'
+          }}
+        >
+          <DocsContainer context={context}>
+            <Unstyled>
+              {children}
+              {<DocFooter feedbackFormLink="https://forms.monday.com/forms/213ebddcb0d423ae5b6178fb6e8f7b3d?r=use1" />}
+            </Unstyled>
+          </DocsContainer>
+        </ThemeProvider>
       ),
       page: DocsPage,
       components: {
