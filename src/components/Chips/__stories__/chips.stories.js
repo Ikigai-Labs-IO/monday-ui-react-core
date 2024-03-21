@@ -1,4 +1,3 @@
-import { chunk as _chunk } from "lodash-es";
 import Flex from "../../Flex/Flex";
 import Chips from "../Chips";
 import Text from "../../Text/Text";
@@ -34,7 +33,7 @@ export const Overview = {
   name: "Overview",
 
   args: {
-    label: "This is a chip",
+    label: "label",
     onMouseDown: undefined,
     onClick: undefined
   }
@@ -69,138 +68,91 @@ export const Themes = {
   render: () => (
     <>
       <Chips label="This is a long chip" />
-      <Chips label="Chip positive" color={Chips.colors.POSITIVE} />
-      <Chips label="Chip negative" color={Chips.colors.NEGATIVE} />
-      <Chips label="Chip warning" color={Chips.colors.WARNING} />
-      <Chips label="Disabled" disabled />
+      <Chips label="Error Chip" color={Chips.colors.Error} />
     </>
   ),
   name: "Themes"
 };
 
-export const Clickable = {
+export const DisabledChips = {
   render: () => {
     return (
       <Flex direction={Flex.directions.ROW} gap={Flex.gaps.MEDIUM} align={Flex.align.START}>
-        <Chips label="Clickable default chip" readOnly onClick={NOOP} />
-        <Chips label="Clickable removable chip" onClick={NOOP} />
+        <Chips label="Disabled" disabled />
+        <Chips label="Disabled error chips" color={Chips.colors.Error} disabled />
+      </Flex>
+    );
+  },
+
+  name: "Disabled Chips"
+};
+
+export const ChipsGroup = {
+  render: () => {
+    return (
+      <Flex direction={Flex.directions.ROW} gap={Flex.gaps.MEDIUM} align={Flex.align.START}>
+        <Flex direction={Flex.directions.COLUMN} gap={Flex.gaps.LARGE} align={Flex.align.START}>
+          <Flex direction={Flex.directions.ROW} gap={Flex.gaps.XS} align={Flex.align.START}>
+            <Chips label="label" />
+          </Flex>
+          <Flex direction={Flex.directions.ROW} gap={Flex.gaps.XS} align={Flex.align.START}>
+            <Chips label="label" />
+            <Chips label="label" />
+          </Flex>
+          <Flex direction={Flex.directions.ROW} gap={Flex.gaps.XS} align={Flex.align.START}>
+            <Chips label="label" />
+            <Chips label="label" />
+            <Chips label="label" />
+          </Flex>
+          <Flex direction={Flex.directions.ROW} gap={Flex.gaps.XS} align={Flex.align.START}>
+            <Chips label="label" />
+            <Chips label="label" />
+            <Chips label="label" />
+            <Chips label="label" />
+          </Flex>
+        </Flex>
+        <Flex direction={Flex.directions.COLUMN} gap={Flex.gaps.MEDIUM} align={Flex.align.START}>
+          <Chips label="label" color={Chips.colors.Error} />
+        </Flex>
+        <Flex direction={Flex.directions.COLUMN} gap={Flex.gaps.MEDIUM} align={Flex.align.START}>
+          <Chips label="label" color={Chips.colors.Error} />
+          <Chips label="label" color={Chips.colors.Error} />
+        </Flex>
+        <Flex direction={Flex.directions.COLUMN} gap={Flex.gaps.MEDIUM} align={Flex.align.START}>
+          <Chips label="label" color={Chips.colors.Error} />
+          <Chips label="label" color={Chips.colors.Error} />
+          <Chips label="label" color={Chips.colors.Error} />
+        </Flex>
+        <Flex direction={Flex.directions.COLUMN} gap={Flex.gaps.MEDIUM} align={Flex.align.START}>
+          <Chips label="label" color={Chips.colors.Error} />
+          <Chips label="label" color={Chips.colors.Error} />
+          <Chips label="label" color={Chips.colors.Error} />
+          <Chips label="label" color={Chips.colors.Error} />
+        </Flex>
+      </Flex>
+    );
+  },
+
+  name: "Chips group"
+};
+
+export const Clickable = {
+  render: () => {
+    return (
+      <Flex direction={Flex.directions.COLUMN} gap={Flex.gaps.LARGE} align={Flex.align.START}>
+        <Flex direction={Flex.directions.ROW} gap={Flex.gaps.MEDIUM} align={Flex.align.START}>
+          <Chips label="Clickable default chip" readOnly onClick={NOOP} />
+          <Chips label="Clickable removable chip" onClick={NOOP} />
+        </Flex>
+        <Flex direction={Flex.directions.ROW} gap={Flex.gaps.MEDIUM} align={Flex.align.START}>
+          <Chips label="Clickable error chip" readOnly onClick={NOOP} color={Chips.colors.Error} />
+          <Chips label="Clickable removable chip" onClick={NOOP} color={Chips.colors.Error} />
+        </Flex>
       </Flex>
     );
   },
 
   name: "Clickable"
-};
-
-export const ChipsPalette = {
-  render: () => {
-    const excludedColors = [Chips.colors.DARK_INDIGO, Chips.colors.BLACKISH];
-    const allowedColorsChunks = _chunk(
-      Object.keys(Chips.colors).filter(k => !excludedColors.includes(Chips.colors[k])),
-      7
-    );
-    return (
-      <Flex
-        style={{
-          width: "100%",
-          height: 300
-        }}
-        align={Flex.align.STRETCH}
-      >
-        {allowedColorsChunks.map(colorChunk => {
-          return (
-            <Flex
-              direction={Flex.directions.COLUMN}
-              key={colorChunk}
-              justify={Flex.justify.SPACE_BETWEEN}
-              align={Flex.align.STRETCH}
-            >
-              {colorChunk.map(colorName => (
-                <Chips label={colorName} key={colorName} color={Chips.colors[colorName]} readOnly allowTextSelection />
-              ))}
-            </Flex>
-          );
-        })}
-      </Flex>
-    );
-  },
-
-  name: "Chips palette"
-};
-
-export const OnColor = {
-  render: () => (
-    <Flex
-      style={{
-        width: "100%"
-      }}
-      align={Flex.align.STRETCH}
-      justify={Flex.justify.START}
-    >
-      <Flex
-        align={Flex.align.CENTER}
-        justify={Flex.justify.CENTER}
-        style={{
-          background: "var(--sb-primary-selected-color)",
-          width: "124px",
-          height: "64px",
-          margin: "var(--sb-spacing-small)",
-          borderRadius: "var(--sb-border-radius-small)"
-        }}
-      >
-        <Chips label="On selected" showBorder readOnly />
-      </Flex>
-      <Flex
-        align={Flex.align.CENTER}
-        justify={Flex.justify.CENTER}
-        style={{
-          background: "var(--positive-color-selected)",
-          width: "124px",
-          height: "64px",
-          margin: "var(--sb-spacing-small)",
-          borderRadius: "var(--sb-border-radius-small)"
-        }}
-      >
-        <Chips label="On positive" showBorder color={Chips.colors.POSITIVE} readOnly />
-      </Flex>
-      <Flex
-        align={Flex.align.CENTER}
-        justify={Flex.justify.CENTER}
-        style={{
-          background: "var(--sb-negative-color-selected)",
-          width: "124px",
-          height: "64px",
-          margin: "var(--sb-spacing-small)",
-          borderRadius: "var(--sb-border-radius-small)"
-        }}
-      >
-        <Chips label="On negative" showBorder color={Chips.colors.NEGATIVE} readOnly />
-      </Flex>
-    </Flex>
-  ),
-
-  name: "On color"
-};
-
-export const ColorfulChipsForDifferentContent = {
-  render: () => (
-    <DialogContentContainer className={styles.searchBar}>
-      <div className={styles.item}>
-        <Chips label="January" color={Chips.colors.POSITIVE} />
-      </div>
-      <Search />
-      <div className={styles.item}>
-        <Chips label="August" readOnly color={Chips.colors.LIPSTICK} />
-      </div>
-      <div className={styles.item}>
-        <Chips label="April" readOnly color={Chips.colors.BUBBLE} />
-      </div>
-      <div className={styles.item}>
-        <Chips label="March" readOnly color={Chips.colors.EGG_YOLK} />
-      </div>
-    </DialogContentContainer>
-  ),
-
-  name: "Colorful chips for different content"
 };
 
 export const ChipsInAPersonPickerComboBox = {
