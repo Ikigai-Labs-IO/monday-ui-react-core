@@ -6,19 +6,30 @@
 .chips {
   display: inline-flex;
   overflow: hidden;
-  height: 24px;
-  border-radius: 4px;
-  padding: 0 8px;
+  height: var(--spacing-xl);
+  border-radius: 1000px;
+  padding: 0 var(--spacing-small);
   align-items: center;
   justify-content: center;
   margin: var(--chips-margin, #{0 var(--spacing-xs)});
   user-select: none;
+  @include vibe-text(text2, normal);
   @include smoothing-text;
-  color: var(--primary-text-color);
+  color: var(--divider-selected);
   animation: chips-pop-in-emphasized var(--motion-productive-medium) var(--motion-timing-emphasize);
-  &.border {
-    border: 1px solid var(--primary-background-color);
+  border: 1px solid var(--ui-border-color);
+  gap: var(--spacing-xs);
+  
+  &.colorPrimary {
+    background-color: var(--surface-secondary);
+    border-color: var(--ui-border-color);
   }
+
+  &.colorError {
+    background-color: var(--negative-color-hover);
+    border-color: var(--negative-color);
+  }
+
   &.withUserSelect {
     user-select: text;
     cursor: text;
@@ -47,17 +58,17 @@
       margin-left: var(--spacing-xs);
     }
     &.close {
-      margin-left: var(--spacing-xs);
-      color: var(--primary-text-color);
+      color: var(--divider-selected);
     }
   }
 
   &.disabled {
     .icon {
-      color: var(--disabled-text-color);
+      color: var(--divider-tertiary);
     }
     .label {
-      color: var(--disabled-text-color);
+      color: var(--divider-tertiary);
+      cursor: not-allowed;
     }
   }
 
@@ -74,6 +85,27 @@
       @include clickable.clickable-disable-text-selection;
     }
   }
+}
+
+.chips.clickable + .colorError:hover {
+  background-color: var(--surface-alert);
+}
+
+.chips.clickable + .colorPrimary:hover {
+  border: 2px solid #B9F33E;
+}
+
+.chips.clickable + .colorPrimary:active {
+  border: 1px solid var(--divider-secondary);
+  background-color: var(--ui-border-color);
+}
+
+.chips.disabled.colorError {
+  background-color: var(--surface-alert) !important;
+}
+
+.chips.disabled.colorError .label {
+  color: var(--type-secondary) !important;
 }
 
 @include keyframe(chips-pop-in-emphasized) {

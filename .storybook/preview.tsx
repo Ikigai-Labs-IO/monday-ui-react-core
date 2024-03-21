@@ -71,7 +71,9 @@ const colorThemeConfig = {
     "type-secondary": palette.grey.grey600,
     "interactive-primary": palette.darkBlue.darkBlue500,
     "interactive-secondaryActive": palette.grey.grey500,
-    "interactive-primaryHover": palette.darkBlue.darkBlue700
+    "interactive-primaryHover": palette.darkBlue.darkBlue700,
+    "surface-alert": palette.red.red200,
+    "divider-secondary": palette.grey.grey300
   },
   black: {
     'brand-colors': {

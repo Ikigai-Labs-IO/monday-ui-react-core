@@ -31,7 +31,7 @@ const modalTemplate = ({ onClose, ...modalProps }) => {
       <Modal
         id={"story-book-modal"}
         title={"Modal title"}
-        description="Subtitle description text goes here"
+        description="Subtitle description text goes here."
         contentSpacing
         triggerElement={openModalButtonRef.current}
         // is modal show or hidden
@@ -41,7 +41,7 @@ const modalTemplate = ({ onClose, ...modalProps }) => {
         {...modalProps}
       >
         <ModalContent>
-          <p>Modal content goes here</p>
+          <p>Modal content goes here.</p>
         </ModalContent>
         <ModalFooterButtons
           primaryButtonText="Confirm"
@@ -96,14 +96,14 @@ export const WidthVariantsNormal = {
           {openModalButton}
           <Modal
             id="story-book-modal"
-            title="Modal title"
+            title="Title"
             triggerElement={openModalButtonRef.current}
             show={show}
             onClose={closeModal}
             width={Modal.width.DEFAULT}
             contentSpacing
           >
-            <ModalContent>Modal content goes here</ModalContent>
+            <ModalContent>Modal content goes here.</ModalContent>
             <ModalFooterButtons
               primaryButtonText="Confirm"
               secondaryButtonText="Cancel"
@@ -150,7 +150,7 @@ export const WidthVariantsFull = {
             width={Modal.width.FULL_WIDTH}
             contentSpacing
           >
-            <ModalContent>Modal content goes here</ModalContent>
+            <ModalContent>Modal content goes here.</ModalContent>
             <ModalFooterButtons
               primaryButtonText="Confirm"
               secondaryButtonText="Cancel"
@@ -197,7 +197,7 @@ export const WidthVariantsCustom = {
             width={"720px"}
             contentSpacing
           >
-            <ModalContent>Modal content goes here</ModalContent>
+            <ModalContent>Modal content goes here.</ModalContent>
             <ModalFooterButtons
               primaryButtonText="Confirm"
               secondaryButtonText="Cancel"
@@ -247,7 +247,7 @@ export const ModalWithIcon = {
           >
             {}
             <ModalHeader title={"Modal Heading"} icon={Upgrade} iconSize={32} />
-            <ModalContent>Modal content goes here</ModalContent>
+            <ModalContent>Modal content goes here.</ModalContent>
             <ModalFooterButtons
               primaryButtonText="Confirm"
               secondaryButtonText="Cancel"
@@ -294,7 +294,7 @@ export const AlertModal = {
             onClose={closeModal}
             contentSpacing
           >
-            <ModalContent>Modal content goes here</ModalContent>
+            <ModalContent>Modal content goes here.</ModalContent>
             <ModalFooterButtons
               primaryButtonText="Confirm"
               secondaryButtonText="Cancel"
@@ -307,6 +307,85 @@ export const AlertModal = {
     },
 
   name: "Alert Modal"
+};
+
+export const SingleLock = {
+  render: () => {
+    const [show, setShow] = useState(false);
+    const openModalButtonRef = useRef(null);
+
+    const closeModal = useCallback(() => {
+      setShow(false);
+    }, []);
+
+    const openModalButton = useHelperOpenModalButton({
+      title: "Single Lock Modal",
+      setShow,
+      openModalButtonRef
+    });
+
+    return (
+      <div>
+        {openModalButton}
+        <Modal
+          id="story-book-modal"
+          title="Title"
+          triggerElement={openModalButtonRef.current}
+          show={show}
+          onClose={closeModal}
+          contentSpacing
+          hideCloseButton
+        >
+          <ModalContent>Modal content goes here.</ModalContent>
+        </Modal>
+      </div>
+    );
+  },
+
+  name: "Single Lock"
+};
+
+export const DoubleLock = {
+  render: () => {
+    const [show, setShow] = useState(false);
+    const openModalButtonRef = useRef(null);
+
+    const closeModal = useCallback(() => {
+      setShow(false);
+    }, []);
+
+    const openModalButton = useHelperOpenModalButton({
+      title: "Double Lock Modal",
+      setShow,
+      openModalButtonRef
+    });
+
+    return (
+      <div>
+        {openModalButton}
+        <Modal
+          alertDialog
+          id="story-book-modal"
+          title="Title"
+          triggerElement={openModalButtonRef.current}
+          show={show}
+          onClose={closeModal}
+          contentSpacing
+          hideCloseButton
+        >
+          <ModalContent>Modal content goes here.</ModalContent>
+          <ModalFooterButtons
+            primaryButtonText="Confirm"
+            secondaryButtonText="Cancel"
+            onPrimaryButtonClick={closeModal}
+            onSecondaryButtonClick={closeModal}
+          />
+        </Modal>
+      </div>
+    );
+  },
+
+  name: "Double Lock"
 };
 
 export const ModalWithEditableTitle = {
@@ -345,7 +424,7 @@ export const ModalWithEditableTitle = {
             <ModalHeader description={"Description text goes here"}>
               <EditableHeading type={EditableHeading.types.H2} value={"Modal title"} />
             </ModalHeader>
-            <ModalContent>Modal content goes here</ModalContent>
+            <ModalContent>Modal content goes here.</ModalContent>
             <ModalFooterButtons
               primaryButtonText="Confirm"
               secondaryButtonText="Cancel"
