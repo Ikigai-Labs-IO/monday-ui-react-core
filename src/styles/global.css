@@ -1,4 +1,7 @@
 :root{
+    /* Font Family */
+    --font-family: 'Inter', sans-serif;
+    
     /* Spacing */
     --spacing-xs: 4px;
     --spacing-small: 8px;
