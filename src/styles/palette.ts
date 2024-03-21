@@ -10,6 +10,7 @@ export const palette = {
     grey100: "#f5f7f8",
     grey200: "#e3e9ef",
     grey400: "#a2b1c1",
+    grey500: "#8898a9",
     grey600: "#637282",
     grey700: "#414d5a",
     grey900: "#10181b",
@@ -33,7 +34,8 @@ export const palette = {
     navy500: "#133774"
   },
   darkBlue: {
-    darkBlue500: "#0d2e65"
+    darkBlue500: "#0d2e65",
+    darkBlue700: "#161632"
   },
   orange: {
     orange100: "#fff7e6",
