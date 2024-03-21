@@ -36,10 +36,12 @@ const ModalFooterButtons: VibeComponent<ModalFooterButtonsProps> = forwardRef(
         data-testid={dataTestId || getTestId(ComponentDefaultTestId.MODAL_FOOTER_BUTTONS, id)}
       >
         <Flex justify={Flex.justify.END} gap={Flex.gaps.SMALL}>
-          <Button onClick={onSecondaryButtonClick} kind={Button.kinds.TERTIARY}>
+          <Button onClick={onSecondaryButtonClick} kind={Button.kinds.SECONDARY}>
             {secondaryButtonText}
           </Button>
-          <Button onClick={onPrimaryButtonClick}>{primaryButtonText}</Button>
+          <Button onClick={onPrimaryButtonClick} color={Button.colors.PRIMARY}>
+            {primaryButtonText}
+          </Button>
         </Flex>
       </ModalFooter>
     );

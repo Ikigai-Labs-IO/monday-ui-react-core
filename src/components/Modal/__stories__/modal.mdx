@@ -78,6 +78,31 @@ clicking outside. Use this variant in case of sensitive or important messages, a
   <Story of={ModalStories.AlertModal} />
 </Canvas>
 
+### Lock Modals
+
+#### Single Lock
+
+<ul>
+  <li>There is no “X” / close icon.</li>
+  <li>You can click outside a modal to dismiss it.</li>
+</ul>
+
+<Canvas>
+  <Story of={ModalStories.SingleLock} />
+</Canvas>
+
+#### Double Lock
+
+<ul>
+  <li>There is no “X” / close icon.</li>
+  <li>You can’t click outside a modal to dismiss it.</li>
+  <li>You can close it by using buttons only.</li>
+</ul>
+
+<Canvas>
+  <Story of={ModalStories.DoubleLock} />
+</Canvas>
+
 ## Do’s and Don’ts
 
 <ComponentRules
