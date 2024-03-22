@@ -1,3 +1,5 @@
+import { PaginationSize } from "./PaginationConstants";
+
 export type IPaginationBoxProps = {
   size: number;
   from: number;
@@ -7,6 +9,8 @@ export type IPaginationBoxProps = {
   small?: boolean;
   sidebar?: boolean;
   firstPage?: number;
+  paginationSizes?: PaginationSize;
+  isItemPerPage?: boolean;
 };
 
 export type IPaginationProps = {
@@ -15,6 +19,7 @@ export type IPaginationProps = {
   count: number;
   size: number;
   firstPage?: number;
+  paginationSizes?: PaginationSize;
 };
 
 export type IExtendedPaginationProps = Omit<IPaginationProps, "current"> & {
