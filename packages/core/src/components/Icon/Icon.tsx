@@ -72,6 +72,8 @@ mo   * Icon aria label [aria label](https://developer.mozilla.org/en-US/docs/Web
   iconName?: PathName;
 
   isCustomIcon?: boolean;
+
+  viewBox?: string;
 }
 
 const Icon: VibeComponent<IconProps, HTMLElement> & { type?: typeof IconType } = forwardRef(
@@ -96,12 +98,13 @@ const Icon: VibeComponent<IconProps, HTMLElement> & { type?: typeof IconType } =
       customColor,
       "data-testid": dataTestId,
       iconName,
-      isCustomIcon = false
+      isCustomIcon = false,
+      viewBox
     },
     ref
   ) => {
     if (isCustomIcon && typeof iconName === "string") {
-      icon = () => <CustomIcon name={iconName} iconSize={iconSize} />;
+      icon = () => <CustomIcon name={iconName} iconSize={iconSize} viewBox={viewBox && viewBox} />;
     }
 
     const overrideExternalTabIndex = externalTabIndex && +externalTabIndex;

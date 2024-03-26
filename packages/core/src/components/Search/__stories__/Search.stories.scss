@@ -7,7 +7,7 @@
     width: 448px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--spacing-medium);
   }
 
   &_size {

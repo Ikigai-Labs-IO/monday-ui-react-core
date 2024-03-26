@@ -139,6 +139,7 @@ const Modal: FC<ModalProps> & { width?: typeof ModalWidth } = ({
         closeModal={onClose}
         id={id}
         closeButtonAriaLabel={closeButtonAriaLabel}
+        hideCloseButton={hideCloseButton}
       />
     );
   }, [attr.title, childrenArray, title, description, onClose, closeButtonAriaLabel]);

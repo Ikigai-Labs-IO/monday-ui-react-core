@@ -12,6 +12,7 @@ export interface FieldLabelProps extends VibeComponentProps {
   iconClassName?: string;
   labelClassName?: string;
   requiredAsterisk?: boolean;
+  position?: "top" | "left";
 }
 
 const FieldLabel: FC<FieldLabelProps> = forwardRef(
@@ -23,7 +24,8 @@ const FieldLabel: FC<FieldLabelProps> = forwardRef(
       labelFor = "",
       iconClassName = "",
       labelClassName = "",
-      requiredAsterisk = false
+      requiredAsterisk = false,
+      position = "top"
     },
     ref: ForwardedRef<HTMLLabelElement>
   ) => {
@@ -32,7 +34,12 @@ const FieldLabel: FC<FieldLabelProps> = forwardRef(
     }
 
     return (
-      <section className={cx(styles.labelComponentWrapper)}>
+      <section
+        className={cx(styles.labelComponentWrapper, {
+          [styles.leftLabel]: position === "left",
+          [styles.topLabel]: position === "top"
+        })}
+      >
         <Icon
           icon={icon}
           className={cx(styles.labelComponentIcon, iconClassName)}
@@ -41,7 +48,12 @@ const FieldLabel: FC<FieldLabelProps> = forwardRef(
           iconLabel={iconLabel}
           iconType={Icon.type.ICON_FONT}
         />
-        <label htmlFor={labelFor} ref={ref} className={cx(styles.labelComponentText, labelClassName)}>
+        <label
+          htmlFor={labelFor}
+          ref={ref}
+          className={cx(styles.labelComponentText, labelClassName)}
+          style={requiredAsterisk ? { display: "flex", flexDirection: "row" } : {}}
+        >
           {labelText}
           {requiredAsterisk && <span className={styles.requiredAsterisk}> *</span>}{" "}
           {/* Render asterisk based on the prop */}

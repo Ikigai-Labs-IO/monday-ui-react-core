@@ -1,10 +1,10 @@
-import React, { forwardRef, RefObject, useCallback, useMemo, useRef } from "react";
+import React, { forwardRef, RefObject, useCallback, useRef } from "react";
 import cx from "classnames";
 import Icon from "../Icon/Icon";
 import useMergeRef from "../../hooks/useMergeRef";
 import CloseSmall from "../Icon/Icons/components/CloseSmall";
-import { getCSSVar } from "../../services/themes";
-import { ElementAllowedColor, ElementColor, getElementColor } from "../../utils/colors-vars-map";
+import { getStyle } from "../../helpers/typesciptCssModulesHelper";
+import { camelCase } from "lodash-es";
 import Avatar from "../Avatar/Avatar";
 import IconButton from "../IconButton/IconButton";
 import Text from "../Text/Text";
@@ -12,10 +12,10 @@ import { ComponentDefaultTestId, getTestId } from "../../tests/test-ids-utils";
 import { AvatarType } from "../Avatar/AvatarConstants";
 import { ElementContent, SubIcon, VibeComponent, VibeComponentProps, withStaticProps } from "../../types";
 import useHover from "../../hooks/useHover/useHover";
-import useSetFocus from "../../hooks/useSetFocus";
 import useClickableProps from "../../hooks/useClickableProps/useClickableProps";
 import { backwardCompatibilityForProperties } from "../../helpers/backwardCompatibilityForProperties";
 import styles from "./Chips.module.scss";
+import { ChipsColor } from "./ChipsConstants";
 
 const CHIPS_AVATAR_SIZE = 20;
 
@@ -53,7 +53,7 @@ export interface ChipsProps extends VibeComponentProps {
   /** ClassName for left or right avatar */
   avatarClassName?: string;
   // TODO Vibe 3.0: filter ElementAllowedColor.DARK_INDIGO, ElementAllowedColor.BLACKISH from colors which are valid for Chips
-  color?: ElementColor;
+  color?: ChipsColor;
   /** Size for font icon */
   iconSize?: number | string;
   onDelete?: (id: string, event: React.MouseEvent<HTMLSpanElement>) => void;
@@ -95,12 +95,11 @@ export interface ChipsProps extends VibeComponentProps {
    * Show border, the border color is `--text-color-on-primary`, should be when the chip is a colored background like
    * selected-color
    */
-  showBorder?: boolean;
   closeButtonAriaLabel?: string;
 }
 
 const Chips: VibeComponent<ChipsProps, HTMLDivElement> & {
-  colors?: typeof ElementAllowedColor;
+  colors?: typeof ChipsColor;
   avatarTypes?: typeof AvatarType;
 } = forwardRef<HTMLDivElement, ChipsProps>(
   (
@@ -117,7 +116,7 @@ const Chips: VibeComponent<ChipsProps, HTMLDivElement> & {
       disabled = false,
       readOnly = false,
       allowTextSelection = false,
-      color = Chips.colors.PRIMARY,
+      color = ChipsColor.PRIMARY,
       iconSize = 18,
       onDelete = (_id: string, _e: React.MouseEvent<HTMLSpanElement>) => {},
       onMouseDown,
@@ -129,7 +128,6 @@ const Chips: VibeComponent<ChipsProps, HTMLDivElement> & {
       disableClickableBehavior = false,
       leftAvatarType = AvatarType.IMG,
       rightAvatarType = AvatarType.IMG,
-      showBorder = false,
       leftRenderer,
       rightRenderer,
       closeButtonAriaLabel = "Remove"
@@ -147,34 +145,20 @@ const Chips: VibeComponent<ChipsProps, HTMLDivElement> & {
     const iconButtonRef = useRef(null);
     const componentRef = useRef(null);
 
-    const [hoverRef, isHovered] = useHover<HTMLDivElement>();
-    const { isFocused } = useSetFocus({ ref: componentRef });
+    const [hoverRef] = useHover<HTMLDivElement>();
 
     const mergedRef = useMergeRef<HTMLDivElement>(ref, componentRef, hoverRef);
 
-    const overrideClassName = cx(styles.chips, className, {
+    const overrideClassName = cx(styles.chips, className, getStyle(styles, camelCase("color" + "_" + color)), {
       [styles.disabled]: disabled,
       [styles.withClose]: hasCloseButton,
       [styles.noAnimation]: noAnimation,
-      [styles.withUserSelect]: allowTextSelection,
-      [styles.border]: showBorder
+      [styles.withUserSelect]: allowTextSelection
     });
     const clickableClassName = cx(styles.clickable, overrideClassName, {
       [styles.disabled]: disabled,
       [styles.disableTextSelection]: !allowTextSelection
     });
-
-    const backgroundColorStyle = useMemo(() => {
-      let cssVar;
-      if (disabled) {
-        cssVar = getCSSVar("disabled-background-color");
-      } else if (hasClickableWrapper && (isHovered || isFocused)) {
-        cssVar = getElementColor(color, true, true);
-      } else {
-        cssVar = getElementColor(color, true);
-      }
-      return { backgroundColor: cssVar };
-    }, [disabled, hasClickableWrapper, isHovered, isFocused, color]);
 
     const onDeleteCallback = useCallback(
       (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
@@ -214,13 +198,11 @@ const Chips: VibeComponent<ChipsProps, HTMLDivElement> & {
       ? {
           ...clickableProps,
           ref: clickableProps.ref as RefObject<HTMLDivElement>,
-          className: clickableClassName,
-          style: backgroundColorStyle
+          className: clickableClassName
         }
       : {
           className: overrideClassName,
           "aria-label": overrideAriaLabel,
-          style: backgroundColorStyle,
           ref: mergedRef,
           onClick: onClickCallback,
           onMouseDown,
@@ -297,6 +279,6 @@ const Chips: VibeComponent<ChipsProps, HTMLDivElement> & {
 );
 
 export default withStaticProps(Chips, {
-  colors: ElementAllowedColor,
+  colors: ChipsColor,
   avatarTypes: AvatarType
 });
