@@ -1,5 +1,6 @@
 import { ExtendedPaginationBox as Pagination } from "../Pagination";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
+import { PAGINATION_SIZES } from "../PaginationConstants";
 
 const metaSettings = createStoryMetaSettingsDecorator({
   component: Pagination,
@@ -25,6 +26,43 @@ export const Overview = {
     setPage: () => undefined,
     setSize: () => undefined
   }
+};
+
+export const Variants = {
+  render: () => (
+    <div style={{ display: "flex", flexDirection: "column", width: "100%", gap: "var(--spacing-xxl)" }}>
+      <Pagination count={400} from={15} size={20} setPage={() => undefined} setSize={() => undefined} />
+      <Pagination count={400} from={25} size={20} setPage={() => undefined} setSize={() => undefined} isItemPerPage />
+    </div>
+  ),
+
+  name: "Variants"
+};
+
+export const Sizes = {
+  render: () => (
+    <div style={{ display: "flex", flexDirection: "column", width: "100%", gap: "var(--spacing-xxl)" }}>
+      <Pagination
+        count={400}
+        from={0}
+        size={20}
+        setPage={() => undefined}
+        setSize={() => undefined}
+        paginationSizes={PAGINATION_SIZES.SMALL}
+      />
+      <Pagination count={400} from={0} size={20} setPage={() => undefined} setSize={() => undefined} />
+      <Pagination
+        count={400}
+        from={0}
+        size={20}
+        setPage={() => undefined}
+        setSize={() => undefined}
+        paginationSizes={PAGINATION_SIZES.LARGE}
+      />
+    </div>
+  ),
+
+  name: "Sizes"
 };
 
 export const FirstPage = {

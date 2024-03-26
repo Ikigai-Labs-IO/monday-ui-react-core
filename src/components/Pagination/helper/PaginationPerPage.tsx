@@ -9,7 +9,7 @@ type Props = {
 export function PerPage({ size, set }: Props) {
   return (
     <nav className={styles["pagination-per-page"]} role="navigation" aria-label="pagination">
-      <div className={styles["pagination-show"]}>Show:</div>
+      <div className={styles["pagination-show"]}>Items per page</div>
       {[10, 20, 50].map(element => (
         <button
           key={element}

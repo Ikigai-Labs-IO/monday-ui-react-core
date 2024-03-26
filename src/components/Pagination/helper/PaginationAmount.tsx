@@ -23,7 +23,7 @@ export function PaginationAmount({ from, size, count, firstPage = 0 }: Props) {
 
   return (
     <div className={styles["pagination-result"]}>
-      {min} -{max > count ? count : max} of {count}
+      Showing {min} -{max > count ? count : max} of {count}
     </div>
   );
 }
