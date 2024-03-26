@@ -20,21 +20,21 @@
 }
 
 .danger {
-  background-color: #e74c3c;
+  background-color: var(--negative-color-hover);
   &:after {
-    border-top-color: #e74c3c;
+    border-top-color: var(--negative-color-hover);
   }
 }
 .warning {
-  background-color: #f39c12;
+  background-color: var(--warning-color);
   &:after {
-    border-top-color: #f39c12;
+    border-top-color: var(--warning-color);
   }
 }
 .success {
-  background-color: #27ae60;
+  background-color: var(--positive-color);
   &:after {
-    border-top-color: #27ae60;
+    border-top-color: var(--positive-color);
   }
 }
 .notification {

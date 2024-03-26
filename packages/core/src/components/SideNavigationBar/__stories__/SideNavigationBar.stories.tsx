@@ -4,7 +4,6 @@ import { SideNavigationBar } from "../SideNavigationBar";
 import { SideNavigationBarHeader } from "../components/SideNavigationBarHeader";
 import { SideNavigationBarFooter } from "../components/SideNavigationBarFooter";
 import "./SideNavigationBar.stories.scss";
-import { Settings, CustomIcon } from "../../../components/Icon/Icons";
 
 const meta: Meta = {
   title: "Components/SideNavigationBar",
@@ -39,12 +38,12 @@ export const Default: StoryObj = {
         >
           <div className="items-container">
             <ItemsSection>
-              <MenuItem caption="Apps" icon={() => <CustomIcon name="apps" />} />
-              <MenuItem caption="Schedules" icon={() => <CustomIcon name="schedule" />} />
-              <MenuItem caption="Facets" icon={() => <CustomIcon name="facets" />} />
-              <MenuItem caption="Connectors" icon={() => <CustomIcon name="connector" />} />
-              <MenuItem caption="Market Place" icon={() => <CustomIcon name="marketPlace" />} />
-              <MenuItem caption="In Progress" icon={() => <CustomIcon name="inProgress" />} />
+              <MenuItem caption="Apps" iconName="apps" />
+              <MenuItem caption="Schedules" iconName="schedule" />
+              <MenuItem caption="Facets" iconName="facets" />
+              <MenuItem caption="Connectors" iconName="connector" />
+              <MenuItem caption="Market Place" iconName="marketPlace" />
+              <MenuItem caption="In Progress" iconName="inProgress" />
             </ItemsSection>
           </div>
         </SideNavigationBar>
@@ -71,12 +70,12 @@ export const NonExpandable: StoryObj = {
           position: "relative"
         }}
       >
-        <SideNavigationBar position="absolute" height="100%" expandable={false}>
+        <SideNavigationBar position="absolute" height="100%">
           <div className="items-container">
             <ItemsSection>
-              <MenuItem caption="Apps" icon={() => <CustomIcon name="apps" />} />
-              <MenuItem caption="Schedules" icon={() => <CustomIcon name="schedule" />} />
-              <MenuItem caption="Facets" icon={() => <CustomIcon name="facets" />} />
+              <MenuItem caption="Apps" iconName="apps" iconSize="20" />
+              <MenuItem caption="Schedules" iconName="schedule" iconSize="20" />
+              <MenuItem caption="Facets" iconName="facets" iconSize="20" />
             </ItemsSection>
           </div>
         </SideNavigationBar>
@@ -106,28 +105,16 @@ export const MultipleSectionsWithStickToBottom: StoryObj = {
         <SideNavigationBar position="absolute" height="100%">
           <div className="items-container">
             <ItemsSection>
-              <MenuItem caption="Dashboard" icon={() => <CustomIcon name="dashboard" />} />
-              <MenuItem caption="Applications" icon={() => <CustomIcon name="application" />} />
-              <MenuItem caption="Settings" icon={Settings}>
-                <ul
-                  style={{
-                    backgroundColor: "green",
-                    padding: "0.5rem 1rem",
-                    border: "solid 1px black"
-                  }}
-                >
-                  <li>User settings</li>
-                  <li>Application settings</li>
-                </ul>
-              </MenuItem>
+              <MenuItem caption="Dashboard" iconName="dashboard" iconSize="30" />
+              <MenuItem caption="Applications" iconName="application" iconSize="30" />
             </ItemsSection>
             <ItemsSection>
-              <MenuItem caption="KPIs" icon={() => <CustomIcon name="chartAscending" />} />
-              <MenuItem caption="Reserved Instances" icon={() => <CustomIcon name="reservedInstances" />} />
-              <MenuItem caption="Estate Records" icon={() => <CustomIcon name="resource" />} />
+              <MenuItem caption="KPIs" iconName="chartAscending" iconSize="30" />
+              <MenuItem caption="Reserved Instances" iconName="reservedInstances" iconSize="30" />
+              <MenuItem caption="Estate Records" iconName="resource" iconSize="30" />
             </ItemsSection>
             <ItemsSection stickToBottom>
-              <MenuItem caption="Archive" icon={() => <CustomIcon name="archive" />} />
+              <MenuItem caption="Archive" iconName="archive" iconSize="30" />
             </ItemsSection>
           </div>
         </SideNavigationBar>
@@ -157,27 +144,15 @@ export const Scrollable: StoryObj = {
         <SideNavigationBar position="absolute" height="100%">
           <div className="items-container">
             <ItemsSection>
-              <MenuItem caption="Dashboard" icon={() => <CustomIcon name="dashboard" />} />
-              <MenuItem caption="Applications" icon={() => <CustomIcon name="application" />} />
-              <MenuItem caption="Settings" icon={Settings}>
-                <ul
-                  style={{
-                    backgroundColor: "green",
-                    padding: "0.5rem 1rem",
-                    border: "solid 1px black"
-                  }}
-                >
-                  <li>User settings</li>
-                  <li>Application settings</li>
-                </ul>
-              </MenuItem>
-              <MenuItem caption="KPIs" icon={() => <CustomIcon name="chartAscending" />} />
-              <MenuItem caption="Reserved Instances" icon={() => <CustomIcon name="reservedInstances" />} />
-              <MenuItem caption="Estate Records" icon={() => <CustomIcon name="resource" />} />
-              <MenuItem caption="Cloud Accounts" icon={() => <CustomIcon name="cloud" />} />
+              <MenuItem caption="Dashboard" iconName="dashboard" iconSize="25" />
+              <MenuItem caption="Applications" iconName="application" iconSize="25" />
+              <MenuItem caption="KPIs" iconName="chartAscending" iconSize="25" />
+              <MenuItem caption="Reserved Instances" iconName="reservedInstances" iconSize="25" />
+              <MenuItem caption="Estate Records" iconName="resource" iconSize="25" />
+              <MenuItem caption="Cloud Accounts" iconName="cloud" iconSize="25" />
             </ItemsSection>
             <ItemsSection stickToBottom>
-              <MenuItem caption="Archive" icon={() => <CustomIcon name="archive" />} />
+              <MenuItem caption="Archive" iconName="archive" iconSize="25" />
             </ItemsSection>
           </div>
         </SideNavigationBar>

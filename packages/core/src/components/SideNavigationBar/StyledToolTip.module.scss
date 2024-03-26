@@ -6,7 +6,7 @@
   line-height: 1rem;
   padding: 0.5rem;
   background-color: darkgray;
-  color: white;
+  color: var(--text-color-on-primary);
   border-radius: 4px;
   opacity: 0;
   animation: fadeIn 0.2s ease-in-out both;
