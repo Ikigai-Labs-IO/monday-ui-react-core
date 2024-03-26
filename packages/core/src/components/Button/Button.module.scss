@@ -202,6 +202,22 @@ $transparent-gray: rgba(16, 24, 27, 0.40);
   color: var(--disabled-background-color);
 }
 
+.kindPrimary.colorInverted {
+  background: var(--inverted-color-background);
+  color: var(--text-color-on-inverted);
+}
+
+.kindPrimary.colorInvertedActive,
+.kindPrimary.colorInverted:hover,
+.kindPrimary.colorInverted:focus {
+  background: var(--placeholder-color);
+}
+
+.kindPrimary.button.colorInverted.disabled {
+  background: var(--disabled-text-color);
+  color: var(--disabled-background-color);
+}
+
 .kindPrimary.colorOnPrimaryColor {
   background: var(--text-color-on-primary);
 }
@@ -456,6 +472,20 @@ $transparent-gray: rgba(16, 24, 27, 0.40);
 
 .kindTertiary.colorNegative:active {
   color: black;
+}
+
+.kindTertiary.colorInverted {
+  color: var(--primary-text-color);
+}
+
+.kindTertiary.colorInvertedActive,
+.kindTertiary.colorInverted:hover,
+.kindTertiary.colorInverted:focus {
+  background: var(--primary-background-hover-color);
+}
+
+.kindTertiary.colorInverted.disabled {
+  color: var(--disabled-text-color);
 }
 
 .kindTertiary.colorInverted {
