@@ -1,0 +1,122 @@
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--ui-border-color);
+    padding: 0.75rem;
+    border-radius: var(--border-radius-small);
+    align-items: center;
+    width: 100%;
+
+    .pagination-result,
+    .pagination-show {
+        font-weight: var(--font-weight-normal);
+        font-size: 0.75rem;
+        color: var(--type-secondary);
+        margin: 0 0.5rem 0 0;
+        line-height: 1.5em;
+    }
+
+    .pagination-result {
+        width: 12rem;
+    }
+
+    .pagination-per-page {
+        display: flex;
+        align-items: center;
+    }
+
+    .pagination-list {
+        display: flex;
+        list-style: none !important;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        border: 0;
+        font-weight: var(--font-weight-normal);
+        font-size: 0.75rem;
+        color: var(--divider-selected);
+        line-height: 1.5em;
+        padding: 0.5rem;
+        border-radius: var(--border-radius-small);
+        margin: 0 0.25rem;
+        background-color: var(--ui-border-color);
+
+        &:active {
+            background-color: var(--interactive-secondaryActive);
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &:hover:not([disabled]) {
+            cursor: pointer;
+            background-color: var(--divider-tertiary);
+        }
+
+        svg {
+            width: 1.125rem;
+            height: 1.125rem;
+        }
+
+        span {
+            min-width: 1.125rem;
+            text-align: center;
+        }
+
+        &.current {
+            background-color: var(--interactive-primary);
+            color: var(--ui-border-color);
+            font-weight: var(--font-weight-bold);
+
+            &:hover {
+                background-color: var(--interactive-primaryHover);
+                color: var(--ui-border-color);
+            }
+        }
+
+        &.pagination-first,
+        &.pagination-prev,
+        &.pagination-last,
+        &.pagination-next {
+            background-color: transparent;
+        }
+
+        &.pagination-first {
+            padding-left: 0.25rem;
+
+            svg {
+                padding-left: 0;
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        &.pagination-last {
+            padding-right: 0.25rem;
+
+            svg {
+                padding-right: 0;
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+
+    .dots {
+        margin: 0 0.5rem;
+
+        >* {
+            margin-top: 0.125rem;
+        }
+    }
+}
