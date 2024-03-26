@@ -102,6 +102,7 @@
   "homepage": "https://github.com/mondaycom/monday-ui-react-core#readme",
   "dependencies": {
     "@popperjs/core": "2.11.6",
+    "@storybook/react-vite": "^7.5.3",
     "a11y-dialog": "^7.5.2",
     "autosize": "^5.0.1",
     "body-scroll-lock": "^4.0.0-beta.0",
@@ -111,6 +112,7 @@
     "lodash-es": "^4.17.21",
     "monday-ui-style": "0.3.0",
     "prop-types": "^15.8.1",
+    "react-awesome-styled-grid": "^3.1.4",
     "react-dates": "21.8.0",
     "react-inlinesvg": "^3.0.1",
     "react-is": "^16.9.0",
@@ -121,7 +123,7 @@
     "react-window": "^1.8.7",
     "react-windowed-select": "^2.0.4",
     "style-inject": "^0.3.0",
-    "vibe-storybook-components": "0.17.1"
+    "vibe-storybook-components": "0.17.2"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",

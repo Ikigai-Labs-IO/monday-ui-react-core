@@ -1,4 +1,4 @@
-import { Canvas, Meta, Story } from "@storybook/blocks";
+import { Canvas, Meta } from "@storybook/blocks";
 import Chips from "../Chips";
 import { COUNTER, LABEL, TOOLTIP } from "../../../storybook/components/related-components/component-description-map";
 import { TipLabel } from "./chips.stories.helpers";
@@ -21,9 +21,7 @@ import * as ChipsStories from "./chips.stories";
 
 Chips are compact elements that represent an input, attribute, or action. They may display text, icons, or both.
 
-<Canvas>
-  <Story of={ChipsStories.Overview} />
-</Canvas>
+<Canvas of={ChipsStories.Overview} />
 
 ## Props
 
@@ -45,27 +43,19 @@ Chips are compact elements that represent an input, attribute, or action. They m
 
 ### With read only state
 
-<Canvas>
-  <Story of={ChipsStories.ChipsWithReadOnlyState} />
-</Canvas>
+<Canvas of={ChipsStories.ChipsWithReadOnlyState} />
 
 ### With icons
 
-<Canvas>
-  <Story of={ChipsStories.ChipsWithIcons} />
-</Canvas>
+<Canvas of={ChipsStories.ChipsWithIcons} />
 
 ### With avatars
 
-<Canvas>
-  <Story of={ChipsStories.ChipsWithAvatars} />
-</Canvas>
+<Canvas of={ChipsStories.ChipsWithAvatars} />
 
 ### Themes
 
-<Canvas>
-  <Story of={ChipsStories.Themes} />
-</Canvas>
+<Canvas of={ChipsStories.Themes} />
 
 ### Disabled Chips
 
@@ -75,9 +65,7 @@ Chips are compact elements that represent an input, attribute, or action. They m
 
 ### Clickable chips
 
-<Canvas>
-  <Story of={ChipsStories.Clickable} />
-</Canvas>
+<Canvas of={ChipsStories.Clickable} />
 
 ### Chips Group
 
@@ -108,9 +96,7 @@ Chips are compact elements that represent an input, attribute, or action. They m
 
 Chips can be removable, and can be used in a multiple options selection use cases.
 
-<Canvas>
-  <Story of={ChipsStories.ChipsInAPersonPickerComboBox} />
-</Canvas>
+<Canvas of={ChipsStories.ChipsInAPersonPickerComboBox} />
 
 ## Related components
 

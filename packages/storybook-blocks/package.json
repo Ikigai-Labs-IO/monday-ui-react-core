@@ -1,6 +1,6 @@
 {
   "name": "vibe-storybook-components",
-  "version": "0.17.1",
+  "version": "0.17.2",
   "description": "Collection of Vibe's Storybook components",
   "license": "MIT",
   "repository": {
@@ -75,7 +75,7 @@
     "@storybook/testing-library": "^0.2.2",
     "@storybook/theming": "^7.5.0",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^14.0.0",
+     "@testing-library/react": "^12.1.2",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
     "autoprefixer": "^10.4.14",
