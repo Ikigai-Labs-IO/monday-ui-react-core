@@ -86,7 +86,7 @@ export const Tree: React.FC<React.PropsWithChildren<TreeProps>> = ({
 
   return (
     <TreeContext.Provider value={initialValue}>
-      <div className={className} style={{ paddingLeft: "1.625rem" }} {...props}>
+      <div className={className} {...props}>
         {customChildren}
       </div>
     </TreeContext.Provider>

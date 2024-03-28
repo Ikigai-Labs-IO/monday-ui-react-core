@@ -19,13 +19,11 @@ export const Overview = {
     render: () => (
         <Flex>
             <Tree>
-                <TreeFile name="package.json" />
                 <TreeFolder name="Components">
                     <TreeFile name="footer.js" />
                     <TreeFile name="layout.js" />
                     <TreeFile name="header.js" />
                 </TreeFolder>
-                <TreeFile name="readme.md" />
             </Tree>
         </Flex>
     ),
@@ -55,4 +53,38 @@ export const Default = {
     ),
 
     name: "default",
+};
+
+export const DisabledFolder = {
+    render: () => (
+        <Flex>
+            <Tree>
+                <TreeFile name="package.json" />
+                <TreeFolder name="Components" disabled>
+                    <TreeFile name="layout.js" />
+                    <TreeFile name="header.js" />
+                </TreeFolder>
+                <TreeFile name="readme.md" />
+            </Tree>
+        </Flex>
+    ),
+
+    name: "disabled folder",
+};
+
+export const DisabledFile = {
+    render: () => (
+        <Flex>
+            <Tree>
+                <TreeFile name="package.json" disabled />
+                <TreeFolder name="Components" >
+                    <TreeFile name="layout.js" />
+                    <TreeFile name="header.js" />
+                </TreeFolder>
+                <TreeFile name="readme.md" />
+            </Tree>
+        </Flex>
+    ),
+
+    name: "disabled file",
 };
