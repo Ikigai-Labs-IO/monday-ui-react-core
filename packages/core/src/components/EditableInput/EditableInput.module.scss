@@ -1,19 +1,37 @@
 @import "../../styles/typography";
 
 .editableInputWrapper {
-  background-color: var(--primary-background-color);
+  background-color: var(--text-color-on-primary);
   display: inline-block;
-  width: 100%;
-  min-width: 0;
-  max-height: 100%;
   margin: auto 0;
   @include heading-padding();
   outline: none;
-  border: 1px solid;
-  border-radius: var(--border-radius-small);
-  border-color: var(--primary-color);
   vertical-align: top;
   text-align: left;
+  padding: var(--spacing-small) 12px;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-small);
+  font: var(--font-text2-normal);
+  line-height: 22px;
+
+  &:hover {
+    border-color: var(--ui-border-color);
+  }
+
+  &:active,
+  &:focus {
+    border-color: var(--divider-selected);
+  }
+}
+
+.Input {
+  width: 207px;
+  height: 28px;
+}
+
+.TextArea {
+  width: 216px;
+  height: 72px;
 }
 
 .editableInputWrapper.noResize {
