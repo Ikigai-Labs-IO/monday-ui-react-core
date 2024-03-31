@@ -104,7 +104,7 @@ const Icon: VibeComponent<IconProps, HTMLElement> & { type?: typeof IconType } =
     ref
   ) => {
     if (isCustomIcon && typeof iconName === "string") {
-      icon = () => <CustomIcon viewBox={viewBox} name={iconName} iconSize={iconSize} />;
+      icon = () => <CustomIcon name={iconName} iconSize={iconSize} viewBox={viewBox && viewBox} />;
     }
 
     const overrideExternalTabIndex = externalTabIndex && +externalTabIndex;

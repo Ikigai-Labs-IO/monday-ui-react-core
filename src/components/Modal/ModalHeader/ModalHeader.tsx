@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import cx from "classnames";
 import IconButton from "../../IconButton/IconButton";
-import CloseSmall from "../../Icon/Icons/components/CloseSmall";
+import CloseIcon from "../../Icon/Icons/components/Close";
 import Icon, { IconSubComponentProps } from "../../Icon/Icon";
 import VibeComponentProps from "../../../types/VibeComponentProps";
 import { NOOP } from "../../../utils/function-utils";
@@ -94,7 +94,7 @@ const ModalHeader: FC<ModalHeaderProps> = ({
       {children ? (
         children
       ) : (
-        <Flex align={Flex.align.START} gap={Flex.gaps.SMALL} className={titleClassName}>
+        <Flex align={Flex.align.START} style={{ color: "#10181b" }} gap={Flex.gaps.SMALL} className={titleClassName}>
           {icon && (
             <Icon
               className={cx(styles.icon, iconClassName)}
@@ -105,7 +105,7 @@ const ModalHeader: FC<ModalHeaderProps> = ({
               clickable={false}
             />
           )}
-          <Heading id={id} maxLines={2}>
+          <Heading id={id} type={Heading.types.H3} weight={Heading.weights.BOLD} maxLines={2}>
             {title}
           </Heading>
         </Flex>
@@ -116,16 +116,18 @@ const ModalHeader: FC<ModalHeaderProps> = ({
         </Text>
       )}
 
-      <div className={cx(styles.closeButton)}>
-        <IconButton
-          key="xxs"
-          onClick={closeModal}
-          ariaLabel={closeButtonAriaLabel}
-          icon={CloseSmall}
-          kind={IconButton.kinds.TERTIARY}
-          size={IconButton.sizes.SMALL}
-        />
-      </div>
+      {!hideCloseButton && (
+        <div className={cx(styles.closeButton)}>
+          <IconButton
+            key="xxs"
+            onClick={closeModal}
+            ariaLabel={closeButtonAriaLabel}
+            icon={CloseIcon}
+            kind={IconButton.kinds.TERTIARY}
+            size={IconButton.sizes.SMALL}
+          />
+        </div>
+      )}
     </div>
   );
 };
