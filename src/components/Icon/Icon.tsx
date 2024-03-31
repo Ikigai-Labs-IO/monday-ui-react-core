@@ -10,7 +10,7 @@ import { VibeComponentProps, VibeComponent, MouseEventCallBack, SubIcon, withSta
 import { CustomIcon, PathName } from "./Icons/components/CustomIcon";
 
 // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function
-const CLICK_NOOP = (_event: React.MouseEvent) => {};
+const CLICK_NOOP = (_event: React.MouseEvent) => { };
 
 export interface IconSubComponentProps {
   ref?: Ref<HTMLElement>;
