@@ -29,6 +29,15 @@ function Pagination({ count, from, set, size, firstPage = 0 }: IExtendedPaginati
     set(selectedOption.value * size);
   };
 
+  let dropdownProps = {
+    singleValueWrapperClassName: styles.singleValue,
+    value: { value: currentPage, label: `${currentPage}` },
+    placeholder: currentPage,
+    size: "xs",
+    options: options,
+    onChange: handlePageChange
+  }
+
   return (
     <nav role="navigation" aria-label="pagination" style={{ display: "flex", gap: "8px" }}>
       <ul className={styles["pagination-list"]}>
@@ -45,12 +54,7 @@ function Pagination({ count, from, set, size, firstPage = 0 }: IExtendedPaginati
         )}
         <li>
           <Dropdown
-            options={options}
-            singleValueWrapperClassName={styles.singleValue}
-            value={{ value: currentPage, label: `${currentPage}` }}
-            placeholder={currentPage}
-            size="xs"
-            onChange={handlePageChange}
+            {...(dropdownProps) as any}
           />
         </li>
         {currentPage < nPages - (isFirstPageZero ? 1 : 0) && (
