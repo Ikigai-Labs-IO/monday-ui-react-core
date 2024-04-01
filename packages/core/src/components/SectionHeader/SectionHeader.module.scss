@@ -1,0 +1,53 @@
+.sectionHeader {
+  display: flex;
+  width: 100%;
+  padding-right: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filled {
+  background: var(--surface-secondary);
+}
+
+.withBorder {
+  border-bottom: 1px solid var(--ui-border-color);
+}
+
+.text {
+  font-family: var(--font-family);
+}
+
+.xs {
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 15px;
+  padding-top: 11px;
+  padding-bottom: 5px;
+  height: var(--spacing-xl);
+}
+
+.small {
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 22px;
+  padding-top: 14px;
+  padding-bottom: 5px;
+  height: 42px;
+}
+
+.large {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: var(--spacing-large);
+  padding-top: 31px;
+  padding-bottom: var(--spacing-small);
+  height: var(--spacing-xxxl);
+}
+
+.indented {
+  padding-left: var(-spacing-medium);
+}

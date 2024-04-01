@@ -1,0 +1,57 @@
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import * as SectionHeaderStories from "./SectionHeader.stories";
+
+<Meta of={SectionHeaderStories} />
+
+# Section Header
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variations](#variations)
+- [Feedback](#feedback)
+
+## Overview
+
+Section Header serves as a navigational landmark within content, allowing users to easily identify and jump to various sections.
+
+<Canvas>
+  <Story of={SectionHeaderStories.Overview} />
+</Canvas>
+
+## Props
+
+<PropsTable />
+
+## Variations
+
+### Variants
+Section Header appears in 2 variants: Flush and Indented.
+
+<Canvas>
+  <Story of={SectionHeaderStories.Variants} />
+</Canvas>
+
+### Sizes
+Section Header appears in 3 sizes: XSmall, Small and Large.
+
+<Canvas>
+  <Story of={SectionHeaderStories.Sizes} />
+</Canvas>
+
+### Types
+Section Header appears in 2 types: Filled and with border.
+
+<Canvas>
+  <Story of={SectionHeaderStories.Types} />
+</Canvas>
+
+## Usage
+
+### With Right Element
+
+This variant demonstrates how to incorporate a right-aligned element, such as a button or icon, into the section header.
+
+<Canvas>
+  <Story of={SectionHeaderStories.WithRightElement} />
+</Canvas>
