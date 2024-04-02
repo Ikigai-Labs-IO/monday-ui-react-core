@@ -1,0 +1,40 @@
+.timeline_row {
+  max-width: 300px;
+}
+
+.margin_description {
+  margin-top: 0.5rem;
+}
+
+.user_name {
+  color: var(--primary-color);
+  text-underline-offset: 0.2em;
+  font-size: 12px;
+  line-height: 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.timeline_row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(----spacing-xs);
+}
+
+.side_line {
+  flex-grow: 1;
+  position: relative;
+  margin-top: 1.5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 18px;
+    bottom: -22px;
+    width: 1px;
+    background-color: #e2e2e2;
+  }
+}
