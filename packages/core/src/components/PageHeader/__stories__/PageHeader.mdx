@@ -1,0 +1,60 @@
+import PageHeader from "../PageHeader";
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import * as PageHeaderStories from "./PageHeader.stories";
+import {
+  EDITABLE_HEADING,
+  HIDDEN_TEXT,
+  TEXT
+} from "../../../storybook/components/related-components/component-description-map";
+
+<Meta of={PageHeaderStories} />
+
+# PageHeader
+
+- [Overview](#overview)
+- [Props](#props)
+- [Variants](#variants)
+- [Related components](#related-components)
+- [Feedback](#feedback)
+
+## Overview
+
+Page Header is a vessle to descirbe ot the user where they are and what global actions they can take.
+
+<Canvas>
+  <Story of={PageHeaderStories.Default} />
+</Canvas>
+
+## Props
+
+<PropsTable />
+
+## Variants
+
+### Default
+
+<Canvas>
+  <Story of={PageHeaderStories.Default} />
+</Canvas>
+
+### With Description
+
+<Canvas>
+  <Story of={PageHeaderStories.WithDescription} />
+</Canvas>
+
+### With Breadcrumb
+
+<Canvas>
+  <Story of={PageHeaderStories.WithBreadcrumb} />
+</Canvas>
+
+### With Breadcrumb and Description
+
+<Canvas>
+  <Story of={PageHeaderStories.WithBreadcrumbAndDescription} />
+</Canvas>
+
+## Related components
+
+<RelatedComponents componentsNames={[EDITABLE_HEADING, TEXT, HIDDEN_TEXT]} />
