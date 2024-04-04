@@ -69,6 +69,9 @@ const colorThemeConfig = {
     'disabled-background-color': palette.grey.softGrey,
     "background-orangebold": palette.orange.orange500,
     "type-secondary": palette.grey.grey600,
+    "interactive-primary": palette.darkBlue.darkBlue500,
+    "interactive-secondaryActive": palette.grey.grey500,
+    "interactive-primaryHover": palette.darkBlue.darkBlue700,
     "surface-alert": palette.red.red200,
     "divider-secondary": palette.grey.grey300
   },

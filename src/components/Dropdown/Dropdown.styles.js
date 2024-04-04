@@ -132,6 +132,7 @@ const container =
       ...provided,
       ...getSize(size),
       minHeight: "30px",
+      width: "6rem",
       border: `1px solid ${getCSSVar("ui-border-color")}`,
       boxShadow: "none",
       borderRadius: getCSSVar("border-radius-small"),
