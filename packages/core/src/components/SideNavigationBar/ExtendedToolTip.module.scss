@@ -1,0 +1,61 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  position: fixed;
+  min-width: 0;
+  max-width: 16rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: grey;
+  color: white;
+  border-radius: 4px;
+  z-index: var(--zIndex, 2000);
+  opacity: 0;
+  animation: 0.2s ease-in-out both fadeIn;
+}
+
+.danger {
+  background-color: var(--negative-color-hover);
+  &:after {
+    border-top-color: var(--negative-color-hover);
+  }
+}
+.warning {
+  background-color: var(--warning-color);
+  &:after {
+    border-top-color: var(--warning-color);
+  }
+}
+.success {
+  background-color: var(--positive-color);
+  &:after {
+    border-top-color: var(--positive-color);
+  }
+}
+.notification {
+  background-color: #3498db;
+  &:after {
+    border-top-color: #3498db;
+  }
+}
+.accent {
+  background-color: #ff2837;
+  &:after {
+    border-top-color: #ff2837;
+  }
+}
+.default {
+  background-color: #161632;
+  &:after {
+    border-top-color: #161632;
+  }
+}
+
+.tooltipWrapper {
+  display: var(--display, inline-block);
+}

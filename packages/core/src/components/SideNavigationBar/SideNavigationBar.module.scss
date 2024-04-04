@@ -1,0 +1,211 @@
+.sideNavigationBarWrapper {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: "2.5rem" !important;
+  padding-bottom: "1rem";
+  padding-left: "0.5rem";
+  padding-right: "0.5rem";
+  row-gap: "2rem";
+  border-right: 1px solid var(--layout-border-color);
+  align-items: center;
+  z-index: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.expanded {
+    width: 200px;
+    align-items: start;
+  }
+}
+
+.styled-trigger-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 2rem;
+  width: 100%;
+
+  &:hover {
+    background-color: red;
+  }
+
+  &:active,
+  &.active {
+    background-color: red;
+  }
+
+  > * {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    column-gap: "0.5rem";
+    padding-left: "0.25rem";
+  }
+}
+
+.styledPopoverTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  column-gap: "0.5rem";
+}
+
+.sideNavigationBarFooter {
+  border-top: 1px solid var(--layout-border-color);
+  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .help {
+    padding: 12px var(--spacing-small);
+    font: var(--font-text2-normal);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: var(--spacing-small);
+  }
+
+  .help:hover {
+    border-radius: var(--border-radius-small);
+    background-color: var(--primary-background-hover-color);
+  }
+
+  .profile {
+    display: flex;
+    padding: 12px var(--spacing-small);
+    justify-content: center !important;
+    align-items: center !important;
+    gap: var(--spacing-small); 
+    border-radius: var(--border-radius-small); 
+
+    svg {
+      margin-top: var(--spacing-small);
+      margin-left: var(--spacing-small);
+    }
+
+    .avatar {
+      border-radius: 100px;
+      padding: 1px 5px 5px var(--spacing-xs);
+      font: var(--font-text2-normal);
+      font-size: 12px;
+      background: var(--primary-color); 
+      color: var(--text-color-on-primary);
+      height: var(--spacing-large);
+      width: var(--spacing-large);
+      border: 1px solid rgba(16, 24, 27, 0.10);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    .name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex: 1 0 0;
+      
+      .title {
+        font: var(--font-text2-normal);
+        color: var(--divider-selected);
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .subTitle {
+        margin-top: 0;
+        font: var(--font-text2-normal);
+        font-size: 12px;
+        color: var(--type-secondary);
+      }
+    }
+  }
+}
+
+.sideNavigationBarHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 46px;
+  width: 100%;
+  align-items: center;
+  padding: 9px 6px;
+  margin-bottom: 2.5rem;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+
+    .logo {
+      height: 28px;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .title {
+      font: var(--font-text2-normal);
+      font-size: 12px;
+      margin-top: var(--spacing-xs);
+      color: var(--type-secondary);
+    }
+  }
+
+  &.collapsed {
+    flex-direction: column;
+    margin-right: var(--spacing-medium);
+
+    .header {
+      flex-direction: column;
+
+      .title {
+        padding-left: 0;
+        padding-bottom: 6px;
+      }
+    }
+  }
+}
+
+.burger-wrapper {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  box-sizing: border-box;
+
+  &.expanded {
+    justify-content: start;
+    padding-left: "0.25rem";
+  }
+}
+
+.customActive {
+  background-color: transparent !important;
+}
+
+.wrapper:focus,
+.wrapper:hover {
+  background-color: transparent !important;
+}
