@@ -90,6 +90,13 @@ export const SearchFieldWithTokens = {
       []
     );
 
+    const dropdownProps = {
+      placeholder: "Single line multi state",
+      defaultValue: [options[0]],
+      options: { options },
+      multi: true
+    }
+
     return (
       <StoryDescription description="Single line" vertical>
         <div
@@ -97,7 +104,7 @@ export const SearchFieldWithTokens = {
             width: "400px"
           }}
         >
-          <Dropdown placeholder="Single line multi state" defaultValue={[options[0]]} options={options} multi />
+          <Dropdown {...(dropdownProps) as any} />
         </div>
       </StoryDescription>
     );
