@@ -90,15 +90,15 @@ type TooltipProps = {
   status?: Status;
 };
 
-function Tooltip({ caption, isHovered, tooltipRef, status, style }: TooltipProps): React.ReactNode {
+function Tooltip({ caption, isHovered, tooltipRef, status, style }: TooltipProps): JSX.Element | null {
   const { zIndex = 2000 } = style;
   return isHovered
     ? (ReactDOM.createPortal(
-        <StyledTooltip ref={tooltipRef} status={status} style={style} zIndex={zIndex}>
-          {caption}
-        </StyledTooltip>,
-        document.body
-      ) as React.ReactNode)
+      <StyledTooltip ref={tooltipRef} status={status} style={style} zIndex={zIndex}>
+        {caption}
+      </StyledTooltip>,
+      document.body
+    ))
     : null;
 }
 
