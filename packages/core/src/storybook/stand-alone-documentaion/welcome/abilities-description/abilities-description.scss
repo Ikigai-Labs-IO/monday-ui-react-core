@@ -9,6 +9,7 @@ $abilities-grid-cell-array-calc: calc(33.3% - #{$abilities-grid-gap});
   img {
     width: 100%;
     height: 120px;
+    object-fit: none;
   }
   @include grid-auto-fit(
     $grid-gap: $abilities-grid-gap,
