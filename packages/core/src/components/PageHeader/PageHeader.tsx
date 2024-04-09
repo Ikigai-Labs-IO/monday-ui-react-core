@@ -46,7 +46,6 @@ export const PageHeader: VibeComponent<PageHeaderProps, HTMLElement> & {
     return (
       <Flex
         align={Flex.align.START}
-        gap={Flex.gaps.XS}
         aria-labelledby="my-work-id"
         direction={Flex.directions.COLUMN}
       >
@@ -55,20 +54,22 @@ export const PageHeader: VibeComponent<PageHeaderProps, HTMLElement> & {
             {BreadcrumbsItems}
           </BreadcrumbsBar>
         )}
-        <EditableHeading
-          type={type}
-          weight={weight}
-          value={text}
-          className={styles.editableHeading}
-        />
-        {isDescription &&
-          <Flex direction={Flex.directions.ROW} align={Flex.align.CENTER} gap={Flex.gaps.SMALL}>
-            <Text type={Text.types.TEXT2} color={Text.colors.SECONDARY}>
-              {description}
-            </Text>
-            <CustomIcon name="info" viewBox="0 -2 27 30" iconSize={19} fillColor="var(--type-secondary)" />
-          </Flex>
-        }
+        <div style={{gap: "var(--spacing-xs)"}}>
+          <EditableHeading
+            type={type}
+            weight={weight}
+            value={text}
+            className={styles.editableHeading}
+          />
+          {isDescription &&
+            <Flex direction={Flex.directions.ROW} align={Flex.align.CENTER} gap={Flex.gaps.SMALL}>
+              <Text type={Text.types.TEXT2} color={Text.colors.SECONDARY}>
+                {description}
+              </Text>
+              <CustomIcon name="info" viewBox="0 -2 27 30" iconSize={19} fillColor="var(--type-secondary)" />
+            </Flex>
+          }
+        </div>
       </Flex>
     );
   }

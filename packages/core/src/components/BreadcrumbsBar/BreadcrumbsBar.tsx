@@ -32,11 +32,12 @@ const BreadcrumbsBar: FC<BreadcrumbBarProps> & { types?: typeof BreadcrumbsBarTy
           React.isValidElement(child)
             ? [
                 index > 0 && (
-                  <li>
+                  <li style={{ width: "20px", height: "20px"}}>
                     <CustomIcon
                       className={styles.separatorIcon}
                       fillColor="#A2B1C1"
-                      iconSize="30"
+                      iconSize="20"
+                      viewBox="2 -1 20 25"
                       name="navigationSlash"
                     />
                   </li>
