@@ -71,7 +71,8 @@ const colorThemeConfig = {
     "type-secondary": palette.grey.grey600,
     "interactive-secondaryActive": palette.grey.grey500,
     "surface-alert": palette.red.red200,
-    "divider-secondary": palette.grey.grey300
+    "divider-secondary": palette.grey.grey300,
+    "Charcoal-900": palette.charcoal.charcoal900
   },
   black: {
     'brand-colors': {

@@ -1,0 +1,43 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import * as EditableInputStories from "./editableInput.stories.js";
+
+<Meta of={EditableInputStories} />
+
+# Editable Input
+
+- [Overview](#overview)
+- [Props](#props)
+- [Variants](#variants)
+- [Feedback](#feedback)
+
+## Overview
+
+<Canvas>
+  <Story of={EditableInputStories.Overview} />
+</Canvas>
+
+## Props
+
+<PropsTable />
+
+## Variants
+
+### Input
+
+<Canvas>
+  <Story of={EditableInputStories.Input} />
+</Canvas>
+
+### TextArea
+
+With auto size
+
+<Canvas>
+  <Story of={EditableInputStories.TextAreaWithAutoSize} />
+</Canvas>
+
+Without auto size
+
+<Canvas>
+  <Story of={EditableInputStories.TextAreaWithoutAutoSize} />
+</Canvas>

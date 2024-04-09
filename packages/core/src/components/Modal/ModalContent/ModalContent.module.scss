@@ -5,4 +5,5 @@
   overflow: auto;
   @include scroller();
   font-weight: var(--font-weight-bold);
+  padding-inline: var(--spacing-xl);
 }

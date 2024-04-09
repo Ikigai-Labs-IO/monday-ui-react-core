@@ -41,5 +41,8 @@ export const palette = {
   orange: {
     orange100: "#fff7e6",
     orange500: "#ffab48"
+  },
+  charcoal: {
+    charcoal900: "#3c3c3c"
   }
 } as const;

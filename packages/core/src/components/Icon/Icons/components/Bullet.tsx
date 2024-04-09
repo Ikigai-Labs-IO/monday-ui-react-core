@@ -6,7 +6,7 @@ size?: string | number;
 }
 const Bullet: React.FC<BulletProps> = ({size, ...props}) => (
   <svg viewBox="0 0 20 20" fill="currentColor" width={ size || "20" } height={ size || "20" } {...props}>
-    <circle cx="10" cy="10" r="3" fill="currentColor" />
+    <circle cx="11" cy="9" r="3" fill="currentColor" />
   </svg>
 );
 Bullet.displayName = 'Bullet';

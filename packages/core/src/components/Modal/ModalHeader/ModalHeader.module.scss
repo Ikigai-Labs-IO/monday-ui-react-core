@@ -1,6 +1,7 @@
 @import "../../../styles/typography";
 
 .container {
+  padding-inline: var(--spacing-large);
 
   .icon {
     flex-shrink: 0;
