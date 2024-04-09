@@ -12,6 +12,7 @@ import { withStaticProps } from "../../types";
 import { getTestId } from "../../tests/test-ids-utils";
 import { ComponentDefaultTestId } from "../../tests/constants";
 import styles from "./Modal.module.scss";
+import Divider from "../Divider/Divider";
 
 export interface ModalProps {
   /**
@@ -133,7 +134,8 @@ const Modal: FC<ModalProps> & { width?: typeof ModalWidth } = ({
       return cloneElement(header, { id, closeModal: onClose });
     }
     return (
-      <ModalHeader
+      <>
+        <ModalHeader
         title={title}
         description={description}
         closeModal={onClose}
@@ -141,6 +143,8 @@ const Modal: FC<ModalProps> & { width?: typeof ModalWidth } = ({
         closeButtonAriaLabel={closeButtonAriaLabel}
         hideCloseButton={hideCloseButton}
       />
+      <Divider/>
+      </>
     );
   }, [attr.title, childrenArray, title, description, onClose, closeButtonAriaLabel]);
 

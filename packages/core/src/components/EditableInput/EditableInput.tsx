@@ -235,7 +235,9 @@ const EditableInput: VibeComponent<EditableInputProps> & {
         data-testid={dataTestId || getTestId(ComponentDefaultTestId.EDITABLE_INPUT, id)}
         style={style}
         className={cx(styles.editableInputWrapper, className, {
-          [styles.noResize]: autoSize
+          [styles.noResize]: autoSize,
+          [styles.Input]: inputType === InputType.INPUT,
+          [styles.TextArea]: inputType === InputType.TEXT_AREA
         })}
         onChange={onChangeCallback}
         onKeyDown={onKeyDownCallback}
