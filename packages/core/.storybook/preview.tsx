@@ -69,9 +69,7 @@ const colorThemeConfig = {
     'disabled-background-color': palette.grey.softGrey,
     "background-orangebold": palette.orange.orange500,
     "type-secondary": palette.grey.grey600,
-    "interactive-primary": palette.darkBlue.darkBlue500,
     "interactive-secondaryActive": palette.grey.grey500,
-    "interactive-primaryHover": palette.darkBlue.darkBlue700,
     "surface-alert": palette.red.red200,
     "divider-secondary": palette.grey.grey300,
     "Charcoal-900": palette.charcoal.charcoal900
@@ -100,7 +98,7 @@ const colorThemeConfig = {
     'primary-color': palette.purple.purple500,
     'primary-hover-color': palette.blue.blue500,
     'primary-selected-color': palette.navy.navy500,
-    'primary-selected-hover-color': palette.darkBlue.darkBlue500,
+  'primary-selected-hover-color': palette.darkBlue.darkBlue500,
     'text-color-on-primary': palette.white,
     'ui-border-color': palette.grey.grey200,
     'negative-color': palette.red.red500,

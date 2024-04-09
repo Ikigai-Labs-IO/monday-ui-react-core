@@ -36,8 +36,7 @@ export const palette = {
     navy500: "#133774"
   },
   darkBlue: {
-    darkBlue500: "#0d2e65",
-    darkBlue700: "#161632"
+    darkBlue500: "#0d2e65"
   },
   orange: {
     orange100: "#fff7e6",
