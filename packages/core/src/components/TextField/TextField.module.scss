@@ -1,8 +1,6 @@
 @import "~monday-ui-style/dist/mixins";
 @import "../../styles/typography";
 
-$Charcoal900: #3C3C3C;
-
 .textField {
   position: relative;
   box-sizing: border-box;
@@ -244,7 +242,7 @@ $Charcoal900: #3C3C3C;
 }
 
 .textField .inputWrapper.wrapperSizeSmall .input {
-  color: $Charcoal900;
+  color: var(--Charcoal-900);
   @include vibe-text(text2, medium);
   @include smoothing-text;
 }
@@ -263,7 +261,7 @@ $Charcoal900: #3C3C3C;
 }
 
 .textField .inputWrapper.wrapperSizeMedium .input {
-  color: $Charcoal900;
+  color: var(--Charcoal-900);
   @include vibe-text(text1, medium);
   @include smoothing-text;
 }
@@ -301,7 +299,7 @@ $Charcoal900: #3C3C3C;
 }
 
 .textField .inputWrapper.wrapperSizeLarge .input {
-  color: $Charcoal900;
+  color: var(--Charcoal-900);
   @include vibe-text(h3, bold);
   @include smoothing-text;
 }
