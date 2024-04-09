@@ -1,8 +1,8 @@
 @import "../../../styles/typography";
 
 .menu {
-  margin: unset;
-  padding: unset;
+  margin: auto;
+  padding: var(--spacing-small) var(--spacing-xs);
   position: relative;
 }
 

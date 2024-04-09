@@ -1,0 +1,52 @@
+import { TopNavigationBar } from "../TopNavigationBar";
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import * as TopNavigationBarStories from "./TopNavigationBar.stories";
+
+<Meta of={TopNavigationBarStories} />
+
+# TopNavigationBar
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Feedback](#feedback)
+
+## Overview
+
+Top navigation component that helps users visualize and interact with a multi-step process.
+
+<Canvas>
+  <Story of={TopNavigationBarStories.Overview} />
+</Canvas>
+
+## Props
+
+<PropsTable />
+
+## Usage
+
+### With Trial
+
+<Canvas>
+  <Story of={TopNavigationBarStories.WithTrialModal} />
+</Canvas>
+
+### States
+
+#### Project only
+
+<Canvas>
+  <Story of={TopNavigationBarStories.ProjectOnly} />
+</Canvas>
+
+#### Organization only
+
+<Canvas>
+  <Story of={TopNavigationBarStories.OrganizationOnly} />
+</Canvas>
+
+#### Project and Organization
+
+<Canvas>
+  <Story of={TopNavigationBarStories.ProjectAndOrganization} />
+</Canvas>

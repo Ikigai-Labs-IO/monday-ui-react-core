@@ -37,7 +37,7 @@ export const AvatarContent: React.FC<AvatarContentProps> & {
 }) => {
   const className = cx(
     getStyle(styles, camelCase("content_" + type)),
-    getStyle(styles, camelCase("content_" + type + "--" + size))
+    getStyle(styles, camelCase("content_" + size))
   );
   switch (type) {
     case AvatarType.IMG:
