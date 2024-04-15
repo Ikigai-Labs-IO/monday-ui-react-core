@@ -12,7 +12,6 @@ import MenuItem from "../Menu/MenuItem/MenuItem";
 import styles from "./TopNavigationBar.module.scss";
 import MenuDivider from "../Menu/MenuDivider/MenuDivider";
 import React, { ReactNode, useState, useRef } from "react";
-import person from "../Badge/__stories__/assets/person.png";
 import ModalContent from "../Modal/ModalContent/ModalContent";
 import DialogContentContainer from "../DialogContentContainer/DialogContentContainer";
 
@@ -230,9 +229,9 @@ export const TopNavigationBar: React.FC<TopNavigationBarProps> & { states?: type
                     <span
                     >
                       <Avatar
-                        size={Avatar.sizes.EXTRALARGE}
+                        size={Avatar.sizes.LARGE}
                         withoutTooltip={true}
-                        src={person}
+                        src={require("../Avatar/__stories__/assets/person3.png")}
                         type={Avatar.types.IMG}
                         ariaLabel="Hadas Fahri"
                       />
@@ -278,7 +277,7 @@ export const TopNavigationBar: React.FC<TopNavigationBarProps> & { states?: type
                 <Avatar
                   size={Avatar.sizes.MEDIUM}
                   withoutTooltip={true}
-                  src={person}
+                  src={require("../Avatar/__stories__/assets/person3.png")}
                   type={Avatar.types.IMG}
                   ariaLabel={"Hadas Fahri"}
                   className={styles.navbarAvatar}

@@ -42,7 +42,6 @@ const makeChildren = (value: Array<TreeFile> = []) => {
         return (
           <TreeFolder
             name={item.name}
-            extra={item.extra}
             key={`folder-${item.name}-${index}`}
           >
             {makeChildren(item.files)}
@@ -51,7 +50,6 @@ const makeChildren = (value: Array<TreeFile> = []) => {
       return (
         <TreeFile
           name={item.name}
-          extra={item.extra}
           key={`file-${item.name}-${index}`}
         />
       );

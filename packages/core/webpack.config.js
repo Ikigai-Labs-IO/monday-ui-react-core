@@ -105,6 +105,17 @@ module.exports = () => {
           ]
         },
         {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                outputPath: "images"
+              }
+            }
+          ]
+        },
+        {
           test: /\.css$/,
           include: [path.resolve(__dirname, "../../node_modules/"), path.resolve(__dirname, "../style")], // only include 3rd party libraries and the style package
           use: styleLoaders
