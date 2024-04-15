@@ -60,5 +60,6 @@
     "prettier": "^2.0.5",
     "sass": "^1.70.0",
     "stylelint-config-recommended-scss": "^6.0.0"
-  }
+  },
+  "gitHead": "c8a624f5c4fd4fcc7a4323e0fc9834156ad13445"
 }
