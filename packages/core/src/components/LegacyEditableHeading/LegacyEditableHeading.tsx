@@ -37,7 +37,7 @@ export interface EditableHeadingProps extends EditableInputProps, HeadingProps {
 }
 
 /**
- * @deprecated - use EditableHeading from 'monday-ui-react-core/next'
+ * @deprecated - use EditableHeading from '@ikigailabs/origami-design/next'
  */
 const LegacyEditableHeading: React.FC<EditableHeadingProps> & {
   sizes?: typeof Sizes;

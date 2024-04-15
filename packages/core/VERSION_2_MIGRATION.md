@@ -69,7 +69,7 @@ If you use jest snapshot testing, fix `jest.config.js` to use `moduleNameMapper`
 
 ```diff
 + moduleNameMapper: {
-+     "monday-ui-react-core": "monday-ui-react-core/dist/mocked_classnames_esm/src/index.js"
++     "@ikigailabs/origami-design": "@ikigailabs/origami-design/dist/mocked_classnames_esm/src/index.js"
 + }
 ```
 
@@ -79,27 +79,27 @@ CommonJS imports for components and hooks from the `dist` are going to be deprec
 Before:
 
 ```diff
-- import Button from "monday-ui-react-core/dist/Button";
+- import Button from "@ikigailabs/origami-design/dist/Button";
 ```
 
 After:
 
 ```diff
-+ import { Button } from "monday-ui-react-core";
++ import { Button } from "@ikigailabs/origami-design";
 ```
 
 ### Replace main.css import with tokens import
 
-Previously `main.css` contained all the style definitions + `monday-ui-style` tokens and was required to import, now instead of this you should just load `monday-ui-style` tokens via separate endpoint.
+Previously `main.css` contained all the style definitions + `@ikigailabs/ui-style` tokens and was required to import, now instead of this you should just load `@ikigailabs/ui-style` tokens via separate endpoint.
 
 Before:
 
 ```diff
-- import "monday-ui-react-core/dist/main.css";
+- import "@ikigailabs/origami-design/dist/main.css";
 ```
 
 After:
 
 ```diff
-+ import "monday-ui-react-core/tokens";
++ import "@ikigailabs/origami-design/tokens";
 ```

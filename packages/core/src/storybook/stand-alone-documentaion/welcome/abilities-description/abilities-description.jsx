@@ -7,7 +7,7 @@ export const AbilitiesDescription = () => (
     <AbilityDescription
       title="Getting started"
       imageSrc={gettingStarted}
-      linkHref="https://github.com/mondaycom/monday-ui-react-core#readme"
+      linkHref="https://github.com/mondaycom/@ikigailabs/origami-design#readme"
     >
       Instructions on how to use the Ikigai Design System
     </AbilityDescription>

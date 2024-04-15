@@ -1,5 +1,5 @@
 import React from "react";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../../storybook/functions/createStoryMetaSettingsDecorator";
 import MenuTitle from "../MenuTitle";
 import Menu from "../../Menu/Menu";

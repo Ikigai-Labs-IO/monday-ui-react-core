@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "vibe-storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import { AccordionItem, Accordion } from "../../../../../components";
 import styles from "./accordion-description.module.scss";
 

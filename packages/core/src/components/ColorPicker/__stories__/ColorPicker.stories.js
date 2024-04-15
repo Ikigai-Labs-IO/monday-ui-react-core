@@ -3,7 +3,7 @@ import TextColorIndicator from "../../Icon/Icons/components/TextColorIndicator";
 import Check from "../../Icon/Icons/components/Check";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { multiSelectionInteractionSuite, noColorInteractionSuite } from "../__tests__/ColorPicker.interactions.js";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 
 const metaSettings = createStoryMetaSettingsDecorator({
   component: ColorPicker,

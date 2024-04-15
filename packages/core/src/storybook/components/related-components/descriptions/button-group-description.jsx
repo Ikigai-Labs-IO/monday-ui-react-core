@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "vibe-storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import ButtonGroup from "../../../../components/ButtonGroup/ButtonGroup";
 
 export const ButtonGroupDescription = () => {

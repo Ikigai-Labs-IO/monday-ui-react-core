@@ -1,4 +1,4 @@
-import { createComponentTemplate, MultipleStoryElementsWrapper } from "vibe-storybook-components";
+import { createComponentTemplate, MultipleStoryElementsWrapper } from "@ikigailabs/storybook-components";
 import Toggle from "../Toggle";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import "./toggle.stories.scss";

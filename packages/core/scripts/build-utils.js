@@ -47,8 +47,8 @@ function buildComponentsTypesIndexFile() {
 }
 
 function buildStorybookComponentsIndexFile() {
-  const imports = ["import 'vibe-storybook-components/index.css';"];
-  const exports = ["export * from 'vibe-storybook-components'"];
+  const imports = ["import '@ikigailabs/storybook-components/index.css';"];
+  const exports = ["export * from '@ikigailabs/storybook-components'"];
   convertExportsToFile(imports.concat(exports), "storybook/index.js");
 }
 

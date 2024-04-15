@@ -1,5 +1,5 @@
 /* eslint-disable react/no-children-prop */
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import SplitButton from "../SplitButton";
 import Button from "../../Button/Button";
 import { Add, Announcement, Check, Download, Favorite, Moon, Sun, Upload } from "../../Icon/Icons";

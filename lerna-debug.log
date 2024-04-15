@@ -1,0 +1,14 @@
+0 silly argv { _: [ 'run' ], lernaVersion: '8.1.2', '$0': 'lerna', script: 'build' }
+1 notice cli v8.1.2
+2 verbose packageConfigs Resolving packages based on package.json "workspaces" configuration.
+3 verbose rootPath /Users/abdul/workspace/Personal/monday-ui-react-core
+4 error Error: Invalid package name "@ikigailabs/@ikigailabs/storybook-components": name can only contain URL-friendly characters
+4 error     at invalidPackageName (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/npm-package-arg/npa.js:89:15)
+4 error     at Result.setName (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/npm-package-arg/npa.js:124:11)
+4 error     at new Result (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/npm-package-arg/npa.js:114:23)
+4 error     at Function.resolve (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/npm-package-arg/npa.js:61:15)
+4 error     at new _Package (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/dist/index.js:764:57)
+4 error     at /Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/dist/index.js:1468:14
+4 error     at Array.forEach (<anonymous>)
+4 error     at createProjectGraphWithPackages (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/dist/index.js:1465:16)
+4 error     at async detectProjects (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/dist/index.js:1565:24)

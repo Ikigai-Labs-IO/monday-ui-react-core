@@ -1,6 +1,6 @@
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import Flex from "../../Flex/Flex";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import Heading from "../Heading";
 import { ONE_LINE_ELLIPSIS_TEST_ID, OVERFLOW_TITLE_CONTAINER_ID } from "../__tests__/heading-tests-constants";
 import { headingOverflowSuite } from "../__tests__/Heading.interactions";

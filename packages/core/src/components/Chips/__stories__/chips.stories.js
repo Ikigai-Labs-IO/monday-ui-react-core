@@ -2,7 +2,7 @@ import Flex from "../../Flex/Flex";
 import Chips from "../Chips";
 import Text from "../../Text/Text";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import Search from "../../Search/Search";
 import Avatar from "../../Avatar/Avatar";
 import DialogContentContainer from "../../DialogContentContainer/DialogContentContainer";

@@ -1,1 +1,1 @@
-import "monday-ui-style/dist/index.min.css";
+import "@ikigailabs/ui-style/dist/index.min.css";

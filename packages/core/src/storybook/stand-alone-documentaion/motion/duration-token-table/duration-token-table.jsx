@@ -1,4 +1,4 @@
-import { TokenTable } from "vibe-storybook-components";
+import { TokenTable } from "@ikigailabs/storybook-components";
 
 export const DurationTokenTable = () => {
   const theadData = ["Token", "Usage", "Value"];

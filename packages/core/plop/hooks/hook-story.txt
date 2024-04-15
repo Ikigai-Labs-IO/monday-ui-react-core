@@ -1,4 +1,4 @@
-import { FunctionArgument, FunctionArguments } from "vibe-storybook-components";
+import { FunctionArgument, FunctionArguments } from "@ikigailabs/storybook-components";
 import { Canvas, Meta } from "@storybook/addon-docs";
 import * as {{properCase hookName}}Stories from "./{{camelCase hookName}}.stories";
 

@@ -1,7 +1,7 @@
 import Link from "../Link";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { ExternalPage, Info, Link as IconLink } from "../../Icon/Icons";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import "./Link.stories.scss";
 
 const metaSettings = createStoryMetaSettingsDecorator({

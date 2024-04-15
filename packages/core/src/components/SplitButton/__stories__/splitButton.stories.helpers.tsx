@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "vibe-storybook-components";
+import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
 import { Announcement, Check } from "../../Icon/Icons";
 import SplitButtonMenu from "../SplitButtonMenu/SplitButtonMenu";
 import { MenuItem } from "../../index";

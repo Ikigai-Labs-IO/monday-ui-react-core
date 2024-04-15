@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "vibe-storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import Dropdown from "../../../../components/Dropdown/Dropdown";
 
 export const DropdownDescription = () => {

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "vibe-storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import { Flex, Button } from "../../../../components";
 
 export const FlexDescription = () => {

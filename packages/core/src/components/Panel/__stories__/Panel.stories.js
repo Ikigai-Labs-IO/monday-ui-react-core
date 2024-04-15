@@ -5,7 +5,7 @@ import Button from "../../Button/Button";
 import Text from "../../Text/Text";
 import { Panel, PanelHeader, PanelFooter } from "../Panel";
 import { PANEL_SIZES } from "../PanelConstants";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 
 const metaSettings = createStoryMetaSettingsDecorator({
   component: Panel,

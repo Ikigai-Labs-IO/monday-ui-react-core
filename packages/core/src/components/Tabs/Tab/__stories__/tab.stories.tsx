@@ -1,4 +1,4 @@
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import Tab from "../../Tab/Tab";
 import { Email } from "../../../Icon/Icons";
 import styles from "../Tab.module.scss";

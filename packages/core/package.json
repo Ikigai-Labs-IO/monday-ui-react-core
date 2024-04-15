@@ -1,6 +1,6 @@
 {
-  "name": "monday-ui-react-core",
-  "version": "2.98.3",
+  "name": "@ikigailabs/origami-design",
+  "version": "0.0.1",
   "description": "Official monday.com UI resources for application development in React.js",
   "main": "./dist/main.js",
   "types": "./dist/types.d.ts",
@@ -71,7 +71,7 @@
     "build:commonjs": "webpack --mode production --config webpack/default.config.js",
     "build:esm": "rollup -c",
     "build:esm:mock-classnames": "mock_classnames=on rollup -c",
-    "build:react-icons": "svg2react-icon --typescript --keep-colors ../../node_modules/monday-ui-style/src/Icons src/components/Icon/Icons",
+    "build:react-icons": "svg2react-icon --typescript --keep-colors ../../node_modules/@ikigailabs/ui-style/src/Icons src/components/Icon/Icons",
     "storybook": "storybook dev -p 7008",
     "build-storybook": "yarn build:storybook-exports && storybook build -o static_storybook",
     "deploy-storybook": "storybook-to-ghpages",
@@ -86,7 +86,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mondaycom/monday-ui-react-core.git"
+    "url": "git+https://github.com/mondaycom/@ikigailabs/origami-design.git"
   },
   "author": "",
   "license": "MIT",
@@ -97,9 +97,9 @@
     "THEME_README.md"
   ],
   "bugs": {
-    "url": "https://github.com/mondaycom/monday-ui-react-core/issues"
+    "url": "https://github.com/mondaycom/@ikigailabs/origami-design/issues"
   },
-  "homepage": "https://github.com/mondaycom/monday-ui-react-core#readme",
+  "homepage": "https://github.com/mondaycom/@ikigailabs/origami-design#readme",
   "dependencies": {
     "@popperjs/core": "2.11.6",
     "@storybook/react-vite": "^7.5.3",
@@ -111,7 +111,7 @@
     "file-loader": "^6.2.0",
     "framer-motion": "^6.5.1",
     "lodash-es": "^4.17.21",
-    "monday-ui-style": "0.3.0",
+    "@ikigailabs/ui-style": "0.0.1",
     "prop-types": "^15.8.1",
     "react-awesome-styled-grid": "^3.1.4",
     "react-dates": "21.8.0",
@@ -124,7 +124,7 @@
     "react-window": "^1.8.7",
     "react-windowed-select": "^2.0.4",
     "style-inject": "^0.3.0",
-    "vibe-storybook-components": "0.17.2"
+    "@ikigailabs/storybook-components": "0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",

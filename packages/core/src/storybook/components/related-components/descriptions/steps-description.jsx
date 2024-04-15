@@ -1,5 +1,5 @@
 import { useMemo, useState, useCallback } from "react";
-import { RelatedComponent } from "vibe-storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import Steps from "../../../../components/Steps/Steps";
 
 export const StepsDescription = () => {
