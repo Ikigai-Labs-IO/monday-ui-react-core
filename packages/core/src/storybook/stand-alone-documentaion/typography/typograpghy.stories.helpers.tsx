@@ -1,4 +1,4 @@
-import { Link, Tip } from "vibe-storybook-components";
+import { Link, Tip } from "@ikigailabs/storybook-components";
 
 export const TipHowToUseFonts = () => (
   <Tip title="How to use the fonts?">

@@ -1,4 +1,4 @@
-import { Link, StorybookLink, Tip } from "vibe-storybook-components";
+import { Link, StorybookLink, Tip } from "@ikigailabs/storybook-components";
 
 export const TipDialogContentContainer = () => (
   <Tip>

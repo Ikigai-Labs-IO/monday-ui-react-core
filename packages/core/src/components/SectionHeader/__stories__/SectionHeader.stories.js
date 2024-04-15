@@ -2,7 +2,7 @@ import Icon from "../../Icon/Icon";
 import { Close } from "../../Icon/Icons";
 import SectionHeader from "../SectionHeader";
 import { IconType } from "../../Icon/IconConstants";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 
 const metaSettings = createStoryMetaSettingsDecorator({

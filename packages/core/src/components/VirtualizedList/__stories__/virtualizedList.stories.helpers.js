@@ -1,6 +1,6 @@
 // eslint-disable-next-line default-param-last
 
-import { Tip } from "vibe-storybook-components";
+import { Tip } from "@ikigailabs/storybook-components";
 
 export const generateItems = (defaultItemSize = 30, itemsCount, layout) => {
   const items = [];

@@ -1,11 +1,11 @@
 {
-  "name": "vibe-storybook-components",
-  "version": "0.17.2",
+  "name": "@ikigailabs/storybook-components",
+  "version": "0.0.2",
   "description": "Collection of Vibe's Storybook components",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mondaycom/monday-ui-react-core.git"
+    "url": "git@github.com:mondaycom/@ikigailabs/origami-design.git"
   },
   "sideEffects": [
     "*.scss",
@@ -75,7 +75,7 @@
     "@storybook/testing-library": "^0.2.2",
     "@storybook/theming": "^7.5.0",
     "@testing-library/jest-dom": "^5.17.0",
-     "@testing-library/react": "^12.1.2",
+    "@testing-library/react": "^12.1.2",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
     "autoprefixer": "^10.4.14",

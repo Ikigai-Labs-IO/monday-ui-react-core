@@ -1,4 +1,4 @@
-import { GithubContributorsList, ContributorsList, Paragraph } from "vibe-storybook-components";
+import { GithubContributorsList, ContributorsList, Paragraph } from "@ikigailabs/storybook-components";
 import styles from "./other-contributors-list.module.scss";
 
 const excludedContributorsIds: Set<number> = new Set();
@@ -59,7 +59,7 @@ export const OtherContributorsList = () => {
       </Paragraph>
       <GithubContributorsList
         organizationName="mondaycom"
-        packageName="monday-ui-react-core"
+        packageName="@ikigailabs/origami-design"
         staticContributors={STATIC_CONTRIBUTORS}
         excludedContributorsIds={excludedContributorsIds}
       />

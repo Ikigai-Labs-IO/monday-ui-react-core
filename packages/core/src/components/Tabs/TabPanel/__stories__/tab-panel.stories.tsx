@@ -1,4 +1,4 @@
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import TabPanel from "../TabPanel";
 
 export default {

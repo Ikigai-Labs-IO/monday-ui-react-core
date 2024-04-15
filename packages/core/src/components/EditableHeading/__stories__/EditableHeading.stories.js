@@ -1,6 +1,6 @@
 import EditableHeading from "../EditableHeading";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import { overviewPlaySuite } from "../__tests__/EditableHeading-interactions";
 import styles from "./EditableHeading.stories.module.scss";
 

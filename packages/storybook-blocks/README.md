@@ -2,14 +2,14 @@
 
 ![image](https://user-images.githubusercontent.com/60314759/147566893-63c5209a-8b83-4f32-af61-8b4c350ec770.png)
 
-[monday.com](https://www.monday.com) Collection of Storybook components, with which [monday-ui-react-core](https://github.com/mondaycom/monday-ui-react-core) storybook is built - [style.monday.com](https://style.monday.com).
+[monday.com](https://www.monday.com) Collection of Storybook components, with which [@ikigailabs/origami-design](https://github.com/mondaycom/@ikigailabs/origami-design) storybook is built - [style.monday.com](https://style.monday.com).
 
 ## Installation
 
 Install the component library
 
 ```
-$ npm install vibe-storybook-components
+$ npm install @ikigailabs/storybook-components
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ $ npm install vibe-storybook-components
 **Styles**: Import the library's styles in your storybook `preview.js` file:
 
 ```javascript
-import 'vibe-storybook-components/index.css';
+import '@ikigailabs/storybook-components/index.css';
 ```
 
 **Components**:
@@ -26,7 +26,7 @@ There are 2 ways to use the components:
 1. Import the components from the library's main entry, like this:
 
 ```javascript
-import { ComponentName } from 'vibe-storybook-components';
+import { ComponentName } from '@ikigailabs/storybook-components';
 ```
 
 and then use in a story like this:
@@ -38,11 +38,11 @@ and then use in a story like this:
 2. Import and map the components once in the storybook's `preview.js` file, like this:
 
 ```javascript
-import { ComponentName } from 'vibe-storybook-components';
+import { ComponentName } from '@ikigailabs/storybook-components';
 ```
 
 ```javascript
-import { ComponentName } from 'vibe-storybook-components';
+import { ComponentName } from '@ikigailabs/storybook-components';
 ...
 addParameters({
   docs: {

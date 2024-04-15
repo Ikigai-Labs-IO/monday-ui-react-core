@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "vibe-storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import EditableText from "../../../../components/EditableText/EditableText";
 
 export const EditableTextDescription = () => {

@@ -86,7 +86,7 @@ module.exports = () => {
         },
         {
           test: /\.(js|jsx)$/,
-          exclude: /node_modules\/(?!monday-ui-style)(.*)/,
+          exclude: [/node_modules\/(?!@ikigailabs\/ui-style)(.*)/],
           use: ["babel-loader"]
         },
         {
@@ -100,6 +100,17 @@ module.exports = () => {
                 sassOptions: {
                   includePaths: [path.resolve("./src")]
                 }
+              }
+            }
+          ]
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                outputPath: "images"
               }
             }
           ]
@@ -135,7 +146,7 @@ module.exports = () => {
             to: "assets/"
           },
           {
-            from: "../../node_modules/monday-ui-style/dist/index.min.css",
+            from: "../../node_modules/@ikigailabs/ui-style/dist/index.min.css",
             to: "tokens/tokens.css"
           }
         ]

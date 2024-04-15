@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "vibe-storybook-components";
+import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
 import { DialogContentContainer, Menu, MenuItem, Search } from "../../../index";
 import { Calendar, Filter, Wand } from "../../../Icon/Icons";
 import styles from "./Menu.stories.module.scss";

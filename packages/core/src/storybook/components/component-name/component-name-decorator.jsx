@@ -1,5 +1,5 @@
 import cx from "classnames";
-import { ComponentName } from "vibe-storybook-components";
+import { ComponentName } from "@ikigailabs/storybook-components";
 import "./component-name-decorator.scss";
 
 export const ComponentNameDecorator = ({ children, className, withFoundationBackground = false }) => {

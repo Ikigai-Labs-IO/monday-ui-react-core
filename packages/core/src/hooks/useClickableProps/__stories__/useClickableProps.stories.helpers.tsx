@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "vibe-storybook-components";
+import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
 
 export const TipClickable = () => (
   <Tip title="Check out our component solution for this use case">

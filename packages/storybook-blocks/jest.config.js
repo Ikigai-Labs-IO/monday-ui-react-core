@@ -14,7 +14,7 @@ module.exports = {
   preset: 'ts-jest/presets/default',
   testEnvironment: 'jsdom',
   testMatch: ['**/__tests__/**/*.jest.[jt]s?(x)'],
-  transformIgnorePatterns: ['/node_modules/(?!monday-ui-react-core)'],
+  transformIgnorePatterns: ['/node_modules/(?!@ikigailabs/origami-design)'],
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.(tx|tsx)$': 'ts-jest',

@@ -8,7 +8,7 @@ It is no longer recommended and will be removed in the upcoming major version re
 Instead, you should import directly from the root of the library as described in the main readme
 
 ```javascript
-import Button from "monday-ui-react-core/dist/Button";
+import Button from "@ikigailabs/origami-design/dist/Button";
 ```
 
 ## Loading CSS tokens and classes
@@ -23,5 +23,5 @@ In these cases you should import the `dist/main.css` file at the root level of y
 
 
 ```javascript
-import "monday-ui-react-core/dist/main.css";
+import "@ikigailabs/origami-design/dist/main.css";
 ```

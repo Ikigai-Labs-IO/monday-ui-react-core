@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "vibe-storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import MenuButton from "../../../../components/MenuButton/MenuButton";
 import Menu from "../../../../components/Menu/Menu/Menu";
 import MenuItem from "../../../../components/Menu/MenuItem/MenuItem";

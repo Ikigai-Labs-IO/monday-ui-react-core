@@ -2,13 +2,13 @@
 
 > [!IMPORTANT]
 >
-> **Exciting Update**: The `monday-ui-react-core` repository is getting a new name - `vibe`!
+> **Exciting Update**: The `@ikigailabs/origami-design` repository is getting a new name - `vibe`!
 >
 > As this project has evolved, it now includes a comprehensive design system toolkit, including components, styles, icons, hooks, and more. It's become more than just a "core" library; it's a full-fledged design system, now with all related packages unified under one umbrella.
 >
 > The change will apply in the upcoming weeks, no additional action is required on your part. All issues, PRs, branches will remain intact. Stay tuned!
 
-[![npm](https://img.shields.io/npm/v/monday-ui-react-core)](https://www.npmjs.com/package/monday-ui-react-core)
+[![npm](https://img.shields.io/npm/v/@ikigailabs/origami-design)](https://www.npmjs.com/package/@ikigailabs/origami-design)
 
 <img src="https://user-images.githubusercontent.com/60314759/147566893-63c5209a-8b83-4f32-af61-8b4c350ec770.png" width="300px" alt="Vibe Design System, by monday.com">
 
@@ -23,7 +23,7 @@
 Install the component library
 
 ```
-npm install monday-ui-react-core
+npm install @ikigailabs/origami-design
 ```
 
 ## Usage
@@ -31,13 +31,13 @@ npm install monday-ui-react-core
 Components are imported from the library's root entry:
 
 ```javascript
-import { Button } from "monday-ui-react-core";
+import { Button } from "@ikigailabs/origami-design";
 ```
 
 In order to load all the relevant CSS tokens, you should import the `tokens` file at the root of your application file
 
 ```javascript
-import "monday-ui-react-core/tokens";
+import "@ikigailabs/origami-design/tokens";
 ```
 
 _If your project (or it's Storybook) is importing files differently - read more [here](packages/core/DEPRECATED_IMPORTS.md)._

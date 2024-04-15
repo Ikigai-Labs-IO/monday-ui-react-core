@@ -1,4 +1,4 @@
-import { InformationBox } from "vibe-storybook-components";
+import { InformationBox } from "@ikigailabs/storybook-components";
 import styles from "./animation-information-box.module.scss";
 
 export const AnimationInformationBox = ({ videoSrc, title, description }) => {

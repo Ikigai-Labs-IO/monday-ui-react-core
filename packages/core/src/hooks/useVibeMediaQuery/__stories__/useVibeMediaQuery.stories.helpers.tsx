@@ -1,4 +1,4 @@
-import { TokenTable } from "vibe-storybook-components";
+import { TokenTable } from "@ikigailabs/storybook-components";
 
 export const TableMediaQuery = () => {
   const theadData = ["Value", "Media query"];

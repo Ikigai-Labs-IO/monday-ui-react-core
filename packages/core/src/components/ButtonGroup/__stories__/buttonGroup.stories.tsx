@@ -1,6 +1,6 @@
 import ButtonGroup from "../ButtonGroup";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import { createComponentTemplate } from "vibe-storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import "./buttonGroup.stories.scss";
 
 const metaSettings = createStoryMetaSettingsDecorator({

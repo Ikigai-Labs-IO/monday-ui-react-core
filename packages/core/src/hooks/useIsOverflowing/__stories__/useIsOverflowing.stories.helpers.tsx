@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "vibe-storybook-components";
+import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
 
 export const TipTooltip = () => (
   <Tip title={"What to do when overflow is detected?"}>
