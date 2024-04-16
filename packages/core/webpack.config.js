@@ -86,7 +86,7 @@ module.exports = () => {
         },
         {
           test: /\.(js|jsx)$/,
-          exclude: [/node_modules\/(?!@ikigailabs\/ui-style)(.*)/],
+          exclude: /node_modules\/(?!@ikigailabs\/ui-style)(.*)/,
           use: ["babel-loader"]
         },
         {
