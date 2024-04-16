@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import Search from "../../../../components/Search/Search";
 
 export const SearchDescription = () => {

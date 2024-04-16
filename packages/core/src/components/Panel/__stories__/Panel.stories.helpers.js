@@ -1,4 +1,4 @@
-import { Tip } from "storybook-components";
+import { Tip } from "@ikigailabs/storybook-components";
 
 export const TipBenefits = () => (
   <Tip title="Benefits of the Panel component">

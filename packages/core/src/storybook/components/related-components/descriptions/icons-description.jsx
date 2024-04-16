@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import { Update, Locked, Lines } from "../../../../components/Icon/Icons";
 import Icon from "../../../../components/Icon/Icon";
 

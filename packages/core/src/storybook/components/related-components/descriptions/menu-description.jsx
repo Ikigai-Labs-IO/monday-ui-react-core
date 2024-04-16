@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import DialogContentContainer from "../../../../components/DialogContentContainer/DialogContentContainer";
 import MenuItem from "../../../../components/Menu/MenuItem/MenuItem";
 import { Email, Delete, Info } from "../../../../components/Icon/Icons";

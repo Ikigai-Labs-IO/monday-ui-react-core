@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "storybook-components";
+import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
 
 export const TipCheckYourself = () => (
   <Tip title="Check yourself">

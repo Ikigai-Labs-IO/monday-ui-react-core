@@ -6,7 +6,7 @@ import Flex from "../../Flex/Flex";
 import { productTheme1, productTheme2, productTheme3, productTheme4 } from "./product-themes";
 import ColorsDescription from "../../../storybook/stand-alone-documentaion/colors/colors-description/colors-description";
 import { ThemeColor } from "../ThemeProviderConstants";
-import { Link, Tip, UsageGuidelines } from "storybook-components";
+import { Link, Tip, UsageGuidelines } from "@ikigailabs/storybook-components";
 import styles from "./ThemeProvider.stories.module.scss";
 
 export const ColorsEligibleForThemingTemplate = () => <ColorsDescription colorNames={Object.values(ThemeColor)} />;

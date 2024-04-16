@@ -1,6 +1,6 @@
 {
   "name": "@ikigailabs/origami-design",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "description": "Official monday.com UI resources for application development in React.js",
   "main": "./dist/main.js",
   "types": "./dist/types.d.ts",
@@ -71,7 +71,7 @@
     "build:commonjs": "webpack --mode production --config webpack/default.config.js",
     "build:esm": "rollup -c",
     "build:esm:mock-classnames": "mock_classnames=on rollup -c",
-    "build:react-icons": "svg2react-icon --typescript --keep-colors ../../node_modules/ui-style/src/Icons src/components/Icon/Icons",
+    "build:react-icons": "svg2react-icon --typescript --keep-colors ../../node_modules/@ikigailabs/ui-style/src/Icons src/components/Icon/Icons",
     "storybook": "storybook dev -p 7008",
     "build-storybook": "yarn build:storybook-exports && storybook build -o static_storybook",
     "deploy-storybook": "storybook-to-ghpages",
@@ -122,9 +122,9 @@
     "react-virtualized-auto-sizer": "^1.0.7",
     "react-window": "^1.8.7",
     "react-windowed-select": "^2.0.4",
-    "storybook-components": "^0.0.7",
+    "@ikigailabs/storybook-components": "^0.0.7",
     "style-inject": "^0.3.0",
-    "ui-style": "^0.0.7"
+    "@ikigailabs/ui-style": "^0.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
@@ -291,5 +291,5 @@
       "PR: Icon 💎": "New Icons"
     }
   },
-  "gitHead": "2570ce15d16bd18b35ee2c99d26976298e157299"
+  "gitHead": "cb35075241bc62088b3938d021b70197e19b8e29"
 }

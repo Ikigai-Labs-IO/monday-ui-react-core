@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import Button from "../../../../components/Button/Button";
 
 export const ButtonDescription = () => {

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { StoryDescription } from "storybook-components";
+import { StoryDescription } from "@ikigailabs/storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { person1, person2, person3 } from "./assets";
 import AvatarGroup from "../AvatarGroup";

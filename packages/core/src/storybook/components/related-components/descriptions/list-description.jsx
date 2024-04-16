@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import DialogContentContainer from "../../../../components/DialogContentContainer/DialogContentContainer";
 import ListItem from "../../../../components/ListItem/ListItem";
 import List from "../../../../components/List/List";

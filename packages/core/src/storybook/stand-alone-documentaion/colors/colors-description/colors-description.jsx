@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { ColorDescription } from "storybook-components";
+import { ColorDescription } from "@ikigailabs/storybook-components";
 import { colorsHashMap } from "../../../../utils/colors-vars-map";
 
 const colorsWithBorder = new Set([

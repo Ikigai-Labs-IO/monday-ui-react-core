@@ -1,4 +1,4 @@
-import { InformationBox } from "storybook-components";
+import { InformationBox } from "@ikigailabs/storybook-components";
 import "./principle.scss";
 
 const PRINCIPLE_VISUAL_ELEMENT = `monday-storybook-principle`;

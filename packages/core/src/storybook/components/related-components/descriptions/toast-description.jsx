@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import ToastLineWrapper from "../../../../components/Toast/__stories__/ToastLineWrapper";
 import Toast from "../../../../components/Toast/Toast";
 

@@ -6,7 +6,7 @@ import Button from "../../Button/Button";
 import Flex from "../../Flex/Flex";
 import Avatar from "../../Avatar/Avatar";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import { createComponentTemplate, StoryDescription } from "storybook-components";
+import { createComponentTemplate, StoryDescription } from "@ikigailabs/storybook-components";
 
 const metaSettings = createStoryMetaSettingsDecorator({
   component: Badge,

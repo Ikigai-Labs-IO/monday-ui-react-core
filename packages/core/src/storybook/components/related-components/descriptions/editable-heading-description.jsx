@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import EditableHeading from "../../../../components/EditableHeading/EditableHeading";
 
 export const EditableHeadingDescription = () => {

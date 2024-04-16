@@ -1,7 +1,7 @@
 import Label from "../Label";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { NOOP } from "../../../utils/function-utils";
-import { createComponentTemplate, MultipleStoryElementsWrapper } from "storybook-components";
+import { createComponentTemplate, MultipleStoryElementsWrapper } from "@ikigailabs/storybook-components";
 import "./label.stories.scss";
 
 const metaSettings = createStoryMetaSettingsDecorator({

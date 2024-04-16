@@ -6,14 +6,14 @@ const config = {
   plugins: [path.resolve(__dirname, "../index.js")],
   customSyntax: "postcss-scss",
   rules: {
-    "ui-style/use-defined-css-var-when-available": true
+    "@ikigailabs/ui-style/use-defined-css-var-when-available": true
   }
 };
 
 const configWithUseRecommendation = {
   ...config,
   rules: {
-    "ui-style/use-defined-css-var-when-available": [
+    "@ikigailabs/ui-style/use-defined-css-var-when-available": [
       true,
       {
         useRecommendedFixes: true
@@ -22,7 +22,7 @@ const configWithUseRecommendation = {
   }
 };
 
-describe("ui-style/use-defined-css-var-when-available", () => {
+describe("@ikigailabs/ui-style/use-defined-css-var-when-available", () => {
   // since we run tests that actually perform code fixes, the fixtures are expected to change
   const fixturesContentBeforeTests = new Map();
 
@@ -61,13 +61,13 @@ describe("ui-style/use-defined-css-var-when-available", () => {
     const [firstWarning, secondWarning] = warnings;
 
     expect(firstWarning.text).toBe(
-      `Expected \"16px\" to be \"var(--spacing-medium)\" (ui-style/use-defined-css-var-when-available)`
+      `Expected \"16px\" to be \"var(--spacing-medium)\" (@ikigailabs/ui-style/use-defined-css-var-when-available)`
     );
     expect(firstWarning.line).toBe(3);
     expect(firstWarning.column).toBe(15);
 
     expect(secondWarning.text).toBe(
-      `Expected \"16px\" to be \"var(--border-radius-big)\" (ui-style/use-defined-css-var-when-available)`
+      `Expected \"16px\" to be \"var(--border-radius-big)\" (@ikigailabs/ui-style/use-defined-css-var-when-available)`
     );
     expect(secondWarning.line).toBe(7);
     expect(secondWarning.column).toBe(18);
@@ -112,7 +112,7 @@ describe("ui-style/use-defined-css-var-when-available", () => {
 --font-size-20
 --font-size-general-label
 --font-size-subtext
- (ui-style/use-defined-css-var-when-available)`
+ (@ikigailabs/ui-style/use-defined-css-var-when-available)`
     );
     expect(firstWarning.line).toBe(3);
     expect(firstWarning.column).toBe(14);
@@ -159,7 +159,7 @@ describe("ui-style/use-defined-css-var-when-available", () => {
         config: {
           ...config,
           rules: {
-            "ui-style/use-defined-css-var-when-available": ruleConfigValue
+            "@ikigailabs/ui-style/use-defined-css-var-when-available": ruleConfigValue
           }
         }
       });

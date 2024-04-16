@@ -1,4 +1,4 @@
-import { Frame } from "storybook-components";
+import { Frame } from "@ikigailabs/storybook-components";
 import Icon from "../../../../components/Icon/Icon";
 import Drag from "../../../../components/Icon/Icons/components/Drag";
 import classes from "./drag-shadow-example.module.scss";

@@ -1,4 +1,4 @@
-import { createComponentTemplate, Link } from "storybook-components";
+import { createComponentTemplate, Link } from "@ikigailabs/storybook-components";
 import IconButton from "../IconButton";
 import Text from "../../Text/Text";
 import Flex from "../../Flex/Flex";

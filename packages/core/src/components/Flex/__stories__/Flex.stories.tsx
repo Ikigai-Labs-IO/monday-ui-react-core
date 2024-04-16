@@ -2,7 +2,7 @@ import Flex, { FlexProps } from "../Flex";
 import { Add, Filter, Person, Search, Sort } from "../../Icon/Icons";
 import Button from "../../Button/Button";
 import Chips from "../../Chips/Chips";
-import { StoryDescription } from "storybook-components";
+import { StoryDescription } from "@ikigailabs/storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import styles from "./Flex.stories.module.scss";
 

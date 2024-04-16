@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import { Calendar, Doc, Status } from "../../../../components/Icon/Icons";
 import { Label, Table, TableBody, TableCell, TableHeader, TableHeaderCell, TableRow } from "../../../../components";
 import {

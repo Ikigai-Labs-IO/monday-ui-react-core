@@ -1,7 +1,7 @@
 import { addons } from "@storybook/manager-api";
 import React from "react";
-import { SidebarItem } from "storybook-components";
-import "storybook-components/index.css";
+import { SidebarItem } from "@ikigailabs/storybook-components";
+import "@ikigailabs/storybook-components/index.css";
 import theme from "./theme";
 
 window.STORYBOOK_GA_ID = "UA-308574295";

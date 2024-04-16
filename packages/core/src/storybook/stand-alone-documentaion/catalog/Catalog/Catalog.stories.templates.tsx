@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RelatedComponentsDecorator } from "../../../components";
-import { RelatedComponents } from "storybook-components";
+import { RelatedComponents } from "@ikigailabs/storybook-components";
 import { DESCRIPTION_COMPONENTS_WITHOUT_GENERAL_DESCRIPTION_MAP } from "../../../components/related-components/component-description-map";
 import { Search } from "../../../../components";
 import { CatalogEmptyState } from "../EmptyState/Catalog.stories.EmptyState";

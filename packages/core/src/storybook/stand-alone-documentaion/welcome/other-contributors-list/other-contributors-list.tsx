@@ -1,4 +1,4 @@
-import { GithubContributorsList, ContributorsList, Paragraph } from "storybook-components";
+import { GithubContributorsList, ContributorsList, Paragraph } from "@ikigailabs/storybook-components";
 import styles from "./other-contributors-list.module.scss";
 
 const excludedContributorsIds: Set<number> = new Set();

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import AlertBanner from "../../../../components/AlertBanner/AlertBanner";
 import AlertBannerText from "../../../../components/AlertBanner/AlertBannerText/AlertBannerText";
 

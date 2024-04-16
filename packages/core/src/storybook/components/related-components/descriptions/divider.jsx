@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import Divider from "../../../../components/Divider/Divider";
 import Menu from "../../../../components/Menu/Menu/Menu";
 import MenuItem from "../../../../components/Menu/MenuItem/MenuItem";

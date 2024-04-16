@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
-import { createComponentTemplate } from "storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import Toast from "../Toast";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import Button from "../../Button/Button";

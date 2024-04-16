@@ -1,5 +1,5 @@
 import cx from "classnames";
-import { InformationBox, InformationBoxTitle, Link } from "storybook-components";
+import { InformationBox, InformationBoxTitle, Link } from "@ikigailabs/storybook-components";
 import { elementColorsNames } from "../../../../utils/colors-vars-map";
 import { Flex, IconButton } from "../../../../components";
 import { Email } from "../../../../components/Icon/Icons";

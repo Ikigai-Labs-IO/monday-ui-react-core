@@ -1,7 +1,7 @@
 import Avatar from "../Avatar";
 import AvatarGroup from "../../AvatarGroup/AvatarGroup";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import { createComponentTemplate, StoryDescription } from "storybook-components";
+import { createComponentTemplate, StoryDescription } from "@ikigailabs/storybook-components";
 import Tooltip from "../../Tooltip/Tooltip";
 import { Counter, Flex } from "../..";
 import { guest, home, minus, owner, person1, person2, person3 } from "./assets";

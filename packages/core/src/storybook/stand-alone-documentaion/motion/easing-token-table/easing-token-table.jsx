@@ -1,4 +1,4 @@
-import { TokenTable } from "storybook-components";
+import { TokenTable } from "@ikigailabs/storybook-components";
 
 export const EasingTokenTable = () => {
   const theadData = ["Token", "Usage", "Cubic bezier"];

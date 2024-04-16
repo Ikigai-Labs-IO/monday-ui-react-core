@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { createComponentTemplate } from "storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import Counter from "../Counter";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import Divider from "../../Divider/Divider";

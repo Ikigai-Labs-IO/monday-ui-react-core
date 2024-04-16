@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import MultiStepIndicator from "../../../../components/MultiStepIndicator/MultiStepIndicator";
 
 export const MultiStepIndicatorDescription = () => {

@@ -1,4 +1,4 @@
-import { createComponentTemplate, StoryDescription } from "storybook-components";
+import { createComponentTemplate, StoryDescription } from "@ikigailabs/storybook-components";
 import Loader from "../Loader";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { Button, DialogContentContainer, Flex, Search } from "../..";

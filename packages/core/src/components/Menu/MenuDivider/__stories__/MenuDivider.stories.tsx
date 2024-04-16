@@ -1,5 +1,5 @@
 import MenuDivider from "../MenuDivider";
-import { createComponentTemplate } from "storybook-components";
+import { createComponentTemplate } from "@ikigailabs/storybook-components";
 import Menu from "../../Menu/Menu";
 import MenuItem from "../../MenuItem/MenuItem";
 

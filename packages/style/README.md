@@ -6,7 +6,7 @@
 ## Installation
 
 ```
-npm install ui-style
+npm install @ikigailabs/ui-style
 ```
 
 ## Usage
@@ -14,26 +14,26 @@ npm install ui-style
 **Styles**: Import the css file in order to have the css variables exposed on the root level
 
 ```scss
-@import "~ui-style/dist/index.min.css";
+@import "~@ikigailabs/ui-style/dist/index.min.css";
 ```
 
 or if you want to import it in your JS files
 
 ```javascript
-import "ui-style/dist/index.min.css";
+import "@ikigailabs/ui-style/dist/index.min.css";
 ```
 
 **Icons**: We expose each icon's SVG from the dist files so you can use them in your app.
 
 ```javascript
-import IconName from "ui-style/src/Icons/IconName.svg";
+import IconName from "@ikigailabs/ui-style/src/Icons/IconName.svg";
 ```
 
 **Mixins and functions**: We export multiple SCSS mixins and function helpers that can be used in your application if you use SASS. All helpers can be imported as demonstrated below.
 
 ```scss
-@import "~ui-style/dist/mixins";
-@import "~ui-style/dist/functions";
+@import "~@ikigailabs/ui-style/dist/mixins";
+@import "~@ikigailabs/ui-style/dist/functions";
 ```
 
 ## Icons
@@ -70,13 +70,13 @@ To create a non existing monday.com style icon open a PR with please see the [gu
 ## Stylelint rules
 
 It is recommended to extend our [Stylelint](https://stylelint.io/) config in order to ensure proper usage of this library.  
-To use the supplied config, add `ui-style/stylelint-config` as a [Stylelint config extension](https://stylelint.io/user-guide/configure/#extends):
+To use the supplied config, add `@ikigailabs/ui-style/stylelint-config` as a [Stylelint config extension](https://stylelint.io/user-guide/configure/#extends):
 
 ```js
 // Your .stylelintrc
 {
   ...
-  "extends": "ui-style/stylelint-config",
+  "extends": "@ikigailabs/ui-style/stylelint-config",
   ...
 }
 ```

@@ -1,4 +1,4 @@
-@import "~ui-style/dist/mixins";
+@import "~@ikigailabs/ui-style/dist/mixins";
 
 .rounded-corner-component {
   @include vibe-text(text1, bold);

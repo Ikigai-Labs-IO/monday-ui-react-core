@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "storybook-components";
+import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
 
 export const TipCombobox = () => (
   <Tip title="Not what you were looking for?">

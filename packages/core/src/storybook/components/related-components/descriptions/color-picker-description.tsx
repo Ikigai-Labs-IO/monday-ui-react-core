@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "storybook-components";
+import { RelatedComponent } from "@ikigailabs/storybook-components";
 import ColorPicker from "../../../../components/ColorPicker/ColorPicker";
 
 const COLORS_LIST = [
