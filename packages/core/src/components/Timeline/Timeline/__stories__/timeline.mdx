@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import Timeline from "../Timeline";
+import * as TimelineStories from "./timeline.stories";
+
+<Meta of={TimelineStories} />
+
+# Timeline
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Feedback](#feedback)
+
+## Overview
+
+The Timeline component displays a list of events in chronological order.
+
+<Canvas>
+  <Story of={TimelineStories.Overview} />
+</Canvas>
+
+## Props
+
+<PropsTable />
+
+## Usage
+
+### Timeline items list
+
+<Canvas>
+  <Story of={TimelineStories.TimelineItems} />
+</Canvas>

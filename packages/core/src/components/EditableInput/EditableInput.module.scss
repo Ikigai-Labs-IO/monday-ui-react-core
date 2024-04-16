@@ -1,0 +1,39 @@
+@import "../../styles/typography";
+
+.editableInputWrapper {
+  background-color: var(--text-color-on-primary);
+  display: inline-block;
+  margin: auto 0;
+  @include heading-padding();
+  outline: none;
+  vertical-align: top;
+  text-align: left;
+  padding: var(--spacing-small) 12px;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-small);
+  font: var(--font-text2-normal);
+  line-height: 22px;
+
+  &:hover {
+    border-color: var(--ui-border-color);
+  }
+
+  &:active,
+  &:focus {
+    border-color: var(--divider-selected);
+  }
+}
+
+.Input {
+  width: 207px;
+  height: 28px;
+}
+
+.TextArea {
+  width: 216px;
+  height: 72px;
+}
+
+.editableInputWrapper.noResize {
+  resize: none;
+}

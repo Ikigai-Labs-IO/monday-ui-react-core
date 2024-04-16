@@ -1,0 +1,45 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import * as TreeStories from "./Tree.stories";
+
+<Meta of={TreeStories} />
+
+# Tree
+
+- [Overview](#overview)
+- [Props](#props)
+- [Tree properties](#tree-properties)
+- [Feedback](#feedback)
+
+## Overview
+
+The `Tree` component is used to visually represent hierarchical data, such as file systems or nested lists. It supports expand/collapse features, custom node rendering, and click events.
+
+<Canvas>
+  <Story of={TreeStories.Overview} />
+</Canvas>
+
+## Props
+
+<PropsTable />
+
+## Tree properties
+
+### Default Tree
+
+Displays a basic tree with default settings.
+
+<Canvas>
+  <Story of={TreeStories.Default} />
+</Canvas>
+
+### Disabled File
+
+<Canvas>
+  <Story of={TreeStories.DisabledFile} />
+</Canvas>
+
+### Disabled Folder
+
+<Canvas>
+  <Story of={TreeStories.DisabledFolder} />
+</Canvas>

@@ -1,0 +1,84 @@
+.alertBanner {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: var(--primary-text-color);
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--layout-border-color);
+}
+
+.primary {
+  background-color: var(--ui-border-color);
+  .closeBtn {
+    color: var(--icon-color);
+  }
+}
+
+.positive {
+  background-color: var(--success-background-color);
+  .closeBtn {
+    color: var(--icon-color);
+  }
+}
+
+.negative {
+  background-color: var(--negative-color-hover);
+  .closeBtn {
+    color: var(--icon-color);
+  }
+}
+
+.dark {
+  background-color: var(--inverted-color-background);
+  .closeBtn {
+    color: var(--icon-color);
+  }
+}
+
+.warning {
+  background-color: var(--warning-background-color);
+  .closeBtn {
+    color: var(--icon-color);
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  height: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: var(--spacing-medium);
+  gap: var(--spacing-small);
+}
+
+.closeButtonWrapper {
+  flex: 0 0 40px;
+  position: relative;
+  height: 100%;
+  min-width: 0;
+  margin-top: var(--spacing-small);
+}
+
+.closeBtn {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+.ellipsis {
+  flex: 0 1 auto;
+}
+
+.contentItem {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.contentItemText {
+  flex: 0 1 auto;
+  min-width: 0;
+}

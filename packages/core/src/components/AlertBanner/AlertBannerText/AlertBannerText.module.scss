@@ -1,0 +1,13 @@
+.bannerText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  line-height: 22px;
+}
+
+.marginLeft {
+  margin-left: var(--spacing-small);
+}

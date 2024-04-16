@@ -10,7 +10,7 @@ body:
 
         Thank you for taking the time to report a bug!
         Please make sure to fill as much details as possible to help us better understand the bug.
-        If you have a question, suggestion, feature request, or need for help, please ask on [GitHub Discussions](https://github.com/mondaycom/monday-ui-react-core/discussions).
+        If you have a question, suggestion, feature request, or need for help, please ask on [GitHub Discussions](https://github.com/mondaycom/@ikigailabs/origami-design/discussions).
         Thanks!
   - type: input
     id: version
@@ -55,7 +55,7 @@ body:
     id: system-info
     attributes:
       label: System Info
-      description: Please run and copy the output of `npx envinfo --system --npmPackages monday-ui-react-core,react --binaries --browsers`
+      description: Please run and copy the output of `npx envinfo --system --npmPackages @ikigailabs/origami-design,react --binaries --browsers`
       render: shell
       placeholder: Operating System, Browsers, React version
   - type: textarea

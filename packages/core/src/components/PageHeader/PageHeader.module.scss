@@ -1,0 +1,20 @@
+@import "../../styles/typography";
+
+@include create-title-classes;
+
+.heading {
+  margin: 0;
+}
+
+.pageheader-right-actions {
+  position: relative;
+  float: right;
+}
+
+.pageheader {
+  padding-top: 100px;
+}
+
+.editableHeading {
+  width: 200px;
+}

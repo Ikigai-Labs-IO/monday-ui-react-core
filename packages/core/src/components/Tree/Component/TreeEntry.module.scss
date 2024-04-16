@@ -1,0 +1,66 @@
+.Container {
+    cursor: pointer;
+    line-height: 1;
+    user-select: none;
+}
+
+.Names {
+    display: flex;
+    height: 1.75rem;
+    align-items: center;
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+    padding: var(--spacing-small);
+
+    &:hover {
+        border-radius: var(--border-radius-small);
+        background-color: var(--surface-secondary);
+    }
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.Name {
+    color: var(--type-secondary);
+    white-space: nowrap;
+    font: var(--font-text2-normal);
+    line-height: 22px;
+}
+
+.Icon {
+    width: 1.5rem;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.Status {
+    position: absolute;
+    left: calc(-1.125rem);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.875rem;
+    height: 0.875rem;
+    z-index: 10;
+    background-color: var(--text-color-on-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Active {
+    color: var(--divider-selected);
+}
+
+.Hover {
+    border-radius: var(--border-radius-small);
+    background-color: var(--surface-secondary);
+}
+
+.Disabled {
+    color: var(--divider-tertiary);
+}

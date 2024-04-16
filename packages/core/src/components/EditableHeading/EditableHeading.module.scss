@@ -1,0 +1,4 @@
+@import "../../styles/typography";
+@import "~@ikigailabs/ui-style/dist/mixins";
+
+@include create-title-classes;

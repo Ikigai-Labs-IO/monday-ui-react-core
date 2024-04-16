@@ -1,0 +1,34 @@
+@import "~@ikigailabs/ui-style/dist/mixins";
+
+.labelComponentWrapper {
+  display: flex;
+  @include vibe-text(text1, medium);
+  font-size: 15px;
+  color: var(--divider-selected);
+
+  &.leftLabel {
+    padding-bottom: 0;
+    padding-top: var(--spacing-xs);
+    align-items: normal;
+  }
+  
+  &.topLabel {
+    padding-bottom: var(--spacing-xs);
+    align-items: center;
+  }
+}
+
+.labelComponentIcon {
+  margin: 0 var(--spacing-small) 0 var(--spacing-xs);
+  line-height: 24px;
+  color: var(--secondary-text-color);
+}
+
+.labelComponentText {
+  color: var(--primary-text-color);
+  padding-block: 2px;
+}
+
+.requiredAsterisk {
+  color: var(--negative-color);
+}

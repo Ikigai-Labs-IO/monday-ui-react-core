@@ -1,0 +1,19 @@
+@import "~@ikigailabs/ui-style/dist/mixins";
+
+$abilities-cell-min-width: $grid-auto-fit-cell-width-medium;
+$abilities-grid-gap: var(--sb-spacing-large);
+$abilities-grid-cell-array-calc: calc(33.3% - #{$abilities-grid-gap});
+
+.origami-storybook-abilities-description {
+  margin-top: var(--sb-spacing-between-section-items);
+  img {
+    width: 100%;
+    height: 120px;
+    object-fit: none;
+  }
+  @include grid-auto-fit(
+    $grid-gap: $abilities-grid-gap,
+    $grid-cell-min-width: $abilities-cell-min-width,
+    $grid-cell-array-calc: $abilities-grid-cell-array-calc
+  );
+}

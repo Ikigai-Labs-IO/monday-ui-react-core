@@ -1,0 +1,83 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+import * as PaginationStories from "./Pagination.stories";
+
+<Meta of={PaginationStories} />
+
+# Pagination
+
+- [Overview](#overview)
+- [Props](#props)
+- [Pagination properties](#pagination-properties)
+- [Feedback](#feedback)
+
+## Overview
+
+<Canvas>
+  <Story of={PaginationStories.Overview} />
+</Canvas>
+
+## Props
+
+<PropsTable />
+
+## Pagination properties
+
+### Sizes
+
+<Canvas>
+  <Story of={PaginationStories.Sizes} />
+</Canvas>
+
+### Variants
+
+<Canvas>
+  <Story of={PaginationStories.Variants} />
+</Canvas>
+
+### First page
+
+<Canvas>
+  <Story of={PaginationStories.FirstPage} />
+</Canvas>
+
+### Second page
+
+<Canvas>
+  <Story of={PaginationStories.SecondPage} />
+</Canvas>
+
+### Middle
+
+<Canvas>
+  <Story of={PaginationStories.Middle} />
+</Canvas>
+
+### Second to last page
+
+<Canvas>
+  <Story of={PaginationStories.SecondToLastPage} />
+</Canvas>
+
+### Last page
+
+<Canvas>
+  <Story of={PaginationStories.LastPage} />
+</Canvas>
+
+### Different edge cases in the middle of the pagination
+
+<Canvas>
+  <Story of={PaginationStories.EdgeCases} />
+</Canvas>
+
+### Short pagination
+
+<Canvas>
+  <Story of={PaginationStories.Short} />
+</Canvas>
+
+## Small
+
+<Canvas>
+  <Story of={PaginationStories.Small} />
+</Canvas>

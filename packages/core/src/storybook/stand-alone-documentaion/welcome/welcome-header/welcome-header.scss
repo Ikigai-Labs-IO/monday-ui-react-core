@@ -1,0 +1,38 @@
+@import "~@ikigailabs/ui-style/dist/mixins";
+
+.origami-storybook-welcome-header {
+  position: absolute;
+  width: 100%;
+  left:0;
+  top:0;
+  height: 400px;
+  display: block;
+  align-items: left;
+  padding: 240px 40px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/intro-banner.png");
+
+  &_head {
+    width: 400px;
+    z-index: 1;
+    align-content: center;
+    color: #fff;
+    font-size: 32px;
+  }
+  &_subhead {
+    width: 500px;
+    z-index: 1;
+    align-content: left;
+    line-height: 120%;
+    position: relative;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &_image {
+    right: 0;
+    position: absolute;
+  }
+}

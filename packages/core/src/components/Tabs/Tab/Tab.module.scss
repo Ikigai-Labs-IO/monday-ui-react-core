@@ -1,0 +1,94 @@
+@import "~@ikigailabs/ui-style/dist/mixins";
+@import "../../../styles/states";
+@import "../../../styles/typography";
+
+.tabWrapper {
+  position: relative;
+  display: inline-block;
+  padding-left: 1px;
+  padding-right: 1px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--ui-border-color);
+  color: var(--primary-text-color);
+  text-align: center;
+  height: 100%;
+}
+
+.tabWrapper:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: "";
+  border-bottom: solid 1px;
+  border-bottom-color: var(--ui-border-color);
+  transform: scaleX(0);
+  z-index: 0;
+}
+
+.tabWrapper .tabInner {
+  $margin-bottom: 1px;
+  height: calc(100% - #{$margin-bottom});
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 2px var(--spacing-medium);
+  @include vibe-text(text2, normal);
+  user-select: none;
+  margin-bottom: $margin-bottom;
+  cursor: pointer;
+  color: var(--type-secondary);
+}
+
+.tabWrapper .tabInner:focus {
+  outline: none;
+}
+
+.tabWrapper .tabInner .tabIcon {
+  color: var(--icon-color);
+  margin-right: var(--spacing-small);
+}
+
+.tabWrapper .tabInner .tabIcon.right {
+  margin-right: 0;
+  margin-left: var(--spacing-small);
+}
+
+.tabWrapper.tabFocusVisibleInset {
+  @include focus-style-css-inset(3px, 3px);
+  position: relative;
+}
+
+.tabWrapper.active .tabInner {
+  color: var(--divider-selected);
+}
+
+.tabWrapper.active:after {
+  border-bottom: 2px solid;
+  border-bottom-color: var(--divider-selected);
+  transform: scaleX(1);
+  transition: transform var(--motion-productive-medium) var(--motion-timing-enter);
+}
+
+.tabWrapper.disabled .tabInner {
+  color: var(--divider-tertiary);
+  cursor: not-allowed;
+}
+
+.tabWrapper.hover .tabInner,
+.tabWrapper:not(.disabled) .tabInner:hover {
+  border-radius: var(--border-radius-small);
+  background-color: var(--surface-secondary);
+  border-bottom-color: var(--divider-tertiary);
+}
+
+.container {
+  align-items: center;
+  gap: var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  @include vibe-text(text2, normal);
+  margin-right: calc(50% /3);
+}

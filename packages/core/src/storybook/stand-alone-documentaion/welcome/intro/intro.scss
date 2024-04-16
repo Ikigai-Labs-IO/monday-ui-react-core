@@ -1,0 +1,5 @@
+@import "~@ikigailabs/storybook-components/dist/mixins";
+
+.monday-storybook-intro {
+  @include sb-title-appearance;
+}

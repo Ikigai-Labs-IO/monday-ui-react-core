@@ -1,0 +1,16 @@
+.monday-storybook-search {
+  &_wrapper {
+    width: 260px;
+  }
+
+  &_box {
+    width: 448px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+  }
+
+  &_size {
+    width: 240px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "~@ikigailabs/ui-style/dist/mixins";
+
+.container {
+  flex-grow: 1;
+  overflow: auto;
+  @include scroller();
+  font-weight: var(--font-weight-bold);
+  padding-inline: var(--spacing-xl);
+}

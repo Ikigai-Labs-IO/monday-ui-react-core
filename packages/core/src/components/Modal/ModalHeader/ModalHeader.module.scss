@@ -1,0 +1,20 @@
+@import "../../../styles/typography";
+
+.container {
+  padding-inline: var(--spacing-large);
+
+  .icon {
+    flex-shrink: 0;
+    color: #10181b;
+  }
+
+  .description {
+    color: #637282;
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}

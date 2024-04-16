@@ -1,0 +1,8 @@
+@import "~@ikigailabs/ui-style/dist/mixins";
+
+.scrollableContainer {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  @include scroller();
+}

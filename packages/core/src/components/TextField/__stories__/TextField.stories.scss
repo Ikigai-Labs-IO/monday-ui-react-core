@@ -1,0 +1,32 @@
+.monday-storybook-text-field {
+  &_wrapper {
+    display: flex;
+  }
+
+  &_column-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: var(--spacing-medium);
+    margin-right: var(--spacing-xl);
+  }
+
+  &_size {
+    width: 300px;
+  }
+
+  &_box {
+    padding: var(--spacing-xs);
+    width: 264px;
+
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-medium);
+    }
+  }
+
+  &_spacing {
+    padding-top: var(--spacing-large);
+  }
+}
