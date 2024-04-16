@@ -15,7 +15,7 @@ import Avatar from "../../Avatar/Avatar";
 import { Icon } from "../../index";
 import DropdownChevronDown from "../../Icon/Icons/components/DropdownChevronDown";
 import DialogContentContainer from "../../DialogContentContainer/DialogContentContainer";
-import { StoryDescription } from "@ikigailabs/storybook-components";
+import { StoryDescription } from "storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { Flex } from "../../";
 import { person1, person2, person3 } from "../../Avatar/__stories__/assets";

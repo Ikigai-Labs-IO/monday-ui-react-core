@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "@ikigailabs/storybook-components";
+import { RelatedComponent } from "storybook-components";
 import Dialog from "../../../../../components/Dialog/Dialog";
 import DialogContentContainer from "../../../../../components/DialogContentContainer/DialogContentContainer";
 import { ExampleContent } from "../../../../../components/Dialog/__stories__/helpers";

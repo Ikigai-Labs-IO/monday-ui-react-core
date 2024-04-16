@@ -1,4 +1,4 @@
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import ListItem from "../../ListItem/ListItem";
 import ListItemIcon from "../../ListItemIcon/ListItemIcon";
 import ListItemAvatar from "../../ListItemAvatar/ListItemAvatar";

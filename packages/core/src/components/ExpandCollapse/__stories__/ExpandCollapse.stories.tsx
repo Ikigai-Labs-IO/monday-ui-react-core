@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import ExpandCollapse from "../ExpandCollapse";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { Flex, Icon, Text } from "../../index";

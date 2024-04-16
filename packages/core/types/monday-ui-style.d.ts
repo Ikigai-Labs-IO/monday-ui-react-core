@@ -1,1 +1,1 @@
-declare module "@ikigailabs/ui-style/src/Icons/iconsMetaData";
+declare module "ui-style/src/Icons/iconsMetaData";

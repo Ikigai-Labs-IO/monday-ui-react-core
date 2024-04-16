@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { StoryDescription } from "@ikigailabs/storybook-components";
+import { StoryDescription } from "storybook-components";
 import Combobox from "../Combobox";
 import person1 from "./assets/person1.png";
 import person2 from "./assets/person2.png";

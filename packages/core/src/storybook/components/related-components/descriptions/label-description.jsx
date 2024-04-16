@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "@ikigailabs/storybook-components";
+import { RelatedComponent } from "storybook-components";
 import Label from "../../../../components/Label/Label";
 
 export const LabelDescription = () => {

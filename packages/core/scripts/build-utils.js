@@ -47,8 +47,8 @@ function buildComponentsTypesIndexFile() {
 }
 
 function buildStorybookComponentsIndexFile() {
-  const imports = ["import '@ikigailabs/storybook-components/index.css';"];
-  const exports = ["export * from '@ikigailabs/storybook-components'"];
+  const imports = ["import 'storybook-components/index.css';"];
+  const exports = ["export * from 'storybook-components'"];
   convertExportsToFile(imports.concat(exports), "storybook/index.js");
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "@ikigailabs/storybook-components",
+  "name": "storybook-components",
   "version": "0.0.4",
   "description": "Collection of Vibe's Storybook components",
   "license": "MIT",
@@ -132,5 +132,5 @@
       "PR: Breaking Changes 💥": "Breaking Changes"
     }
   },
-  "gitHead": "ae1c5bd7530fbe4e93336f90c5377cb1741da115"
+  "gitHead": "9efcb3b3f43b09c7b3ee2655512a780ecbd2312e"
 }

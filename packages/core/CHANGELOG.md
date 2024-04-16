@@ -295,7 +295,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1938](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1938) feat(MenuItem): be able to provide a component to title ([@talkor](https://github.com/talkor))
 
 #### New Icons
-* [#1941](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1941) Update icons - @ikigailabs/ui-style 0.1.210 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1941](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1941) Update icons - ui-style 0.1.210 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.90.3 (2024-02-07)
 
@@ -556,7 +556,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.73.2 (2023-12-18)
 
 #### Bug Fixes
-* [#1829](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1829) fix: update Feedback and DoubleCheck icons after @ikigailabs/ui-style update ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1829](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1829) fix: update Feedback and DoubleCheck icons after ui-style update ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 ## 2.73.1 (2023-12-17)
 
@@ -570,7 +570,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1819](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1819) docs(slider): add slider description on catalog page ([@Dhoni77](https://github.com/Dhoni77))
 
 #### Internal Changes
-* [#1822](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1822) chore: update @ikigailabs/ui-style ([@talkor](https://github.com/talkor))
+* [#1822](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1822) chore: update ui-style ([@talkor](https://github.com/talkor))
 
 ## 2.73.0 (2023-12-14)
 
@@ -672,7 +672,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1786](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1786) docs: RelatedComponents - fix <Dialog> description ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### Internal Changes
-* [#1775](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1775) infra: disable cron for update @ikigailabs/ui-style version workflow ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1775](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1775) infra: disable cron for update ui-style version workflow ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 ## 2.64.2 (2023-11-28)
 
@@ -712,7 +712,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1770](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1770) chore: supress <Dialog> console.error if container not found, add TODO ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1764](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1764) Update icons - @ikigailabs/ui-style 0.1.203 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1764](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1764) Update icons - ui-style 0.1.203 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.63.2 (2023-11-23)
 
@@ -819,10 +819,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1614](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1614) feat(Refable): add TypeScript support ([@naorpeled](https://github.com/naorpeled))
 
 #### Documentation
-* [#1720](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1720) Update @ikigailabs/storybook-components to ^0.10.3 ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1720](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1720) Update storybook-components to ^0.10.3 ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### Internal Changes
-* [#1721](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1721) chore: Replace Github contributors list to be from @ikigailabs/storybook-components ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1721](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1721) chore: Replace Github contributors list to be from storybook-components ([@SergeyRoyt](https://github.com/SergeyRoyt))
 * [#1724](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1724) chore: cleanup ([@SergeyRoyt](https://github.com/SergeyRoyt))
 * [#1651](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1651) chore: fix lint warnings ([@Dhoni77](https://github.com/Dhoni77))
 
@@ -853,7 +853,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1714](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1714) fix: <MenuButton> change moveBy <Dialog> and active state text color ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1709](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1709) Update icons - @ikigailabs/ui-style 0.1.202 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1709](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1709) Update icons - ui-style 0.1.202 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.56.0 (2023-10-29)
 
@@ -861,7 +861,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1705](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1705) feat: fix for Vite ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### Internal Changes
-* [#1711](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1711) chore: replace mixins with exported mixins from @ikigailabs/ui-style ([@talkor](https://github.com/talkor))
+* [#1711](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1711) chore: replace mixins with exported mixins from ui-style ([@talkor](https://github.com/talkor))
 
 ## 2.55.1 (2023-10-26)
 
@@ -912,7 +912,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1691](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1691) feat(EditableInput): expose inputType ([@talkor](https://github.com/talkor))
 
 #### Internal Changes
-* [#1693](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1693) chore: fix < Tip /> imports to be from @ikigailabs/storybook-components ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1693](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1693) chore: fix < Tip /> imports to be from storybook-components ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 ## 2.51.2 (2023-10-22)
 
@@ -939,8 +939,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1601](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1601) chore(deps-dev): bump postcss from 8.4.21 to 8.4.31 ([@dependabot[bot]](https://github.com/apps/dependabot))
 
 #### New Icons
-* [#1688](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1688) Update icons - @ikigailabs/ui-style 0.1.201 ([@github-actions[bot]](https://github.com/apps/github-actions))
-* [#1685](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1685) Update icons - @ikigailabs/ui-style 0.1.200 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1688](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1688) Update icons - ui-style 0.1.201 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1685](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1685) Update icons - ui-style 0.1.200 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.50.2 (2023-10-18)
 
@@ -951,12 +951,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1656](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1656) chore: < GridKeyboardNavigationContext /> - migrate to TS ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1677](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1677) Update icons - @ikigailabs/ui-style 0.1.199 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1677](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1677) Update icons - ui-style 0.1.199 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.50.1 (2023-10-18)
 
 #### Bug Fixes
-* [#1671](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1671) Update @ikigailabs/storybook-components version, @babel/core version ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1671](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1671) Update storybook-components version, @babel/core version ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 ## 2.50.0 (2023-10-18)
 
@@ -967,7 +967,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1653](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1653) chore: resolve lint warnings - < Menu /> ([@Kritik-J](https://github.com/Kritik-J))
 
 #### New Icons
-* [#1669](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1669) Update icons - @ikigailabs/ui-style 0.1.198 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1669](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1669) Update icons - ui-style 0.1.198 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.49.1 (2023-10-16)
 
@@ -1051,7 +1051,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1599](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1599) docs: enable controls for some of the stories ([@Dhoni77](https://github.com/Dhoni77))
 
 #### Internal Changes
-* [#1626](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1626) chore: cleanup, update @ikigailabs/storybook-components to ^0.8.0 ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1626](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1626) chore: cleanup, update storybook-components to ^0.8.0 ([@SergeyRoyt](https://github.com/SergeyRoyt))
 * [#1612](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1612) test: add editable heading interaction test ([@jes14](https://github.com/jes14))
 
 ## 2.46.1 (2023-10-05)
@@ -1106,7 +1106,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1590](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1590) Sergeyro/chore/cleanup  ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1597](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1597) Update icons - @ikigailabs/ui-style 0.1.196 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1597](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1597) Update icons - ui-style 0.1.196 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.43.0 (2023-10-02)
 
@@ -1175,7 +1175,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1549](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1549) fix: <Chips> text overflow Tooltip issue - replace internal Tooltip logic with Text overflow Tooltip logic ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1544](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1544) Update icons - @ikigailabs/ui-style 0.1.194 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1544](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1544) Update icons - ui-style 0.1.194 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.38.0 (2023-09-14)
 
@@ -1236,7 +1236,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1529](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1529) docs: Change <LegacyHeading> name in the story ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1531](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1531) Update icons - @ikigailabs/ui-style 0.1.189 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1531](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1531) Update icons - ui-style 0.1.189 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.33.0 (2023-09-05)
 
@@ -1260,12 +1260,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1522](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1522) fix: <BreadcrumbsBar> type ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1518](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1518) Update icons - @ikigailabs/ui-style 0.1.188 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1518](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1518) Update icons - ui-style 0.1.188 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.31.3 (2023-08-31)
 
 #### New Icons
-* [#1516](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1516) Update icons - @ikigailabs/ui-style 0.1.186 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1516](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1516) Update icons - ui-style 0.1.186 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.31.2 (2023-08-30)
 
@@ -1279,7 +1279,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1487](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1487) Sergeyro/chore/replace theme prop ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1509](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1509) Update icons - @ikigailabs/ui-style 0.1.184 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1509](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1509) Update icons - ui-style 0.1.184 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.31.1 (2023-08-28)
 
@@ -1319,7 +1319,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1492](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1492) feat: <Menu> id generation ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### Dependency Upgrades
-* [#1501](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1501) update @ikigailabs/ui-style ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1501](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1501) update ui-style ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 ## 2.28.3 (2023-08-23)
 
@@ -1366,7 +1366,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.25.1 (2023-08-16)
 
 #### Dependency Upgrades
-* [#1482](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1482) Upgrade @ikigailabs/ui-style ([@sahariko](https://github.com/sahariko))
+* [#1482](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1482) Upgrade ui-style ([@sahariko](https://github.com/sahariko))
 
 ## 2.25.0 (2023-08-16)
 
@@ -1514,7 +1514,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 #### Internal Changes
 * [#1425](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1425) PR #3 of replacing old token variants with mixins ([@hadasfa](https://github.com/hadasfa))
-* [#1430](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1430) Replace storybookComponents with @ikigailabs/storybook-components ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#1430](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1430) Replace storybookComponents with storybook-components ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 ## 2.16.1 (2023-07-19)
 
@@ -1534,7 +1534,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1412](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1412) Fix vibe typography instances 2 ([@hadasfa](https://github.com/hadasfa))
 
 #### New Icons
-* [#1426](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1426) Update icons - @ikigailabs/ui-style 0.1.173 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1426](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1426) Update icons - ui-style 0.1.173 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.15.5 (2023-07-13)
 
@@ -1548,8 +1548,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.15.4 (2023-07-12)
 
 #### New Icons
-* [#1417](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1417) Update icons - @ikigailabs/ui-style 0.1.172 ([@github-actions[bot]](https://github.com/apps/github-actions))
-* [#1415](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1415) Update icons - @ikigailabs/ui-style 0.1.171 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1417](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1417) Update icons - ui-style 0.1.172 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1415](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1415) Update icons - ui-style 0.1.171 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.15.3 (2023-07-12)
 
@@ -1571,7 +1571,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1406](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1406) test(useSwitch): add tests for hook ([@YossiSaadi](https://github.com/YossiSaadi))
 
 #### New Icons
-* [#1413](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1413) Update icons - @ikigailabs/ui-style 0.1.170 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1413](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1413) Update icons - ui-style 0.1.170 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.15.1 (2023-07-11)
 
@@ -1650,7 +1650,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1360](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1360) Add docs best practices to contribution md ([@hadasfa](https://github.com/hadasfa))
 
 #### New Icons
-* [#1361](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1361) Update icons - @ikigailabs/ui-style 0.1.162 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1361](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1361) Update icons - ui-style 0.1.162 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 2.10.1 (2023-06-21)
 
@@ -1664,7 +1664,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#1356](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1356) feat: <Modal> components - data-testid attributes ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 #### New Icons
-* [#1355](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1355) Update @ikigailabs/ui-style to 0.1.160 ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#1355](https://github.com/mondaycom/@ikigailabs/origami-design/pull/1355) Update ui-style to 0.1.160 ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## prerelease (2023-06-12)
 
@@ -2535,7 +2535,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#988](https://github.com/mondaycom/@ikigailabs/origami-design/pull/988) Rollup ([@sahariko](https://github.com/sahariko))
 
 #### New Icons
-* [#990](https://github.com/mondaycom/@ikigailabs/origami-design/pull/990) Bump @ikigailabs/ui-styles version to "0.1.144": team icon ([@3dyonic](https://github.com/3dyonic))
+* [#990](https://github.com/mondaycom/@ikigailabs/origami-design/pull/990) Bump ui-styles version to "0.1.144": team icon ([@3dyonic](https://github.com/3dyonic))
 
 ## 1.71.2 (2022-11-16)
 
@@ -2949,7 +2949,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.50.0 (2022-07-20)
 
 #### New Features
-* [#770](https://github.com/mondaycom/@ikigailabs/origami-design/pull/770) Manually update @ikigailabs/ui-style version to 0.1.132 ([@SergeyRoyt](https://github.com/SergeyRoyt))
+* [#770](https://github.com/mondaycom/@ikigailabs/origami-design/pull/770) Manually update ui-style version to 0.1.132 ([@SergeyRoyt](https://github.com/SergeyRoyt))
 
 ## 1.49.0 (2022-07-20)
 
@@ -3132,7 +3132,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 #### New Features
 * [#698](https://github.com/mondaycom/@ikigailabs/origami-design/pull/698) Feature/yonatanari/add shadow xs example ([@3dyonic](https://github.com/3dyonic))
-* [#697](https://github.com/mondaycom/@ikigailabs/origami-design/pull/697) * Update version "@ikigailabs/ui-style": "0.1.118", ([@3dyonic](https://github.com/3dyonic))
+* [#697](https://github.com/mondaycom/@ikigailabs/origami-design/pull/697) * Update version "ui-style": "0.1.118", ([@3dyonic](https://github.com/3dyonic))
 
 ## 1.34.0 (2022-06-08)
 
@@ -3198,7 +3198,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.30.0 (2022-05-19)
 
 #### New Features
-* [#676](https://github.com/mondaycom/@ikigailabs/origami-design/pull/676) #  Update "@ikigailabs/ui-style" to "0.1.111" ([@3dyonic](https://github.com/3dyonic))
+* [#676](https://github.com/mondaycom/@ikigailabs/origami-design/pull/676) #  Update "ui-style" to "0.1.111" ([@3dyonic](https://github.com/3dyonic))
 
 #### Dependency Upgrades
 * [#669](https://github.com/mondaycom/@ikigailabs/origami-design/pull/669) upgrade patch versions ([@orrgottlieb](https://github.com/orrgottlieb))
@@ -3593,7 +3593,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.11.2 (2022-02-13)
 
 #### Dependency Upgrades
-* [#527](https://github.com/mondaycom/@ikigailabs/origami-design/pull/527) Upgrade @ikigailabs/ui-style ([@github-actions[bot]](https://github.com/apps/github-actions))
+* [#527](https://github.com/mondaycom/@ikigailabs/origami-design/pull/527) Upgrade ui-style ([@github-actions[bot]](https://github.com/apps/github-actions))
 
 ## 1.11.1 (2022-02-13)
 
@@ -3607,7 +3607,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.11.0 (2022-02-08)
 
 #### New Features
-* [#521](https://github.com/mondaycom/@ikigailabs/origami-design/pull/521) Replace typography source to @ikigailabs/ui-style font variables ([@hadasfa](https://github.com/hadasfa))
+* [#521](https://github.com/mondaycom/@ikigailabs/origami-design/pull/521) Replace typography source to ui-style font variables ([@hadasfa](https://github.com/hadasfa))
 
 #### New Icons
 * [#522](https://github.com/mondaycom/@ikigailabs/origami-design/pull/522) Upgrade icons ([@github-actions[bot]](https://github.com/apps/github-actions))

@@ -42,8 +42,8 @@ const config: StorybookConfig = {
       if (config.resolve) {
         config.resolve.alias = {
           ...config.resolve.alias,
-          "@ikigailabs/ui-style/dist/index.min.css": path.resolve(__dirname, "../../style/src/index.scss"),
-          "@ikigailabs/ui-style/dist": path.resolve(__dirname, "../../style/src")
+          "ui-style/dist/index.min.css": path.resolve(__dirname, "../../style/src/index.scss"),
+          "ui-style/dist": path.resolve(__dirname, "../../style/src")
         };
       }
       return config;

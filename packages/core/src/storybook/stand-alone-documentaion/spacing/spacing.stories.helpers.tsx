@@ -1,4 +1,4 @@
-import { Tip } from "@ikigailabs/storybook-components";
+import { Tip } from "storybook-components";
 
 export const TipApplyingSpacing = () => (
   <Tip title="Applying spacing">

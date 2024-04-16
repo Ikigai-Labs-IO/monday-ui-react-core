@@ -1,5 +1,5 @@
 import { PageHeader } from "../PageHeader";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import BreadcrumbItem from "../../BreadcrumbsBar/BreadcrumbItem/BreadcrumbItem";
 

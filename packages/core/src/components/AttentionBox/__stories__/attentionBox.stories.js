@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import AttentionBox from "../AttentionBox";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import { createComponentTemplate, StoryDescription } from "@ikigailabs/storybook-components";
+import { createComponentTemplate, StoryDescription } from "storybook-components";
 import DialogContentContainer from "../../DialogContentContainer/DialogContentContainer";
 import { Info, Invite, ThumbsUp } from "../../Icon/Icons";
 import Icon from "../../Icon/Icon";

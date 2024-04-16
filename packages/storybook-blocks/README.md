@@ -9,7 +9,7 @@
 Install the component library
 
 ```
-$ npm install @ikigailabs/storybook-components
+$ npm install storybook-components
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ $ npm install @ikigailabs/storybook-components
 **Styles**: Import the library's styles in your storybook `preview.js` file:
 
 ```javascript
-import '@ikigailabs/storybook-components/index.css';
+import 'storybook-components/index.css';
 ```
 
 **Components**:
@@ -26,7 +26,7 @@ There are 2 ways to use the components:
 1. Import the components from the library's main entry, like this:
 
 ```javascript
-import { ComponentName } from '@ikigailabs/storybook-components';
+import { ComponentName } from 'storybook-components';
 ```
 
 and then use in a story like this:
@@ -38,11 +38,11 @@ and then use in a story like this:
 2. Import and map the components once in the storybook's `preview.js` file, like this:
 
 ```javascript
-import { ComponentName } from '@ikigailabs/storybook-components';
+import { ComponentName } from 'storybook-components';
 ```
 
 ```javascript
-import { ComponentName } from '@ikigailabs/storybook-components';
+import { ComponentName } from 'storybook-components';
 ...
 addParameters({
   docs: {

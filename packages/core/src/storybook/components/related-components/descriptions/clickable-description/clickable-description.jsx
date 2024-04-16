@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 import { useMemo } from "react";
-import { RelatedComponent } from "@ikigailabs/storybook-components";
+import { RelatedComponent } from "storybook-components";
 import Clickable from "../../../../../components/Clickable/Clickable";
 import classes from "./clickable-description.stories.module.scss";
 

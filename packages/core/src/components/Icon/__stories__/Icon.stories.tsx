@@ -1,7 +1,7 @@
 import Icon from "../Icon";
 import Bolt from "../Icons/components/Bolt";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import IconsList from "./IconsList";
 import "./Icon.stories.module.scss";
 

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "@ikigailabs/storybook-components";
+import { RelatedComponent } from "storybook-components";
 import VirtualizedGrid from "../../../../../components/VirtualizedGrid/VirtualizedGrid";
 import {
   generateItems,

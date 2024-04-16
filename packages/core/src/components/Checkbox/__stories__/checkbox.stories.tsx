@@ -1,4 +1,4 @@
-import { createComponentTemplate, Link } from "@ikigailabs/storybook-components";
+import { createComponentTemplate, Link } from "storybook-components";
 import Checkbox from "../Checkbox";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import "./checkbox.stories.scss";

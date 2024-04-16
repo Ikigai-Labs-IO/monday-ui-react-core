@@ -1,4 +1,4 @@
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import {{properCase componentName}} from "../{{properCase componentName}}";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import styles from "./{{properCase componentName}}.stories.module.scss";

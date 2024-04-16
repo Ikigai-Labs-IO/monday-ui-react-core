@@ -1,5 +1,5 @@
 import { TopNavigationBar } from "../TopNavigationBar";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 
 export default {
   title: "Navigation/TopNavigationBar",

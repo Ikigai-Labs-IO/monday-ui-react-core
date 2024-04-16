@@ -1,4 +1,4 @@
-import { Tip } from "@ikigailabs/storybook-components";
+import { Tip } from "storybook-components";
 
 // TODO add links to the components mentioned in the tip
 export const TipMenuGridItem = () => (

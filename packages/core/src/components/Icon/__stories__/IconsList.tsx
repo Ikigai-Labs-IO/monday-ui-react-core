@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { iconsMetaData } from "@ikigailabs/ui-style/src/Icons/iconsMetaData";
+import { iconsMetaData } from "ui-style/src/Icons/iconsMetaData";
 import Search from "../../Search/Search";
 import * as allIcons from "../Icons";
 import Flex from "../../Flex/Flex";

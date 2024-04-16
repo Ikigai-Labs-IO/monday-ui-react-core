@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from "react";
-import { StoryDescription } from "@ikigailabs/storybook-components";
+import { StoryDescription } from "storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { multiInteractionTests, overviewPlaySuite } from "../__tests__/Dropdown.interactions";
 import person1 from "./assets/person1.png";

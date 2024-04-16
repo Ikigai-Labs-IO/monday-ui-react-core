@@ -1,1 +1,1 @@
-import "@ikigailabs/ui-style/dist/index.min.css";
+import "ui-style/dist/index.min.css";

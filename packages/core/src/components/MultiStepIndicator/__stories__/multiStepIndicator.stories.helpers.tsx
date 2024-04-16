@@ -1,5 +1,5 @@
 import React from "react";
-import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
+import { StorybookLink, Tip } from "storybook-components";
 import MultiStepIndicator, { Step } from "../MultiStepIndicator";
 
 export const firstSteps: Step[] = [

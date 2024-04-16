@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "@ikigailabs/storybook-components";
+import { RelatedComponent } from "storybook-components";
 import Slider from "../../../../components/Slider/Slider";
 export const SliderDescription = () => {
   const component = useMemo(() => <Slider />, []);

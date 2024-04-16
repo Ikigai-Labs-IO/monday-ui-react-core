@@ -1,4 +1,4 @@
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import EditableText from "../EditableText";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import { overviewPlaySuite } from "../__tests__/EditableText-interactions";

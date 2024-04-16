@@ -1,5 +1,5 @@
 import TextWithHighlight from "../TextWithHighlight";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 
 export default {
   title: "Text/TextWithHighlight",

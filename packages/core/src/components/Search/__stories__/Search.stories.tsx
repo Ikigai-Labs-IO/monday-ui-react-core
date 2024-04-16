@@ -1,4 +1,4 @@
-import { createComponentTemplate, StoryDescription } from "@ikigailabs/storybook-components";
+import { createComponentTemplate, StoryDescription } from "storybook-components";
 import Search from "../Search";
 import { useMemo } from "react";
 import { DialogContentContainer, Dropdown } from "../../index";

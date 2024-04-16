@@ -1,5 +1,5 @@
 import HiddenText from "../HiddenText";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 
 const hiddenTextTemplate = createComponentTemplate(HiddenText);
 

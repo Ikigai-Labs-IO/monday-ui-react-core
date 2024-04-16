@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { RelatedComponent } from "@ikigailabs/storybook-components";
+import { RelatedComponent } from "storybook-components";
 import { AccordionItem, Accordion } from "../../../../../components";
 import styles from "./accordion-description.module.scss";
 

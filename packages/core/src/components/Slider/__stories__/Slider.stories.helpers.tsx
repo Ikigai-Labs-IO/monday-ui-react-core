@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
+import { StorybookLink, Tip } from "storybook-components";
 
 export const TipMultiStepIndicator = () => (
   <Tip title="Not what you were looking for?">

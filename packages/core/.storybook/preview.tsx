@@ -27,10 +27,10 @@ import {
   RelatedComponent,
   MultipleStoryElementsWrapper,
   StorybookLink
-} from "@ikigailabs/storybook-components";
+} from "storybook-components";
 import { ComponentNameDecorator, PropsTable, RelatedComponentsDecorator } from "../src/storybook";
-import "@ikigailabs/ui-style/dist/index.min.css";
-import "@ikigailabs/storybook-components/dist/index.css";
+import "ui-style/dist/index.min.css";
+import "storybook-components/dist/index.css";
 import introCode from "../src/storybook/stand-alone-documentaion/playground/playground-helpers";
 import ThemeProvider from "../src/components/ThemeProvider/ThemeProvider";
 import '../src/styles/global.css';

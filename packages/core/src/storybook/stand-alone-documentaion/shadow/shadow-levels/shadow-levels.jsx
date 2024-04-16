@@ -1,4 +1,4 @@
-import { Frame } from "@ikigailabs/storybook-components";
+import { Frame } from "storybook-components";
 import { ShadowExample } from "./shadow-example/shadow-example";
 import "./shadow-levels.scss";
 

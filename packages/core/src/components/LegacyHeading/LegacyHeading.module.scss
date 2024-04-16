@@ -1,5 +1,5 @@
 @import "../../styles/typography";
-@import "~@ikigailabs/ui-style/dist/mixins";
+@import "~ui-style/dist/mixins";
 
 @include create-title-classes;
 @include create-text-classes;

@@ -1,4 +1,4 @@
-import { Tip } from "@ikigailabs/storybook-components";
+import { Tip } from "storybook-components";
 
 export const TipKnowIssue = () => (
   <Tip type={Tip.types.WARNING} emoji={"⚠️"} title="Known issue">

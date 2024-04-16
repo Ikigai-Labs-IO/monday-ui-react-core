@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
+import { StorybookLink, Tip } from "storybook-components";
 
 export const TipAmIUsingTheRightComponent = () => (
   <Tip title="Am I using the right component?">

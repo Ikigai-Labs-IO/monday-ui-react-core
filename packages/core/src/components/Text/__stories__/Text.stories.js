@@ -1,7 +1,7 @@
 import cx from "classnames";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import Text from "../Text";
-import { createComponentTemplate, StorybookLink } from "@ikigailabs/storybook-components";
+import { createComponentTemplate, StorybookLink } from "storybook-components";
 import Flex from "../../Flex/Flex";
 import { ONE_LINE_ELLIPSIS_TEST_ID, OVERFLOW_TEXT_CONTAINER_ID } from "../__tests__/text-tests-constants";
 import { textOverflowSuite } from "../__tests__/text.interactions";

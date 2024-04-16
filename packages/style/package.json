@@ -1,5 +1,5 @@
 {
-  "name": "@ikigailabs/ui-style",
+  "name": "ui-style",
   "version": "0.0.4",
   "description": "Monday UI CSS Foundations",
   "main": "dist/index.css",
@@ -61,5 +61,5 @@
     "sass": "^1.70.0",
     "stylelint-config-recommended-scss": "^6.0.0"
   },
-  "gitHead": "ae1c5bd7530fbe4e93336f90c5377cb1741da115"
+  "gitHead": "9efcb3b3f43b09c7b3ee2655512a780ecbd2312e"
 }

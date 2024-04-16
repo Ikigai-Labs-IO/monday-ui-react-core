@@ -1,4 +1,4 @@
-import { createComponentTemplate, VerticalStories } from "@ikigailabs/storybook-components";
+import { createComponentTemplate, VerticalStories } from "storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
 import Slider from "../Slider";
 import Chips from "../../Chips/Chips";

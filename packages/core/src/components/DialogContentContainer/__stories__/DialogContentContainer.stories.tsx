@@ -1,6 +1,6 @@
 import DialogContentContainer from "../DialogContentContainer";
 import { createStoryMetaSettingsDecorator } from "../../../storybook";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import DialogContentContainerExample from "./DialogContentContainerExample";
 
 const metaSettings = createStoryMetaSettingsDecorator({

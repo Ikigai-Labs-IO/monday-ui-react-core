@@ -1,4 +1,4 @@
-import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
+import { StorybookLink, Tip } from "storybook-components";
 
 export const TipEditableHeading = () => (
   <Tip title="Not what you were looking for?">

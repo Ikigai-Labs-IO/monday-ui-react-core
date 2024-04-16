@@ -7,7 +7,7 @@ import { DEFAULT_DIALOG_SHOW_TRIGGER } from "../../SplitButton/SplitButtonConsta
 import ModalFooterButtons from "../ModalFooter/ModalFooterButtons/ModalFooterButtons";
 import styles from "./Modal.stories.module.scss";
 import cx from "classnames";
-import { StorybookLink, Tip } from "@ikigailabs/storybook-components";
+import { StorybookLink, Tip } from "storybook-components";
 
 // internal custom hook to help with writing tests and stories.
 export const useHelperOpenModalButton = ({

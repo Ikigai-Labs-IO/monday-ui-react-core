@@ -1,4 +1,4 @@
-import { Link, Tip } from "@ikigailabs/storybook-components";
+import { Link, Tip } from "storybook-components";
 import { accessibilityCheckList } from "./assets";
 
 export const TipChecklistLink = () => (

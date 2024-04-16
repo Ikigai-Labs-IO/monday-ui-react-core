@@ -1,10 +1,10 @@
-import { iconsMetaData } from "@ikigailabs/ui-style/src/Icons/iconsMetaData";
-import { createStoryMetaSettings } from "@ikigailabs/storybook-components";
-import { CreateStoryMetaSettingsArgs } from "@ikigailabs/storybook-components/types";
+import { iconsMetaData } from "ui-style/src/Icons/iconsMetaData";
+import { createStoryMetaSettings } from "storybook-components";
+import { CreateStoryMetaSettingsArgs } from "storybook-components/types";
 import * as AllIcons from "../../components/Icon/Icons";
 
 /**
- * Decorator on createStoryMetaSettings from @ikigailabs/storybook-components - adds icons metadata and icons components to function arguments
+ * Decorator on createStoryMetaSettings from storybook-components - adds icons metadata and icons components to function arguments
  */
 export function createStoryMetaSettingsDecorator({
   component,

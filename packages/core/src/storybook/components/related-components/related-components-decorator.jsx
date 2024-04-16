@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { RelatedComponents } from "@ikigailabs/storybook-components";
+import { RelatedComponents } from "storybook-components";
 import { DESCRIPTION_COMPONENTS_MAP } from "./component-description-map";
 
 export const RelatedComponentsDecorator = ({ componentsNames, linkTarget }) => {

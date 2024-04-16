@@ -71,7 +71,7 @@
     "build:commonjs": "webpack --mode production --config webpack/default.config.js",
     "build:esm": "rollup -c",
     "build:esm:mock-classnames": "mock_classnames=on rollup -c",
-    "build:react-icons": "svg2react-icon --typescript --keep-colors ../../node_modules/@ikigailabs/ui-style/src/Icons src/components/Icon/Icons",
+    "build:react-icons": "svg2react-icon --typescript --keep-colors ../../node_modules/ui-style/src/Icons src/components/Icon/Icons",
     "storybook": "storybook dev -p 7008",
     "build-storybook": "yarn build:storybook-exports && storybook build -o static_storybook",
     "deploy-storybook": "storybook-to-ghpages",
@@ -101,8 +101,8 @@
   },
   "homepage": "https://github.com/mondaycom/@ikigailabs/origami-design#readme",
   "dependencies": {
-    "@ikigailabs/storybook-components": "^0.0.4",
-    "@ikigailabs/ui-style": "^0.0.4",
+    "storybook-components": "^0.0.4",
+    "ui-style": "^0.0.4",
     "@popperjs/core": "2.11.6",
     "@storybook/react-vite": "^7.5.3",
     "a11y-dialog": "^7.5.2",
@@ -291,5 +291,5 @@
       "PR: Icon 💎": "New Icons"
     }
   },
-  "gitHead": "ae1c5bd7530fbe4e93336f90c5377cb1741da115"
+  "gitHead": "9efcb3b3f43b09c7b3ee2655512a780ecbd2312e"
 }

@@ -146,7 +146,7 @@ module.exports = () => {
             to: "assets/"
           },
           {
-            from: "../../node_modules/@ikigailabs/ui-style/dist/index.min.css",
+            from: "../../node_modules/ui-style/dist/index.min.css",
             to: "tokens/tokens.css"
           }
         ]

@@ -1,6 +1,6 @@
 import React from "react";
 import { useCallback, useState } from "react";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import RadioButton from "../RadioButton";
 import { clickRadioButtonPlaySuite, controlRadioButtonPlaySuite } from "./radioButton.stories.interactions";
 import "./radioButton.stories.scss";

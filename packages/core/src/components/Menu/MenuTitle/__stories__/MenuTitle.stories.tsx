@@ -1,5 +1,5 @@
 import React from "react";
-import { createComponentTemplate } from "@ikigailabs/storybook-components";
+import { createComponentTemplate } from "storybook-components";
 import { createStoryMetaSettingsDecorator } from "../../../../storybook/functions/createStoryMetaSettingsDecorator";
 import MenuTitle from "../MenuTitle";
 import Menu from "../../Menu/Menu";
