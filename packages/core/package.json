@@ -1,6 +1,6 @@
 {
   "name": "@ikigailabs/origami-design",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Official monday.com UI resources for application development in React.js",
   "main": "./dist/main.js",
   "types": "./dist/types.d.ts",
@@ -101,8 +101,8 @@
   },
   "homepage": "https://github.com/mondaycom/@ikigailabs/origami-design#readme",
   "dependencies": {
-    "@ikigailabs/storybook-components": "^0.0.2",
-    "@ikigailabs/ui-style": "^0.0.2",
+    "@ikigailabs/storybook-components": "^0.0.4",
+    "@ikigailabs/ui-style": "^0.0.4",
     "@popperjs/core": "2.11.6",
     "@storybook/react-vite": "^7.5.3",
     "a11y-dialog": "^7.5.2",
@@ -290,5 +290,6 @@
       "PR: Breaking Changes 💥": "Breaking Changes",
       "PR: Icon 💎": "New Icons"
     }
-  }
+  },
+  "gitHead": "ae1c5bd7530fbe4e93336f90c5377cb1741da115"
 }
