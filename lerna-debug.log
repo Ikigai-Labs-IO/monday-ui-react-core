@@ -1,13 +1,10 @@
 44 error Error: Command failed with exit code 1: npm install --package-lock-only --ignore-scripts
-44 error npm ERR! code E404
-44 error npm ERR! 404 Not Found - GET https://registry.npmjs.org/@ikigailabs%2fstorybook-components - Not found
-44 error npm ERR! 404
-44 error npm ERR! 404  '@ikigailabs/storybook-components@^0.0.10' is not in this registry.
-44 error npm ERR! 404
-44 error npm ERR! 404 Note that you can also install from a
-44 error npm ERR! 404 tarball, folder, http url, or git url.
+44 error npm ERR! code ETARGET
+44 error npm ERR! notarget No matching version found for @ikigailabs/storybook-components@^0.0.10.
+44 error npm ERR! notarget In most cases you or one of your dependencies are requesting
+44 error npm ERR! notarget a package version that doesn't exist.
 44 error
-44 error npm ERR! A complete log of this run can be found in: /Users/abdul/.npm/_logs/2024-04-16T13_37_39_687Z-debug-0.log
+44 error npm ERR! A complete log of this run can be found in: /Users/abdul/.npm/_logs/2024-04-16T13_53_58_785Z-debug-0.log
 44 error     at makeError (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
 44 error     at handlePromise (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/node_modules/execa/index.js:114:26)
 44 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
