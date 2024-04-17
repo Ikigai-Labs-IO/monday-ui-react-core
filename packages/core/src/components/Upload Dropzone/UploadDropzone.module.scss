@@ -1,0 +1,16 @@
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    border-radius: var(--spacing-xs);
+    border: 1px dashed var(--divider-secondary);
+}
+
+.container {
+    margin: auto;
+
+    :hover {
+        border-color: var(--divider-selected);
+        background-color: var(--surface-secondary);
+    }
+}
