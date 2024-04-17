@@ -82,6 +82,10 @@
   }
 }
 
+input[type="number"] {
+  padding: 5px var(--spacing-small) 5px 12px !important;
+}
+
 .textField .inputWrapper .input.inputHover {
   border-color: var(--primary-text-color);
 }
@@ -195,7 +199,7 @@
   color: var(--negative-color);
 }
 
-.textField .inputWrapper.inputErrorValidation + .subTextContainer .subTextContainerStatus {
+.textField .inputWrapper.inputErrorValidation+.subTextContainer .subTextContainerStatus {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -224,7 +228,7 @@
   color: var(--positive-color);
 }
 
-.textField .inputWrapper.inputSuccessValidation + .subTextContainer .subTextContainerStatus {
+.textField .inputWrapper.inputSuccessValidation+.subTextContainer .subTextContainerStatus {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -285,7 +289,7 @@
   font-size: 16px;
 }
 
-.textField .inputWrapper.wrapperSizeMedium .iconContainer:hover + .iconContainer + .input {
+.textField .inputWrapper.wrapperSizeMedium .iconContainer:hover+.iconContainer+.input {
   border-color: var(--primary-text-color);
 }
 
@@ -377,6 +381,7 @@
 // Temp solution for displaying calendar icon in dark themes
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+
   :global(.dark-app-theme) &,
   :global(.black-app-theme) &,
   :global(.hacker_theme-app-theme) & {
