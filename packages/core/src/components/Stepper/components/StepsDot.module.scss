@@ -1,0 +1,31 @@
+@import "~@ikigailabs/ui-style/dist/mixins";
+@import "../../../styles/states.scss";
+
+.dot {
+  @include reset-button;
+  width: var(--spacing-small);
+  height: var(--spacing-small);
+  cursor: pointer;
+  border-radius: 50%;
+  background: var(--divider-tertiary);
+  @include focus-style;
+  transform-origin: center;
+  transform: scale(1);
+  transition: transform var(--motion-productive-long) var(--motion-timing-transition),
+    background var(--motion-productive-long) var(--motion-timing-transition);
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.isActive {
+  background: var(--primary-color);
+}
+
+.lineSeperator {
+  height: 1px;
+  width: 40px;
+  border: 1px solid var(--layout-border-color);
+  border-radius: 1000px;
+}
