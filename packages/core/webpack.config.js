@@ -119,7 +119,24 @@ module.exports = () => {
           test: /\.css$/,
           include: [path.resolve(__dirname, "../../node_modules/"), path.resolve(__dirname, "../style")], // only include 3rd party libraries and the style package
           use: styleLoaders
-        }
+        },
+        {
+        test: /\.css$/,
+        use: [
+          IS_DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                auto: (resourcePath) => resourcePath.endsWith('.module.css'),
+                localIdentName: '[name]__[local]___[hash:base64:5]',
+              },
+            },
+          },
+          'postcss-loader'
+        ],
+      }
       ]
     },
     externals: {
