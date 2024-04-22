@@ -97,6 +97,7 @@ const publishedTSComponents = {
   TableRow: "components/Table/TableRow/TableRow",
   TableVirtualizedBody: "components/Table/TableVirtualizedBody/TableVirtualizedBody",
   ThemeProvider: "components/ThemeProvider/ThemeProvider",
+  TopNavigationBar: "components/TopNavigationBar/TopNavigationBar",
   // Don't remove next line
   // plop_marker:published-hooks
   useKeyEvent: "hooks/useKeyEvent/index",
