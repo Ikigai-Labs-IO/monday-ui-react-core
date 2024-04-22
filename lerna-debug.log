@@ -1,12 +1,10 @@
-44 error Error: Command failed with exit code 1: npm install --package-lock-only --ignore-scripts
-44 error npm ERR! code ETARGET
-44 error npm ERR! notarget No matching version found for @ikigailabs/storybook-components@^0.0.10.
-44 error npm ERR! notarget In most cases you or one of your dependencies are requesting
-44 error npm ERR! notarget a package version that doesn't exist.
-44 error
-44 error npm ERR! A complete log of this run can be found in: /Users/abdul/.npm/_logs/2024-04-16T13_53_58_785Z-debug-0.log
-44 error     at makeError (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
-44 error     at handlePromise (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/node_modules/execa/index.js:114:26)
-44 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-44 error     at async VersionCommand.updatePackageVersions (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/dist/index.js:8469:13)
-44 error     at async Promise.all (index 0)
+51 warn complete Waiting for 1 child process to exit. CTRL-C to exit immediately.
+52 error Error: Command failed with exit code 128: git tag @ikigailabs/storybook-components@0.0.2 -m @ikigailabs/storybook-components@0.0.2
+52 error fatal: tag '@ikigailabs/storybook-components@0.0.2' already exists
+52 error     at makeError (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
+52 error     at handlePromise (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/node_modules/execa/index.js:114:26)
+52 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+52 error     at async Promise.all (index 1)
+52 error     at async VersionCommand.gitCommitAndTagVersionForUpdates (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/dist/index.js:8528:11)
+52 error     at async VersionCommand.commitAndTagUpdates (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/dist/index.js:8503:18)
+52 error     at async Promise.all (index 0)
