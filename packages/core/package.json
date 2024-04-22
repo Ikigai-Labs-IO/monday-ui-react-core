@@ -101,7 +101,7 @@
   },
   "homepage": "https://github.com/mondaycom/@ikigailabs/origami-design#readme",
   "dependencies": {
-    "@ikigailabs/storybook-components": "^0.0.2",
+    "@ikigailabs/storybook-components": "^0.0.3",
     "@ikigailabs/ui-style": "^0.0.16",
     "@popperjs/core": "2.11.6",
     "@rollup/plugin-image": "^3.0.3",
