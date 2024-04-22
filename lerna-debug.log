@@ -1,6 +1,6 @@
 51 warn complete Waiting for 1 child process to exit. CTRL-C to exit immediately.
-52 error Error: Command failed with exit code 128: git tag @ikigailabs/storybook-components@0.0.2 -m @ikigailabs/storybook-components@0.0.2
-52 error fatal: tag '@ikigailabs/storybook-components@0.0.2' already exists
+52 error Error: Command failed with exit code 128: git tag @ikigailabs/storybook-components@0.0.4 -m @ikigailabs/storybook-components@0.0.4
+52 error fatal: tag '@ikigailabs/storybook-components@0.0.4' already exists
 52 error     at makeError (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
 52 error     at handlePromise (/Users/abdul/workspace/Personal/monday-ui-react-core/node_modules/lerna/node_modules/execa/index.js:114:26)
 52 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
