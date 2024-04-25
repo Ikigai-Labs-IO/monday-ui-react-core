@@ -104,6 +104,7 @@
     "@ikigailabs/storybook-components": "^0.0.8",
     "@ikigailabs/ui-style": "^0.0.17",
     "@popperjs/core": "2.11.6",
+    "@rollup/plugin-image": "^3.0.3",
     "@storybook/react-vite": "^7.5.3",
     "a11y-dialog": "^7.5.2",
     "autosize": "^5.0.1",

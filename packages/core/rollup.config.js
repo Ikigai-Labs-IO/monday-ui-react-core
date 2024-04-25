@@ -10,6 +10,7 @@ import autoprefixer from "autoprefixer";
 import { sha256 } from "js-sha256";
 import * as fs from "fs";
 import ejs from "ejs";
+import image from "@rollup/plugin-image";
 
 const EXTENSIONS = [".js", ".jsx", ".ts", ".tsx"];
 const ROOT_PATH = path.join(__dirname);
@@ -72,6 +73,7 @@ export default {
   },
   external: [/node_modules\/(?!@ikigailabs\/ui-style)(.*)/],
   plugins: [
+    image(),
     commonjs(),
     nodeResolve({
       extensions: [...EXTENSIONS, ".json", ".css"]
