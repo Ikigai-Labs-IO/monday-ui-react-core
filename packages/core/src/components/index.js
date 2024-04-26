@@ -110,7 +110,6 @@ export { default as Tree } from "./Tree/Tree";
 export { default as Timeline } from "./Timeline/Timeline/Timeline";
 export { default as SectionHeader } from "./SectionHeader/SectionHeader";
 export { default as PageHeader } from "./PageHeader/PageHeader";
-export { default as Panel } from "./Panel/Panel";
 export { default as ProgressRing } from "./ProgressRing/ProgressRing";
 export { default as Stepper } from "./Stepper/Stepper";
 export { default as NumericStepper } from "./NumericStepper/NumericStepper";
