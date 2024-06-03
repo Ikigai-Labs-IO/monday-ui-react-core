@@ -82,6 +82,10 @@
   }
 }
 
+input[type="number"] {
+  padding: 5px var(--spacing-small) 5px 12px !important;
+}
+
 .textField .inputWrapper .input.inputHover {
   border-color: var(--primary-text-color);
 }
@@ -243,7 +247,7 @@
 
 .textField .inputWrapper.wrapperSizeSmall .input {
   color: var(--Charcoal-900);
-  @include vibe-text(text2, medium);
+  @include vibe-text(text2, normal);
   @include smoothing-text;
 }
 
