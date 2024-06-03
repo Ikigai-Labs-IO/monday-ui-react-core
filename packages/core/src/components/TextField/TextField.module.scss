@@ -199,7 +199,7 @@ input[type="number"] {
   color: var(--negative-color);
 }
 
-.textField .inputWrapper.inputErrorValidation+.subTextContainer .subTextContainerStatus {
+.textField .inputWrapper.inputErrorValidation + .subTextContainer .subTextContainerStatus {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -228,7 +228,7 @@ input[type="number"] {
   color: var(--positive-color);
 }
 
-.textField .inputWrapper.inputSuccessValidation+.subTextContainer .subTextContainerStatus {
+.textField .inputWrapper.inputSuccessValidation + .subTextContainer .subTextContainerStatus {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -247,7 +247,7 @@ input[type="number"] {
 
 .textField .inputWrapper.wrapperSizeSmall .input {
   color: var(--Charcoal-900);
-  @include vibe-text(text2, medium);
+  @include vibe-text(text2, normal);
   @include smoothing-text;
 }
 
@@ -289,7 +289,7 @@ input[type="number"] {
   font-size: 16px;
 }
 
-.textField .inputWrapper.wrapperSizeMedium .iconContainer:hover+.iconContainer+.input {
+.textField .inputWrapper.wrapperSizeMedium .iconContainer:hover + .iconContainer + .input {
   border-color: var(--primary-text-color);
 }
 
@@ -381,7 +381,6 @@ input[type="number"] {
 // Temp solution for displaying calendar icon in dark themes
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-
   :global(.dark-app-theme) &,
   :global(.black-app-theme) &,
   :global(.hacker_theme-app-theme) & {
