@@ -12,6 +12,8 @@ import MenuItem from "../Menu/MenuItem/MenuItem";
 import styles from "./TopNavigationBar.module.scss";
 import MenuDivider from "../Menu/MenuDivider/MenuDivider";
 import React, { ReactNode, useState, useRef } from "react";
+import { person3 } from "../AvatarGroup/__stories__/assets";
+import { Person, Clooney, illustration } from "./assets";
 import ModalContent from "../Modal/ModalContent/ModalContent";
 import DialogContentContainer from "../DialogContentContainer/DialogContentContainer";
 
@@ -150,7 +152,7 @@ export const TopNavigationBar: React.FC<TopNavigationBarProps> & { states?: type
               <NavLink link="">
                 {(state === States.PROJECT || state === States.BOTH) &&
                   <>
-                    <img src={require("./assets/Project 1.png")} style={{ borderRadius: "var(--border-radius-small)", width: "31px", height: "31px" }} alt="Project 1" />
+                    <img src={Person} style={{ borderRadius: "var(--border-radius-small)", width: "31px", height: "31px" }} alt="Project 1" />
                     <Flex direction={Flex.directions.COLUMN} align={Flex.align.START}>
                       {state === States.BOTH &&
                         <div style={{ fontSize: "11px", fontWeight: "500", lineHeight: "15px", color: "#666666" }}>Clooney Construction</div>
@@ -165,7 +167,7 @@ export const TopNavigationBar: React.FC<TopNavigationBarProps> & { states?: type
                 }
                 {(state === States.ORGANIZATION) &&
                   <>
-                    <img src={require("./assets/Clooney.png")} style={{ borderRadius: "var(--border-radius-small)", width: "32px", height: "32px" }} alt="Organization" />
+                    <img src={Clooney} style={{ borderRadius: "var(--border-radius-small)", width: "32px", height: "32px" }} alt="Organization" />
                     <div>
                       <span>Clooney Construction</span>
                       <Icon isCustomIcon iconName="caretDown" viewBox="0 -7 27 30" />
@@ -191,7 +193,7 @@ export const TopNavigationBar: React.FC<TopNavigationBarProps> & { states?: type
                           <span style={{ color: "var(--link-color)" }}>Learn more</span>
                         </span>
                       </p>
-                      <img src={require("./assets/illustration_building_construction.svg")} style={{ width: "96px", height: "96px", marginRight: "48px" }} alt="Illustration" />
+                      <img src={illustration} style={{ width: "96px", height: "96px", marginRight: "48px" }} alt="Illustration" />
                     </Flex>
                     <Flex gap={68} style={{ color: "var(--Charcoal-900)", borderRadius: "var(--border-radius-small)", padding: "28px var(--spacing-medium)" }}>
                       <p style={{ fontSize: "14px", fontWeight: "500", lineHeight: "20px", display: "flex", flexDirection: "column", gap: "var(--spacing-small)" }}>
@@ -231,7 +233,7 @@ export const TopNavigationBar: React.FC<TopNavigationBarProps> & { states?: type
                       <Avatar
                         size={Avatar.sizes.LARGE}
                         withoutTooltip={true}
-                        src={require("../Avatar/__stories__/assets/person3.png")}
+                        src={person3}
                         type={Avatar.types.IMG}
                         ariaLabel="Hadas Fahri"
                       />
@@ -277,7 +279,7 @@ export const TopNavigationBar: React.FC<TopNavigationBarProps> & { states?: type
                 <Avatar
                   size={Avatar.sizes.MEDIUM}
                   withoutTooltip={true}
-                  src={require("../Avatar/__stories__/assets/person3.png")}
+                  src={person3}
                   type={Avatar.types.IMG}
                   ariaLabel={"Hadas Fahri"}
                   className={styles.navbarAvatar}
