@@ -201,7 +201,7 @@
     "chalk": "^4.1.2",
     "chromatic": "^7.5.3",
     "copy-webpack-plugin": "^6.0.3",
-    "css-loader": "^6.8.1",
+    "css-loader": "^7.1.1",
     "csstype": "^3.1.0",
     "ejs": "^3.1.9",
     "eslint": "^8.23.0",
@@ -224,11 +224,11 @@
     "js-sha256": "^0.9.0",
     "json-loader": "^0.5.7",
     "jsontosass": "^0.2.0",
-    "mini-css-extract-plugin": "^2.4.5",
+    "mini-css-extract-plugin": "^2.9.0",
     "plop": "2.7.6",
     "postcss": "^8.4.5",
     "postcss-import": "^15.1.0",
-    "postcss-loader": "^6.2.1",
+    "postcss-loader": "^8.1.1",
     "postcss-scss": "^4.0.2",
     "preact": "^10.8.0",
     "prettier": "^2.5.1",
@@ -248,7 +248,7 @@
     "snapshot-diff": "^0.9.0",
     "storybook": "^7.5.3",
     "storybook-addon-playground": "^1.6.0",
-    "style-loader": "^3.3.3",
+    "style-loader": "^4.0.0",
     "stylelint": "^14.2.0",
     "stylelint-config-recommended": "^7.0.0",
     "stylelint-config-recommended-scss": "^6.0.0",
@@ -293,5 +293,5 @@
       "PR: Icon 💎": "New Icons"
     }
   },
-  "gitHead": "cb35075241bc62088b3938d021b70197e19b8e29"
+  "gitHead": "cc842f659b9e5903cd4b43de00fdcc81bb796e2a"
 }

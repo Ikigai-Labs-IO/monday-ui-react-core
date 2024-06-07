@@ -21,6 +21,19 @@
     "jsx": "react-jsx",
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "esModuleInterop": true,
+    "declarationMap": true,
     "rootDir": "./src"
-  }
+  },
+  "exclude": [
+    "node_modules", // Exclude node_modules by default
+    "**/*.stories.tsx", // Exclude Storybook stories for TypeScript
+    "**/*.stories.jsx", // Exclude Storybook stories for TypeScript
+    "**/*.stories.js", // Exclude Storybook stories for TypeScript
+    "**/*.stories.ts", // Exclude Storybook stories for TypeScript
+    "**/__tests__", // Exclude test files or directories
+    "**/__stories__", // Exclude test files or directories
+    "**/__mocks__", // Exclude mocks
+    "storybook-static", // Exclude Storybook static build directory
+    ".storybook" // Exclude Storybook configuration directory
+  ]
 }
