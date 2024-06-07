@@ -1,6 +1,6 @@
 {
   "name": "@ikigailabs/origami-design",
-  "version": "0.0.22",
+  "version": "0.0.26",
   "description": "Official monday.com UI resources for application development in React.js",
   "main": "./dist/main.js",
   "types": "./dist/types.d.ts",
@@ -293,5 +293,5 @@
       "PR: Icon 💎": "New Icons"
     }
   },
-  "gitHead": "4046aa8a2362f6c06f467ed91446d21238729f1f"
+  "gitHead": "cc842f659b9e5903cd4b43de00fdcc81bb796e2a"
 }

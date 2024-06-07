@@ -1,6 +1,7 @@
 {
   "include": ["src/**/*", "types/**/*"],
   "compilerOptions": {
+    "outDir": "./dist",
     "rootDirs": ["./src", "./.storybook"],
     "lib": ["esnext", "dom"],
     "allowJs": true,
@@ -19,7 +20,9 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declarationMap": true,
+    "rootDir": "./src"
   },
   "exclude": [
     "node_modules", // Exclude node_modules by default
